@@ -39,71 +39,38 @@
 #    Annotation properties
 #################################################################
 
-###  http://purl.org/dc/elements/1.1/creator
 dc:creator rdf:type owl:AnnotationProperty .
 
-
-###  http://purl.org/dc/elements/1.1/description
 dc:description rdf:type owl:AnnotationProperty .
 
-
-###  http://purl.org/dc/elements/1.1/publisher
 dc:publisher rdf:type owl:AnnotationProperty .
 
-
-###  http://purl.org/dc/elements/1.1/title
 dc:title rdf:type owl:AnnotationProperty .
 
-
-###  http://purl.org/dc/terms/contributor
 dcterms:contributor rdf:type owl:AnnotationProperty .
 
-
-###  http://purl.org/dc/terms/license
 dcterms:license rdf:type owl:AnnotationProperty .
 
-
-###  http://purl.org/dc/terms/modified
 dcterms:modified rdf:type owl:AnnotationProperty .
 
-
-###  http://purl.org/vocab/vann/preferredNamespacePrefix
 vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
-
-###  http://www.w3.org/2004/02/skos/core#broadMatch
 skos:broadMatch rdf:type owl:AnnotationProperty .
 
-
-###  http://www.w3.org/2004/02/skos/core#closeMatch
 skos:closeMatch rdf:type owl:AnnotationProperty .
 
-
-###  http://www.w3.org/2004/02/skos/core#definition
 skos:definition rdf:type owl:AnnotationProperty .
 
-
-###  http://www.w3.org/2004/02/skos/core#exactMatch
 skos:exactMatch rdf:type owl:AnnotationProperty .
 
-
-###  http://www.w3.org/2004/02/skos/core#note
 skos:note rdf:type owl:AnnotationProperty .
 
-
-###  http://www.w3.org/ns/dcat#accessURL
 dcat:accessURL rdf:type owl:AnnotationProperty .
 
-
-###  http://www.w3.org/ns/dcat#distribution
 dcat:distribution rdf:type owl:AnnotationProperty .
 
-
-###  http://www.w3.org/ns/dcat#downloadURL
 dcat:downloadURL rdf:type owl:AnnotationProperty .
 
-
-###  http://xmlns.com/foaf/0.1/mbox
 foaf:mbox rdf:type owl:AnnotationProperty .
 
 
@@ -111,7 +78,6 @@ foaf:mbox rdf:type owl:AnnotationProperty .
 #    Datatypes
 #################################################################
 
-###  http://www.w3.org/2001/XMLSchema#date
 xsd:date rdf:type rdfs:Datatype .
 
 
@@ -119,7 +85,6 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://data.europa.eu/s66#disburses
 eurio:disburses rdf:type owl:ObjectProperty ;
                 owl:inverseOf eurio:isDisbursedBy ;
                 rdfs:domain eurio:FundingAgency ;
@@ -128,8 +93,6 @@ eurio:disburses rdf:type owl:ObjectProperty ;
                 rdfs:isDefinedBy eurio: ;
                 rdfs:label "disburses"@en .
 
-
-###  http://data.europa.eu/s66#employs
 eurio:employs rdf:type owl:ObjectProperty ;
               owl:inverseOf eurio:isEmployedBy ;
               rdfs:domain eurio:Organisation ;
@@ -138,8 +101,6 @@ eurio:employs rdf:type owl:ObjectProperty ;
               rdfs:isDefinedBy eurio: ;
               rdfs:label "employs"@en .
 
-
-###  http://data.europa.eu/s66#funds
 eurio:funds rdf:type owl:ObjectProperty ;
             owl:inverseOf eurio:isFundedBy ;
             rdfs:domain eurio:Grant ;
@@ -148,8 +109,6 @@ eurio:funds rdf:type owl:ObjectProperty ;
             rdfs:isDefinedBy eurio: ;
             rdfs:label "funds"@en .
 
-
-###  http://data.europa.eu/s66#hasAcronym
 eurio:hasAcronym rdf:type owl:ObjectProperty ;
                  owl:inverseOf eurio:isAcronymOf ;
                  rdfs:range eurio:Acronym ;
@@ -157,8 +116,6 @@ eurio:hasAcronym rdf:type owl:ObjectProperty ;
                  rdfs:isDefinedBy eurio: ;
                  rdfs:label "has acronym"@en .
 
-
-###  http://data.europa.eu/s66#hasAddress
 eurio:hasAddress rdf:type owl:ObjectProperty ;
                  rdfs:domain eurio:Site ;
                  rdfs:range eurio:PostalAddress ;
@@ -166,24 +123,12 @@ eurio:hasAddress rdf:type owl:ObjectProperty ;
                  rdfs:isDefinedBy eurio: ;
                  rdfs:label "has address"@en .
 
-
-###  http://data.europa.eu/s66#hasAffiliatedOrganisation
-#eurio:hasAffiliatedOrganisation rdf:type owl:ObjectProperty ;
-#                                rdfs:range eurio:Organisation ;
-#                                rdfs:comment "Relates the affiliated organisations of a publication."@en ;
-#                                rdfs:isDefinedBy eurio: ;
-#                                rdfs:label "has affiliated organisation"@en .
-
-
-###  http://data.europa.eu/s66#hasAssociatedFundingScheme
 eurio:hasAssociatedFundingScheme rdf:type owl:ObjectProperty ;
                                  rdfs:range eurio:FundingScheme ;
                                  rdfs:comment "Relates an entity other than funding scheme (e.g., result, etc.) with associated funding schemes."@en ;
                                  rdfs:isDefinedBy eurio: ;
                                  rdfs:label "has associated funding scheme"@en .
 
-
-###  http://data.europa.eu/s66#hasBeneficiary
 eurio:hasBeneficiary rdf:type owl:ObjectProperty ;
                      owl:inverseOf eurio:isBeneficiaryOf ;
                      rdfs:domain eurio:Grant ;
@@ -192,16 +137,12 @@ eurio:hasBeneficiary rdf:type owl:ObjectProperty ;
                      rdfs:isDefinedBy eurio: ;
                      rdfs:label "has beneficiary"@en .
 
-
-###  http://data.europa.eu/s66#hasContactDetails
 eurio:hasContactDetails rdf:type owl:ObjectProperty ;
                         rdfs:range eurio:ContactPoint ;
                         rdfs:comment "Relates the role to the contact details of the entity taking the role (person or organisation) which are valid during the project of which the role forms a part."@en ;
                         rdfs:isDefinedBy eurio: ;
                         rdfs:label "has contact details"@en .
 
-
-###  http://data.europa.eu/s66#hasCoordinates
 eurio:hasCoordinates rdf:type owl:ObjectProperty ;
                      rdfs:domain eurio:Site ;
                      rdfs:range eurio:Coordinates ;
@@ -209,8 +150,6 @@ eurio:hasCoordinates rdf:type owl:ObjectProperty ;
                      rdfs:isDefinedBy eurio: ;
                      rdfs:label "has coordinates"@en .
 
-
-###  http://data.europa.eu/s66#hasEUCountryCode
 eurio:hasEUCountryCode rdf:type owl:ObjectProperty ;
                        rdfs:domain eurio:Country ;
                        rdfs:range skos:Concept ;
@@ -218,8 +157,6 @@ eurio:hasEUCountryCode rdf:type owl:ObjectProperty ;
                        rdfs:isDefinedBy eurio: ;
                        rdfs:label "has EU country code"@en .
 
-
-###  http://data.europa.eu/s66#hasEuroSciVocClassification
 eurio:hasEuroSciVocClassification rdf:type owl:ObjectProperty ;
                                   rdfs:domain eurio:Project ;
                                   rdfs:range skos:Concept ;
@@ -227,27 +164,6 @@ eurio:hasEuroSciVocClassification rdf:type owl:ObjectProperty ;
                                   rdfs:isDefinedBy eurio: ;
                                   rdfs:label "has EuroSciVoc classification"@en .
 
-
-####  http://data.europa.eu/s66#hasEvent
-#eurio:hasEvent rdf:type owl:ObjectProperty ;
-#               owl:inverseOf eurio:isEventOf ;
-#               rdfs:domain eurio:Project ;
-#               rdfs:range eurio:Event ;
-#               rdfs:comment "Relates the project with its event(s)."@en ;
-#               rdfs:isDefinedBy eurio: ;
-#               rdfs:label "has event"@en .
-#
-#
-####  http://data.europa.eu/s66#hasEventType
-#eurio:hasEventType rdf:type owl:ObjectProperty ;
-#                   rdfs:domain eurio:Event ;
-#                   rdfs:range skos:Concept ;
-#                   rdfs:comment "This is a controlled list of types of events."@en ;
-#                   rdfs:isDefinedBy eurio: ;
-#                   rdfs:label "has event type"@en .
-
-
-###  http://data.europa.eu/s66#hasFundingAmount
 eurio:hasFundingAmount rdf:type owl:ObjectProperty ;
                        rdfs:domain [ rdf:type owl:Class ;
                                      owl:unionOf ( eurio:FundingScheme
@@ -259,8 +175,6 @@ eurio:hasFundingAmount rdf:type owl:ObjectProperty ;
                        rdfs:isDefinedBy eurio: ;
                        rdfs:label "has funding amount"@en .
 
-
-###  http://data.europa.eu/s66#hasFundingScheme
 eurio:hasFundingScheme rdf:type owl:ObjectProperty ;
                        owl:inverseOf eurio:hasGrant ;
                        rdfs:domain eurio:Grant ;
@@ -269,8 +183,6 @@ eurio:hasFundingScheme rdf:type owl:ObjectProperty ;
                        rdfs:isDefinedBy eurio: ;
                        rdfs:label "has funding scheme"@en .
 
-
-###  http://data.europa.eu/s66#hasFundingSchemeCall
 eurio:hasFundingSchemeCall rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf eurio:hasFundingScheme ;
                            rdfs:domain eurio:Grant ;
@@ -279,8 +191,6 @@ eurio:hasFundingSchemeCall rdf:type owl:ObjectProperty ;
                            rdfs:isDefinedBy eurio: ;
                            rdfs:label "has funding scheme call"@en .
 
-
-###  http://data.europa.eu/s66#hasFundingSchemeCategory
 eurio:hasFundingSchemeCategory rdf:type owl:ObjectProperty ;
                                rdfs:domain eurio:FundingScheme ;
                                rdfs:range skos:Concept ;
@@ -288,8 +198,6 @@ eurio:hasFundingSchemeCategory rdf:type owl:ObjectProperty ;
                                rdfs:isDefinedBy eurio: ;
                                rdfs:label "has funding scheme category"@en .
 
-
-###  http://data.europa.eu/s66#hasFundingSchemeProgramme
 eurio:hasFundingSchemeProgramme rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf eurio:hasFundingScheme ;
                                 rdfs:domain eurio:Grant ;
@@ -298,8 +206,6 @@ eurio:hasFundingSchemeProgramme rdf:type owl:ObjectProperty ;
                                 rdfs:isDefinedBy eurio: ;
                                 rdfs:label "has funding scheme programme"@en .
 
-
-###  http://data.europa.eu/s66#hasFundingSchemeTopic
 eurio:hasFundingSchemeTopic rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf eurio:hasFundingScheme ;
                             rdfs:domain eurio:Grant ;
@@ -308,8 +214,6 @@ eurio:hasFundingSchemeTopic rdf:type owl:ObjectProperty ;
                             rdfs:isDefinedBy eurio: ;
                             rdfs:label "has funding scheme topic"@en .
 
-
-###  http://data.europa.eu/s66#hasFundingSchemeType
 eurio:hasFundingSchemeType rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf eurio:hasFundingScheme ;
                            rdfs:domain eurio:Grant ;
@@ -318,9 +222,6 @@ eurio:hasFundingSchemeType rdf:type owl:ObjectProperty ;
                            rdfs:isDefinedBy eurio: ;
                            rdfs:label "has funding scheme type"@en .
 
-
-
-###  http://data.europa.eu/s66#hasGeographicalLocation
 eurio:hasGeographicalLocation rdf:type owl:ObjectProperty ;
                               rdfs:domain eurio:Site ;
                               rdfs:range eurio:AdministrativeArea ;
@@ -328,8 +229,6 @@ eurio:hasGeographicalLocation rdf:type owl:ObjectProperty ;
                               rdfs:isDefinedBy eurio: ;
                               rdfs:label "has geographical location"@en .
 
-
-###  http://data.europa.eu/s66#hasGrant
 eurio:hasGrant rdf:type owl:ObjectProperty ;
                rdfs:domain eurio:FundingScheme ;
                rdfs:range eurio:Grant ;
@@ -337,8 +236,6 @@ eurio:hasGrant rdf:type owl:ObjectProperty ;
                rdfs:isDefinedBy eurio: ;
                rdfs:label "has grant"@en .
 
-
-###  http://data.europa.eu/s66#hasISOCountryCode
 eurio:hasISOCountryCode rdf:type owl:ObjectProperty ;
                         rdfs:domain eurio:Country ;
                         rdfs:range skos:Concept ;
@@ -346,8 +243,6 @@ eurio:hasISOCountryCode rdf:type owl:ObjectProperty ;
                         rdfs:isDefinedBy eurio: ;
                         rdfs:label "has ISO country code"@en .
 
-
-###  http://data.europa.eu/s66#hasInvolvedParty
 eurio:hasInvolvedParty rdf:type owl:ObjectProperty ;
                        owl:inverseOf eurio:isInvolvedIn ;
                        rdfs:domain eurio:Project ;
@@ -356,8 +251,6 @@ eurio:hasInvolvedParty rdf:type owl:ObjectProperty ;
                        rdfs:isDefinedBy eurio: ;
                        rdfs:label "has involved party"@en .
 
-
-###  http://data.europa.eu/s66#hasNUTS0code
 eurio:hasNUTS0code rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf eurio:hasNUTSCode ;
                    rdfs:domain eurio:AdministrativeArea ;
@@ -366,8 +259,6 @@ eurio:hasNUTS0code rdf:type owl:ObjectProperty ;
                    rdfs:isDefinedBy eurio: ;
                    rdfs:label "has NUTS 0 code"@en .
 
-
-###  http://data.europa.eu/s66#hasNUTS1code
 eurio:hasNUTS1code rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf eurio:hasNUTSCode ;
                    rdfs:domain eurio:AdministrativeArea ;
@@ -376,8 +267,6 @@ eurio:hasNUTS1code rdf:type owl:ObjectProperty ;
                    rdfs:isDefinedBy eurio: ;
                    rdfs:label "has NUTS 1 code"@en .
 
-
-###  http://data.europa.eu/s66#hasNUTS2code
 eurio:hasNUTS2code rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf eurio:hasNUTSCode ;
                    rdfs:domain eurio:AdministrativeArea ;
@@ -386,8 +275,6 @@ eurio:hasNUTS2code rdf:type owl:ObjectProperty ;
                    rdfs:isDefinedBy eurio: ;
                    rdfs:label "has NUTS 2 code"@en .
 
-
-###  http://data.europa.eu/s66#hasNUTS3code
 eurio:hasNUTS3code rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf eurio:hasNUTSCode ;
                    rdfs:domain eurio:AdministrativeArea ;
@@ -396,8 +283,6 @@ eurio:hasNUTS3code rdf:type owl:ObjectProperty ;
                    rdfs:isDefinedBy eurio: ;
                    rdfs:label "has NUTS 3 code"@en .
 
-
-###  http://data.europa.eu/s66#hasNUTSCode
 eurio:hasNUTSCode rdf:type owl:ObjectProperty ;
                   rdfs:domain eurio:AdministrativeArea ;
                   rdfs:range skos:Concept ;
@@ -405,8 +290,6 @@ eurio:hasNUTSCode rdf:type owl:ObjectProperty ;
                   rdfs:isDefinedBy eurio: ;
                   rdfs:label "has NUTS code"@en .
 
-
-###  http://data.europa.eu/s66#hasNextFundingScheme
 eurio:hasNextFundingScheme rdf:type owl:ObjectProperty ;
                            rdfs:domain eurio:FundingScheme ;
                            rdfs:range eurio:FundingScheme ;
@@ -414,8 +297,6 @@ eurio:hasNextFundingScheme rdf:type owl:ObjectProperty ;
                            rdfs:isDefinedBy eurio: ;
                            rdfs:label "has next funding scheme"@en .
 
-
-###  http://data.europa.eu/s66#hasPayment
 eurio:hasPayment rdf:type owl:ObjectProperty ;
                  owl:inverseOf eurio:isPaymentOf ;
                  rdfs:domain eurio:Grant ;
@@ -424,8 +305,6 @@ eurio:hasPayment rdf:type owl:ObjectProperty ;
                  rdfs:isDefinedBy eurio: ;
                  rdfs:label "has payment"@en .
 
-
-###  http://data.europa.eu/s66#hasPaymentAmount
 eurio:hasPaymentAmount rdf:type owl:ObjectProperty ;
                        rdfs:domain eurio:GrantPayment ;
                        rdfs:range eurio:MonetaryAmount ;
@@ -433,8 +312,6 @@ eurio:hasPaymentAmount rdf:type owl:ObjectProperty ;
                        rdfs:isDefinedBy eurio: ;
                        rdfs:label "has payment amount"@en .
 
-
-###  http://data.europa.eu/s66#hasPreviousFundingScheme
 eurio:hasPreviousFundingScheme rdf:type owl:ObjectProperty ;
                                rdfs:domain eurio:FundingScheme ;
                                rdfs:range eurio:FundingScheme ;
@@ -442,18 +319,6 @@ eurio:hasPreviousFundingScheme rdf:type owl:ObjectProperty ;
                                rdfs:isDefinedBy eurio: ;
                                rdfs:label "has previous funding scheme"@en .
 
-
-###  http://data.europa.eu/s66#hasProjectDivision
-#eurio:hasProjectDivision rdf:type owl:ObjectProperty ;
-#                         owl:inverseOf eurio:isDivisionOf ;
-#                         rdfs:domain eurio:Project ;
-#                         rdfs:range eurio:ProjectDivision ;
-#                         rdfs:comment "Relates the project with its division(s)."@en ;
-#                         rdfs:isDefinedBy eurio: ;
-#                         rdfs:label "has project division"@en .
-
-
-###  http://data.europa.eu/s66#hasRecipient
 eurio:hasRecipient rdf:type owl:ObjectProperty ;
                    owl:inverseOf eurio:isRecipientOf ;
                    rdfs:domain eurio:GrantPayment ;
@@ -462,16 +327,6 @@ eurio:hasRecipient rdf:type owl:ObjectProperty ;
                    rdfs:isDefinedBy eurio: ;
                    rdfs:label "has recipient"@en .
 
-
-###  http://data.europa.eu/s66#hasRelatedEvent
-#eurio:hasRelatedEvent rdf:type owl:ObjectProperty ;
-#                      rdfs:range eurio:Event ;
-#                      rdfs:comment "Relates project-associated events."@en ;
-#                      rdfs:isDefinedBy eurio: ;
-#                      rdfs:label "has related event"@en .
-
-
-###  http://data.europa.eu/s66#hasRelatedProject
 eurio:hasRelatedProject rdf:type owl:ObjectProperty ,
                                  owl:SymmetricProperty ;
                         rdfs:domain eurio:Project ;
@@ -480,8 +335,6 @@ eurio:hasRelatedProject rdf:type owl:ObjectProperty ,
                         rdfs:isDefinedBy eurio: ;
                         rdfs:label "has related project"@en .
 
-
-###  http://data.europa.eu/s66#hasRelatedScheme
 eurio:hasRelatedScheme rdf:type owl:ObjectProperty ,
                                 owl:SymmetricProperty ;
                        rdfs:domain eurio:FundingScheme ;
@@ -490,8 +343,6 @@ eurio:hasRelatedScheme rdf:type owl:ObjectProperty ,
                        rdfs:isDefinedBy eurio: ;
                        rdfs:label "has related scheme"@en .
 
-
-###  http://data.europa.eu/s66#hasResult
 eurio:hasResult rdf:type owl:ObjectProperty ;
                 owl:inverseOf eurio:isResultOf ;
                 rdfs:domain [ rdf:type owl:Class ;
@@ -504,8 +355,6 @@ eurio:hasResult rdf:type owl:ObjectProperty ;
                 rdfs:isDefinedBy eurio: ;
                 rdfs:label "has result"@en .
 
-
-###  http://data.europa.eu/s66#hasResultType
 eurio:hasResultType rdf:type owl:ObjectProperty ;
                     rdfs:domain eurio:Result ;
                     rdfs:range skos:Concept ;
@@ -513,8 +362,6 @@ eurio:hasResultType rdf:type owl:ObjectProperty ;
                     rdfs:isDefinedBy eurio: ;
                     rdfs:label "has result type"@en .
 
-
-###  http://data.europa.eu/s66#hasRole
 eurio:hasRole rdf:type owl:ObjectProperty ;
               owl:inverseOf eurio:isRoleOf ;
               rdfs:domain [ rdf:type owl:Class ;
@@ -527,8 +374,6 @@ eurio:hasRole rdf:type owl:ObjectProperty ;
               rdfs:isDefinedBy eurio: ;
               rdfs:label "has role"@en .
 
-
-###  http://data.europa.eu/s66#hasSite
 eurio:hasSite rdf:type owl:ObjectProperty ;
               rdfs:domain eurio:Organisation ;
               rdfs:range eurio:Site ;
@@ -536,18 +381,6 @@ eurio:hasSite rdf:type owl:ObjectProperty ;
               rdfs:isDefinedBy eurio: ;
               rdfs:label "has site"@en .
 
-
-###  http://data.europa.eu/s66#hasSubDivision
-#eurio:hasSubDivision rdf:type owl:ObjectProperty ;
-#                     owl:inverseOf eurio:isSubDivisionOf ;
-#                     rdfs:domain eurio:ProjectDivision ;
-#                     rdfs:range eurio:ProjectDivision ;
-#                     rdfs:comment "Relates a project division with its subdivisions."@en ;
-#                     rdfs:isDefinedBy eurio: ;
-#                     rdfs:label "has subdivision"@en .
-
-
-###  http://data.europa.eu/s66#hasSubOrganisation
 eurio:hasSubOrganisation rdf:type owl:ObjectProperty ;
                          owl:inverseOf eurio:isSubOrganisationOf ;
                          rdfs:domain eurio:Organisation ;
@@ -556,8 +389,6 @@ eurio:hasSubOrganisation rdf:type owl:ObjectProperty ;
                          rdfs:isDefinedBy eurio: ;
                          rdfs:label "has sub-organisation"@en .
 
-
-###  http://data.europa.eu/s66#hasSubScheme
 eurio:hasSubScheme rdf:type owl:ObjectProperty ;
                    owl:inverseOf eurio:isSubSchemeOf ;
                    rdfs:domain eurio:FundingScheme ;
@@ -566,18 +397,6 @@ eurio:hasSubScheme rdf:type owl:ObjectProperty ;
                    rdfs:isDefinedBy eurio: ;
                    rdfs:label "has subscheme"@en .
 
-
-###  http://data.europa.eu/s66#hasTask
-#eurio:hasTask rdf:type owl:ObjectProperty ;
-#              owl:inverseOf eurio:isTaskOf ;
-#              rdfs:domain eurio:WorkPackage ;
-#              rdfs:range eurio:Task ;
-#              rdfs:comment "Relates the work package to the task(s) that make up the package."@en ;
-#              rdfs:isDefinedBy eurio: ;
-#              rdfs:label "has task"@en .
-
-
-###  http://data.europa.eu/s66#hasTotalCost
 eurio:hasTotalCost rdf:type owl:ObjectProperty ;
                    rdfs:domain eurio:Project ;
                    rdfs:range eurio:MonetaryAmount ;
@@ -585,8 +404,6 @@ eurio:hasTotalCost rdf:type owl:ObjectProperty ;
                    rdfs:isDefinedBy eurio: ;
                    rdfs:label "has total cost"@en .
 
-
-###  http://data.europa.eu/s66#hasUnit
 eurio:hasUnit rdf:type owl:ObjectProperty ;
               owl:inverseOf eurio:isUnitOf ;
               rdfs:domain eurio:Organisation ;
@@ -595,8 +412,6 @@ eurio:hasUnit rdf:type owl:ObjectProperty ;
               rdfs:isDefinedBy eurio: ;
               rdfs:label "has unit"@en .
 
-
-###  http://data.europa.eu/s66#implements
 eurio:implements rdf:type owl:ObjectProperty ;
                  owl:inverseOf eurio:isImplementedBy ;
                  rdfs:domain eurio:FundingAgency ;
@@ -605,16 +420,12 @@ eurio:implements rdf:type owl:ObjectProperty ;
                  rdfs:isDefinedBy eurio: ;
                  rdfs:label "implements"@en .
 
-
-###  http://data.europa.eu/s66#isAcronymOf
 eurio:isAcronymOf rdf:type owl:ObjectProperty ;
                   rdfs:domain eurio:Acronym ;
                   rdfs:comment "Relates the acronym to the entity or entities to which it belongs."@en ;
                   rdfs:isDefinedBy eurio: ;
                   rdfs:label "is acronym of"@en .
 
-
-###  http://data.europa.eu/s66#isBeneficiaryOf
 eurio:isBeneficiaryOf rdf:type owl:ObjectProperty ;
                       rdfs:domain eurio:Role ;
                       rdfs:range eurio:Grant ;
@@ -622,8 +433,6 @@ eurio:isBeneficiaryOf rdf:type owl:ObjectProperty ;
                       rdfs:isDefinedBy eurio: ;
                       rdfs:label "is beneficiary of"@en .
 
-
-###  http://data.europa.eu/s66#isDisbursedBy
 eurio:isDisbursedBy rdf:type owl:ObjectProperty ;
                     rdfs:domain eurio:Grant ;
                     rdfs:range eurio:FundingAgency ;
@@ -631,17 +440,6 @@ eurio:isDisbursedBy rdf:type owl:ObjectProperty ;
                     rdfs:isDefinedBy eurio: ;
                     rdfs:label "is disbursed by"@en .
 
-
-###  http://data.europa.eu/s66#isDivisionOf
-#eurio:isDivisionOf rdf:type owl:ObjectProperty ;
-#                   rdfs:domain eurio:ProjectDivision ;
-#                   rdfs:range eurio:Project ;
-#                   rdfs:comment "Relates the project division to the project of which it forms a part"@en ;
-#                   rdfs:isDefinedBy eurio: ;
-#                   rdfs:label "is division of"@en .
-
-
-###  http://data.europa.eu/s66#isEmployedBy
 eurio:isEmployedBy rdf:type owl:ObjectProperty ;
                    rdfs:domain eurio:PersonRole ;
                    rdfs:range eurio:Organisation ;
@@ -649,17 +447,6 @@ eurio:isEmployedBy rdf:type owl:ObjectProperty ;
                    rdfs:isDefinedBy eurio: ;
                    rdfs:label "is employed by"@en .
 
-
-###  http://data.europa.eu/s66#isEventOf
-#eurio:isEventOf rdf:type owl:ObjectProperty ;
-#                rdfs:domain eurio:Event ;
-#                rdfs:range eurio:Project ;
-#                rdfs:comment "Relates the event to the project to which it belongs."@en ;
-#                rdfs:isDefinedBy eurio: ;
-#                rdfs:label "is event of"@en .
-
-
-###  http://data.europa.eu/s66#isFundedBy
 eurio:isFundedBy rdf:type owl:ObjectProperty ;
                  rdfs:domain eurio:Project ;
                  rdfs:range eurio:Grant ;
@@ -667,17 +454,6 @@ eurio:isFundedBy rdf:type owl:ObjectProperty ;
                  rdfs:isDefinedBy eurio: ;
                  rdfs:label "is funded by"@en .
 
-
-###  http://data.europa.eu/s66#isHeldAt
-#eurio:isHeldAt rdf:type owl:ObjectProperty ;
-#               rdfs:domain eurio:Event ;
-#               rdfs:range eurio:Site ;
-#               rdfs:comment "The location where the event is happening."@en ;
-#               rdfs:isDefinedBy eurio: ;
-#               rdfs:label "is held at"@en .
-
-
-###  http://data.europa.eu/s66#isImplementedBy
 eurio:isImplementedBy rdf:type owl:ObjectProperty ;
                       rdfs:domain eurio:FundingScheme ;
                       rdfs:range eurio:FundingAgency ;
@@ -685,8 +461,6 @@ eurio:isImplementedBy rdf:type owl:ObjectProperty ;
                       rdfs:isDefinedBy eurio: ;
                       rdfs:label "is implemented by"@en .
 
-
-###  http://data.europa.eu/s66#isInvolvedIn
 eurio:isInvolvedIn rdf:type owl:ObjectProperty ;
                    rdfs:domain eurio:Role ;
                    rdfs:range eurio:Project ;
@@ -694,8 +468,6 @@ eurio:isInvolvedIn rdf:type owl:ObjectProperty ;
                    rdfs:isDefinedBy eurio: ;
                    rdfs:label "is involved in"@en .
 
-
-###  http://data.europa.eu/s66#isPaymentOf
 eurio:isPaymentOf rdf:type owl:ObjectProperty ;
                   rdfs:domain eurio:GrantPayment ;
                   rdfs:range eurio:Grant ;
@@ -703,8 +475,6 @@ eurio:isPaymentOf rdf:type owl:ObjectProperty ;
                   rdfs:isDefinedBy eurio: ;
                   rdfs:label "is payment of"@en .
 
-
-###  http://data.europa.eu/s66#isRecipientOf
 eurio:isRecipientOf rdf:type owl:ObjectProperty ;
                     rdfs:domain eurio:Role ;
                     rdfs:range eurio:GrantPayment ;
@@ -712,8 +482,6 @@ eurio:isRecipientOf rdf:type owl:ObjectProperty ;
                     rdfs:isDefinedBy eurio: ;
                     rdfs:label "is recipient of"@en .
 
-
-###  http://data.europa.eu/s66#isResultOf
 eurio:isResultOf rdf:type owl:ObjectProperty ;
                  rdfs:domain eurio:Result ;
                  rdfs:range [ rdf:type owl:Class ;
@@ -725,8 +493,6 @@ eurio:isResultOf rdf:type owl:ObjectProperty ;
                  rdfs:isDefinedBy eurio: ;
                  rdfs:label "is result of"@en .
 
-
-###  http://data.europa.eu/s66#isRoleOf
 eurio:isRoleOf rdf:type owl:ObjectProperty ;
                rdfs:domain eurio:Role ;
                rdfs:range [ rdf:type owl:Class ;
@@ -738,8 +504,6 @@ eurio:isRoleOf rdf:type owl:ObjectProperty ;
                rdfs:isDefinedBy eurio: ;
                rdfs:label "is role of"@en .
 
-
-###  http://data.europa.eu/s66#isSiteOf
 eurio:isSiteOf rdf:type owl:ObjectProperty ;
                rdfs:domain eurio:Site ;
                rdfs:range eurio:Organisation ;
@@ -747,17 +511,6 @@ eurio:isSiteOf rdf:type owl:ObjectProperty ;
                rdfs:isDefinedBy eurio: ;
                rdfs:label "is site of"@en .
 
-
-###  http://data.europa.eu/s66#isSubDivisionOf
-#eurio:isSubDivisionOf rdf:type owl:ObjectProperty ;
-#                      rdfs:domain eurio:ProjectDivision ;
-#                      rdfs:range eurio:ProjectDivision ;
-#                      rdfs:comment "Relates a project division with its parent division."@en ;
-#                      rdfs:isDefinedBy eurio: ;
-#                      rdfs:label "is subdivision of"@en .
-
-
-###  http://data.europa.eu/s66#isSubOrganisationOf
 eurio:isSubOrganisationOf rdf:type owl:ObjectProperty ;
                           rdfs:domain eurio:Organisation ;
                           rdfs:range eurio:Organisation ;
@@ -765,8 +518,6 @@ eurio:isSubOrganisationOf rdf:type owl:ObjectProperty ;
                           rdfs:isDefinedBy eurio: ;
                           rdfs:label "is sub-organisation of"@en .
 
-
-###  http://data.europa.eu/s66#isSubSchemeOf
 eurio:isSubSchemeOf rdf:type owl:ObjectProperty ;
                     rdfs:domain eurio:FundingScheme ;
                     rdfs:range eurio:FundingScheme ;
@@ -774,17 +525,6 @@ eurio:isSubSchemeOf rdf:type owl:ObjectProperty ;
                     rdfs:isDefinedBy eurio: ;
                     rdfs:label "is subscheme of"@en .
 
-
-###  http://data.europa.eu/s66#isTaskOf
-#eurio:isTaskOf rdf:type owl:ObjectProperty ;
-#               rdfs:domain eurio:Task ;
-#               rdfs:range eurio:WorkPackage ;
-#               rdfs:comment "Relates the task to the work package of which it is a part."@en ;
-#               rdfs:isDefinedBy eurio: ;
-#               rdfs:label "is task of"@en .
-
-
-###  http://data.europa.eu/s66#isUnitOf
 eurio:isUnitOf rdf:type owl:ObjectProperty ;
                rdfs:domain eurio:OrganisationUnit ;
                rdfs:range eurio:Organisation ;
@@ -792,8 +532,6 @@ eurio:isUnitOf rdf:type owl:ObjectProperty ;
                rdfs:isDefinedBy eurio: ;
                rdfs:label "is unit of"@en .
 
-
-###  http://data.europa.eu/s66#refersTo
 eurio:refersTo rdf:type owl:ObjectProperty ;
                rdfs:domain eurio:Acronym ;
                rdfs:comment "The entity to which this acronym refers. This can either be an entity inside of the knowledge graph or an external entity of any type."@en ;
@@ -805,15 +543,12 @@ eurio:refersTo rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  http://data.europa.eu/s66#abstract
 eurio:abstract rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:string ;
                rdfs:comment "The general summary and ideas of a CORDIS entity, e.g., project, result."@en ;
                rdfs:isDefinedBy eurio: ;
                rdfs:label "abstract"@en .
 
-
-###  http://data.europa.eu/s66#additionalName
 eurio:additionalName rdf:type owl:DatatypeProperty ;
                      rdfs:domain eurio:Person ;
                      rdfs:range xsd:string ;
@@ -821,8 +556,6 @@ eurio:additionalName rdf:type owl:DatatypeProperty ;
                      rdfs:isDefinedBy eurio: ;
                      rdfs:label "additional name"@en .
 
-
-###  http://data.europa.eu/s66#addressCountry
 eurio:addressCountry rdf:type owl:DatatypeProperty ;
                      rdfs:domain eurio:PostalAddress ;
                      rdfs:range xsd:string ;
@@ -830,8 +563,6 @@ eurio:addressCountry rdf:type owl:DatatypeProperty ;
                      rdfs:isDefinedBy eurio: ;
                      rdfs:label "address country"@en .
 
-
-###  http://data.europa.eu/s66#addressLocality
 eurio:addressLocality rdf:type owl:DatatypeProperty ;
                       rdfs:domain eurio:PostalAddress ;
                       rdfs:range xsd:string ;
@@ -839,25 +570,12 @@ eurio:addressLocality rdf:type owl:DatatypeProperty ;
                       rdfs:isDefinedBy eurio: ;
                       rdfs:label "address locality"@en .
 
-
-###  http://data.europa.eu/s66#authorList
 eurio:authorList rdf:type owl:DatatypeProperty ;
                  rdfs:range xsd:string ;
                  rdfs:comment "The list of authors."@en ;
                  rdfs:isDefinedBy eurio: ;
                  rdfs:label "author list"@en .
 
-
-###  http://data.europa.eu/s66#citationsNumber
-#eurio:citationsNumber rdf:type owl:DatatypeProperty ;
-#                      rdfs:domain eurio:Result ;
-#                      rdfs:range xsd:nonNegativeInteger ;
-#                      rdfs:comment "The number of citations of a published work."@en ;
-#                      rdfs:isDefinedBy eurio: ;
-#                      rdfs:label "citations number"@en .
-
-
-###  http://data.europa.eu/s66#code
 eurio:code rdf:type owl:DatatypeProperty ,
                     owl:FunctionalProperty ;
            rdfs:domain eurio:FundingScheme ;
@@ -866,8 +584,6 @@ eurio:code rdf:type owl:DatatypeProperty ,
            rdfs:isDefinedBy eurio: ;
            rdfs:label "code"@en .
 
-
-###  http://data.europa.eu/s66#currency
 eurio:currency rdf:type owl:DatatypeProperty ;
                rdfs:domain eurio:MonetaryAmount ;
                rdfs:range xsd:string ;
@@ -875,16 +591,12 @@ eurio:currency rdf:type owl:DatatypeProperty ;
                rdfs:isDefinedBy eurio: ;
                rdfs:label "currency"@en .
 
-
-###  http://data.europa.eu/s66#date
 eurio:date rdf:type owl:DatatypeProperty ;
            rdfs:range xsd:date ;
            rdfs:comment "The date in which the grant payment took place."@en ;
            rdfs:isDefinedBy eurio: ;
            rdfs:label "date"@en .
 
-
-###  http://data.europa.eu/s66#definition
 eurio:definition rdf:type owl:DatatypeProperty ;
                  rdfs:domain eurio:Acronym ;
                  rdfs:range xsd:string ;
@@ -892,16 +604,12 @@ eurio:definition rdf:type owl:DatatypeProperty ;
                  rdfs:isDefinedBy eurio: ;
                  rdfs:label "definition"@en .
 
-
-###  http://data.europa.eu/s66#description
 eurio:description rdf:type owl:DatatypeProperty ;
                   rdfs:range xsd:string ;
                   rdfs:comment "A brief summary of the entity (project, etc.)."@en ;
                   rdfs:isDefinedBy eurio: ;
                   rdfs:label "description"@en .
 
-
-###  http://data.europa.eu/s66#doi
 eurio:doi rdf:type owl:DatatypeProperty ,
                    owl:FunctionalProperty ;
           rdfs:range xsd:anyURI ;
@@ -909,16 +617,12 @@ eurio:doi rdf:type owl:DatatypeProperty ,
           rdfs:isDefinedBy eurio: ;
           rdfs:label "doi"@en .
 
-
-###  http://data.europa.eu/s66#duration
 eurio:duration rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:nonNegativeInteger ;
                rdfs:comment "The period of time an entity (e.g. project, grant, etc.) has taken, represented as number of months."@en ;
                rdfs:isDefinedBy eurio: ;
                rdfs:label "duration"@en .
 
-
-###  http://data.europa.eu/s66#email
 eurio:email rdf:type owl:DatatypeProperty ;
             rdfs:domain eurio:ContactPoint ;
             rdfs:range xsd:anyURI ;
@@ -926,8 +630,6 @@ eurio:email rdf:type owl:DatatypeProperty ;
             rdfs:isDefinedBy eurio: ;
             rdfs:label "email"@en .
 
-
-###  http://data.europa.eu/s66#endDate
 eurio:endDate rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf eurio:date ;
               rdfs:range xsd:date ;
@@ -935,8 +637,6 @@ eurio:endDate rdf:type owl:DatatypeProperty ;
               rdfs:isDefinedBy eurio: ;
               rdfs:label "end date"@en .
 
-
-###  http://data.europa.eu/s66#familyName
 eurio:familyName rdf:type owl:DatatypeProperty ;
                  rdfs:domain eurio:Person ;
                  rdfs:range xsd:string ;
@@ -944,8 +644,6 @@ eurio:familyName rdf:type owl:DatatypeProperty ;
                  rdfs:isDefinedBy eurio: ;
                  rdfs:label "family name"@en .
 
-
-###  http://data.europa.eu/s66#faxNumber
 eurio:faxNumber rdf:type owl:DatatypeProperty ;
                 rdfs:domain eurio:ContactPoint ;
                 rdfs:range rdfs:Literal ;
@@ -953,8 +651,6 @@ eurio:faxNumber rdf:type owl:DatatypeProperty ;
                 rdfs:isDefinedBy eurio: ;
                 rdfs:label "fax number"@en .
 
-
-###  http://data.europa.eu/s66#finalResults
 eurio:finalResults rdf:type owl:DatatypeProperty ;
                    rdfs:domain eurio:ProjectReportSummary ;
                    rdfs:range xsd:string ;
@@ -962,8 +658,6 @@ eurio:finalResults rdf:type owl:DatatypeProperty ;
                    rdfs:isDefinedBy eurio: ;
                    rdfs:label "final results"@en .
 
-
-###  http://data.europa.eu/s66#fullAddress
 eurio:fullAddress rdf:type owl:DatatypeProperty ;
                   rdfs:domain eurio:PostalAddress ;
                   rdfs:range rdfs:Literal ;
@@ -971,8 +665,6 @@ eurio:fullAddress rdf:type owl:DatatypeProperty ;
                   rdfs:isDefinedBy eurio: ;
                   rdfs:label "full address"@en .
 
-
-###  http://data.europa.eu/s66#givenName
 eurio:givenName rdf:type owl:DatatypeProperty ;
                 rdfs:domain eurio:Person ;
                 rdfs:range xsd:string ;
@@ -980,8 +672,6 @@ eurio:givenName rdf:type owl:DatatypeProperty ;
                 rdfs:isDefinedBy eurio: ;
                 rdfs:label "given name"@en .
 
-
-###  http://data.europa.eu/s66#honorificTitle
 eurio:honorificTitle rdf:type owl:DatatypeProperty ;
                      rdfs:domain eurio:Person ;
                      rdfs:range xsd:string ;
@@ -989,8 +679,6 @@ eurio:honorificTitle rdf:type owl:DatatypeProperty ;
                      rdfs:isDefinedBy eurio: ;
                      rdfs:label "honorific title"@en .
 
-
-###  http://data.europa.eu/s66#identifier
 eurio:identifier rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
                  rdfs:range rdfs:Literal ;
@@ -998,8 +686,6 @@ eurio:identifier rdf:type owl:DatatypeProperty ,
                  rdfs:isDefinedBy eurio: ;
                  rdfs:label "identifier"@en .
 
-
-###  http://data.europa.eu/s66#isNet
 eurio:isNet rdf:type owl:DatatypeProperty ;
             rdfs:domain eurio:MonetaryAmount ;
             rdfs:range xsd:boolean ;
@@ -1007,8 +693,6 @@ eurio:isNet rdf:type owl:DatatypeProperty ;
             rdfs:isDefinedBy eurio: ;
             rdfs:label "is net"@en .
 
-
-###  http://data.europa.eu/s66#isbn
 eurio:isbn rdf:type owl:DatatypeProperty ,
                     owl:FunctionalProperty ;
            rdfs:domain eurio:ProjectPublication ;
@@ -1017,8 +701,6 @@ eurio:isbn rdf:type owl:DatatypeProperty ,
            rdfs:isDefinedBy eurio: ;
            rdfs:label "isbn"@en .
 
-
-###  http://data.europa.eu/s66#issn
 eurio:issn rdf:type owl:DatatypeProperty ,
                     owl:FunctionalProperty ;
            rdfs:domain eurio:ProjectPublication ;
@@ -1027,8 +709,6 @@ eurio:issn rdf:type owl:DatatypeProperty ,
            rdfs:isDefinedBy eurio: ;
            rdfs:label "issn"@en .
 
-
-###  http://data.europa.eu/s66#journalNumber
 eurio:journalNumber rdf:type owl:DatatypeProperty ;
                     rdfs:domain eurio:ProjectPublication ;
                     rdfs:range rdfs:Literal ;
@@ -1036,8 +716,6 @@ eurio:journalNumber rdf:type owl:DatatypeProperty ;
                     rdfs:isDefinedBy eurio: ;
                     rdfs:label "journal number"@en .
 
-
-###  http://data.europa.eu/s66#journalTitle
 eurio:journalTitle rdf:type owl:DatatypeProperty ;
                    rdfs:domain eurio:ProjectPublication ;
                    rdfs:range xsd:string ;
@@ -1045,16 +723,12 @@ eurio:journalTitle rdf:type owl:DatatypeProperty ;
                    rdfs:isDefinedBy eurio: ;
                    rdfs:label "journal title"@en .
 
-
-###  http://data.europa.eu/s66#keyword
 eurio:keyword rdf:type owl:DatatypeProperty ;
               rdfs:range xsd:string ;
               rdfs:comment "Word or words that represent the main idea of a referred entity (e.g., project. project result, etc.)"@en ;
               rdfs:isDefinedBy eurio: ;
               rdfs:label "keyword"@en .
 
-
-###  http://data.europa.eu/s66#latitude
 eurio:latitude rdf:type owl:DatatypeProperty ;
                rdfs:domain eurio:Coordinates ;
                rdfs:range xsd:decimal ;
@@ -1062,8 +736,6 @@ eurio:latitude rdf:type owl:DatatypeProperty ;
                rdfs:isDefinedBy eurio: ;
                rdfs:label "latitude"@en .
 
-
-###  http://data.europa.eu/s66#legalName
 eurio:legalName rdf:type owl:DatatypeProperty ;
                 rdfs:domain eurio:Organisation ;
                 rdfs:range xsd:string ;
@@ -1071,8 +743,6 @@ eurio:legalName rdf:type owl:DatatypeProperty ;
                 rdfs:isDefinedBy eurio: ;
                 rdfs:label "legal name"@en .
 
-
-###  http://data.europa.eu/s66#longitude
 eurio:longitude rdf:type owl:DatatypeProperty ;
                 rdfs:domain eurio:Coordinates ;
                 rdfs:range xsd:decimal ;
@@ -1080,40 +750,16 @@ eurio:longitude rdf:type owl:DatatypeProperty ;
                 rdfs:isDefinedBy eurio: ;
                 rdfs:label "longitude"@en .
 
-
-###  http://data.europa.eu/s66#maxTrl
-#eurio:maxTrl rdf:type owl:DatatypeProperty ;
-#             rdfs:subPropertyOf eurio:trl ;
-#             rdfs:range xsd:nonNegativeInteger ;
-#             rdfs:comment "The maximum technological readiness level of a project."@en ;
-#             rdfs:isDefinedBy eurio: ;
-#             rdfs:label "max TRL"@en .
-
-
-###  http://data.europa.eu/s66#minTrl
-#eurio:minTrl rdf:type owl:DatatypeProperty ;
-#             rdfs:subPropertyOf eurio:trl ;
-#             rdfs:range xsd:nonNegativeInteger ;
-#             rdfs:comment "The minimum technological readiness level of a project."@en ;
-#             rdfs:isDefinedBy eurio: ;
-#             rdfs:label "min TRL"@en .
-
-
-###  http://data.europa.eu/s66#name
 eurio:name rdf:type owl:DatatypeProperty ;
            rdfs:range xsd:string ;
            rdfs:comment "The name of an entity"@en ;
            rdfs:isDefinedBy eurio: ;
            rdfs:label "name"@en .
 
-
-###  http://data.europa.eu/s66#order
 eurio:order rdf:type owl:DatatypeProperty ;
             rdfs:domain eurio:OrganisationRole ;
             rdfs:range xsd:nonNegativeInteger .
 
-
-###  http://data.europa.eu/s66#periodNumber
 eurio:periodNumber rdf:type owl:DatatypeProperty ;
                    rdfs:domain eurio:ProjectReportSummary ;
                    rdfs:range xsd:integer ;
@@ -1121,17 +767,6 @@ eurio:periodNumber rdf:type owl:DatatypeProperty ;
                    rdfs:isDefinedBy eurio: ;
                    rdfs:label "period number"@en .
 
-
-###  http://data.europa.eu/s66#personMonths
-#eurio:personMonths rdf:type owl:DatatypeProperty ;
-#                   rdfs:domain eurio:ProjectDivision ;
-#                   rdfs:range xsd:nonNegativeInteger ;
-#                   rdfs:comment "The effort needed to carry out work contained in the project division, estimated in person-months."@en ;
-#                   rdfs:isDefinedBy eurio: ;
-#                   rdfs:label "person months"@en .
-
-
-###  http://data.europa.eu/s66#postOfficeBoxNumber
 eurio:postOfficeBoxNumber rdf:type owl:DatatypeProperty ;
                           rdfs:domain eurio:PostalAddress ;
                           rdfs:range rdfs:Literal ;
@@ -1139,8 +774,6 @@ eurio:postOfficeBoxNumber rdf:type owl:DatatypeProperty ;
                           rdfs:isDefinedBy eurio: ;
                           rdfs:label "post office box number"@en .
 
-
-###  http://data.europa.eu/s66#postalCode
 eurio:postalCode rdf:type owl:DatatypeProperty ;
                  rdfs:domain eurio:PostalAddress ;
                  rdfs:range rdfs:Literal ;
@@ -1148,8 +781,6 @@ eurio:postalCode rdf:type owl:DatatypeProperty ;
                  rdfs:isDefinedBy eurio: ;
                  rdfs:label "postal code"@en .
 
-
-###  http://data.europa.eu/s66#projectStatus
 eurio:projectStatus rdf:type owl:DatatypeProperty ;
                     rdfs:domain eurio:Project ;
                     rdfs:range [ rdf:type  rdfs:Datatype ;
@@ -1158,8 +789,6 @@ eurio:projectStatus rdf:type owl:DatatypeProperty ;
                     rdfs:isDefinedBy eurio: ;
                     rdfs:label "project status"@en .
 
-
-###  http://data.europa.eu/s66#publishedPages
 eurio:publishedPages rdf:type owl:DatatypeProperty ;
                      rdfs:domain eurio:ProjectPublication ;
                      rdfs:range rdfs:Literal ;
@@ -1167,8 +796,6 @@ eurio:publishedPages rdf:type owl:DatatypeProperty ;
                      rdfs:isDefinedBy eurio: ;
                      rdfs:label "published pages"@en .
 
-
-###  http://data.europa.eu/s66#publishedYear
 eurio:publishedYear rdf:type owl:DatatypeProperty ;
                     rdfs:domain eurio:ProjectPublication ;
                     rdfs:range xsd:nonNegativeInteger ;
@@ -1176,8 +803,6 @@ eurio:publishedYear rdf:type owl:DatatypeProperty ;
                     rdfs:isDefinedBy eurio: ;
                     rdfs:label "published year"@en .
 
-
-###  http://data.europa.eu/s66#publisher
 eurio:publisher rdf:type owl:DatatypeProperty ;
                 rdfs:domain eurio:ProjectPublication ;
                 rdfs:range xsd:string ;
@@ -1185,8 +810,6 @@ eurio:publisher rdf:type owl:DatatypeProperty ;
                 rdfs:isDefinedBy eurio: ;
                 rdfs:label "publisher"@en .
 
-
-###  http://data.europa.eu/s66#rcn
 eurio:rcn rdf:type owl:DatatypeProperty ,
                    owl:FunctionalProperty ;
           rdfs:range xsd:nonNegativeInteger ;
@@ -1194,8 +817,6 @@ eurio:rcn rdf:type owl:DatatypeProperty ,
           rdfs:isDefinedBy eurio: ;
           rdfs:label "rcn"@en .
 
-
-###  http://data.europa.eu/s66#roleLabel
 eurio:roleLabel rdf:type owl:DatatypeProperty ;
                 rdfs:domain eurio:OrganisationRole ;
                 rdfs:range [ rdf:type  rdfs:Datatype ;
@@ -1205,8 +826,6 @@ eurio:roleLabel rdf:type owl:DatatypeProperty ;
                 rdfs:isDefinedBy eurio: ;
                 rdfs:label "role label"@en .
 
-
-###  http://data.europa.eu/s66#shortForm
 eurio:shortForm rdf:type owl:DatatypeProperty ;
                 rdfs:domain eurio:Acronym ;
                 rdfs:range xsd:string ;
@@ -1214,8 +833,6 @@ eurio:shortForm rdf:type owl:DatatypeProperty ;
                 rdfs:isDefinedBy eurio: ;
                 rdfs:label "short form"@en .
 
-
-###  http://data.europa.eu/s66#signatureDate
 eurio:signatureDate rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf eurio:date ;
                     rdfs:domain eurio:Project ;
@@ -1224,8 +841,6 @@ eurio:signatureDate rdf:type owl:DatatypeProperty ;
                     rdfs:isDefinedBy eurio: ;
                     rdfs:label "signature date"@en .
 
-
-###  http://data.europa.eu/s66#startDate
 eurio:startDate rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf eurio:date ;
                 rdfs:range xsd:date ;
@@ -1233,8 +848,6 @@ eurio:startDate rdf:type owl:DatatypeProperty ;
                 rdfs:isDefinedBy eurio: ;
                 rdfs:label "start date"@en .
 
-
-###  http://data.europa.eu/s66#streetAddress
 eurio:streetAddress rdf:type owl:DatatypeProperty ;
                     rdfs:domain eurio:PostalAddress ;
                     rdfs:range rdfs:Literal ;
@@ -1242,8 +855,6 @@ eurio:streetAddress rdf:type owl:DatatypeProperty ;
                     rdfs:isDefinedBy eurio: ;
                     rdfs:label "street address"@en .
 
-
-###  http://data.europa.eu/s66#telephoneNumber
 eurio:telephoneNumber rdf:type owl:DatatypeProperty ;
                       rdfs:domain eurio:ContactPoint ;
                       rdfs:range rdfs:Literal ;
@@ -1251,8 +862,6 @@ eurio:telephoneNumber rdf:type owl:DatatypeProperty ;
                       rdfs:isDefinedBy eurio: ;
                       rdfs:label "telephone number"@en .
 
-
-###  http://data.europa.eu/s66#terminationDate
 eurio:terminationDate rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf eurio:date ;
                       rdfs:range xsd:date ;
@@ -1260,75 +869,24 @@ eurio:terminationDate rdf:type owl:DatatypeProperty ;
                       rdfs:isDefinedBy eurio: ;
                       rdfs:label "termination date"@en .
 
-
-###  http://data.europa.eu/s66#title
 eurio:title rdf:type owl:DatatypeProperty ;
             rdfs:range rdfs:Literal ;
             rdfs:comment "The entity’s (e.g. project, work package, etc.) official name or title."@en ;
             rdfs:isDefinedBy eurio: ;
             rdfs:label "title"@en .
 
-
-###  http://data.europa.eu/s66#trl
-#eurio:trl rdf:type owl:DatatypeProperty ;
-#          rdfs:domain [ rdf:type owl:Class ;
-#                        owl:unionOf ( eurio:FundingScheme
-#                                      eurio:Project
-#                                    )
-#                      ] ;
-#          rdfs:range xsd:nonNegativeInteger ,
-#                     [ rdf:type rdfs:Datatype ;
-#                       owl:oneOf [ rdf:type rdf:List ;
-#                                   rdf:first 1 ;
-#                                   rdf:rest [ rdf:type rdf:List ;
-#                                              rdf:first 2 ;
-#                                              rdf:rest [ rdf:type rdf:List ;
-#                                                         rdf:first 3 ;
-#                                                         rdf:rest [ rdf:type rdf:List ;
-#                                                                    rdf:first 4 ;
-#                                                                    rdf:rest [ rdf:type rdf:List ;
-#                                                                               rdf:first 5 ;
-#                                                                               rdf:rest [ rdf:type rdf:List ;
-#                                                                                          rdf:first 6 ;
-#                                                                                          rdf:rest [ rdf:type rdf:List ;
-#                                                                                                     rdf:first 7 ;
-#                                                                                                     rdf:rest [ rdf:type rdf:List ;
-#                                                                                                                rdf:first 8 ;
-#                                                                                                                rdf:rest [ rdf:type rdf:List ;
-#                                                                                                                           rdf:first 9 ;
-#                                                                                                                           rdf:rest rdf:nil
-#                                                                                                                         ]
-#                                                                                                              ]
-#                                                                                                   ]
-#                                                                                        ]
-#                                                                             ]
-#                                                                  ]
-#                                                       ]
-#                                            ]
-#                                 ]
-#                     ] ;
-#          rdfs:comment "The technological readiness level associated with a funding scheme or a project."@en ;
-#          rdfs:isDefinedBy eurio: ;
-#          rdfs:label "TRL"@en .
-
-
-###  http://data.europa.eu/s66#url
 eurio:url rdf:type owl:DatatypeProperty ;
           rdfs:range xsd:anyURI ;
           rdfs:comment "A URL that links internet resources related to a CORDIS entity."@en ;
           rdfs:isDefinedBy eurio: ;
           rdfs:label "URL"@en .
 
-
-###  http://data.europa.eu/s66#value
 eurio:value rdf:type owl:DatatypeProperty ;
             rdfs:range xsd:decimal ;
             rdfs:comment "The value of amount being expressed."@en ;
             rdfs:isDefinedBy eurio: ;
             rdfs:label "value"@en .
 
-
-###  http://data.europa.eu/s66#vatNumber
 eurio:vatNumber rdf:type owl:DatatypeProperty ;
                 rdfs:domain eurio:Organisation ;
                 rdfs:range xsd:string ;
@@ -1336,8 +894,6 @@ eurio:vatNumber rdf:type owl:DatatypeProperty ;
                 rdfs:isDefinedBy eurio: ;
                 rdfs:label "VAT number"@en .
 
-
-###  http://data.europa.eu/s66#workPerformed
 eurio:workPerformed rdf:type owl:DatatypeProperty ;
                     rdfs:domain eurio:ProjectReportSummary ;
                     rdfs:range xsd:string ;
@@ -1345,12 +901,10 @@ eurio:workPerformed rdf:type owl:DatatypeProperty ;
                     rdfs:isDefinedBy eurio: ;
                     rdfs:label "work performed"@en .
 
-
 #################################################################
 #    Classes
 #################################################################
 
-###  http://data.europa.eu/s66#Acronym
 eurio:Acronym rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty eurio:definition ;
@@ -1364,8 +918,6 @@ eurio:Acronym rdf:type owl:Class ;
               rdfs:isDefinedBy eurio: ;
               rdfs:label "Acronym"@en .
 
-
-###  http://data.europa.eu/s66#AdministrativeArea
 eurio:AdministrativeArea rdf:type owl:Class ;
                          rdfs:subClassOf [ rdf:type owl:Restriction ;
                                            owl:onProperty eurio:name ;
@@ -1377,8 +929,6 @@ eurio:AdministrativeArea rdf:type owl:Class ;
                          skos:broadMatch <http://data.europa.eu/m8g/AdminUnit> ,
                          <http://schema.org/AdministrativeArea> .
 
-
-###  http://data.europa.eu/s66#Book
 eurio:Book rdf:type owl:Class ;
            rdfs:subClassOf eurio:ProjectPublication ;
            rdfs:comment "A non-serial document that is complete in one volume or a designated finite number of volumes. A book published by a publisher is usually identified by an International Standard Book Number (ISBN), and may be manifested as a physical printed publication on paper bound in a hard or soft cover, or in electronic format as an 'e-book'."@en ;
@@ -1386,8 +936,6 @@ eurio:Book rdf:type owl:Class ;
            rdfs:label "Book"@en ;
            skos:broadMatch <http://purl.org/spar/fabio/Book> .
 
-
-###  http://data.europa.eu/s66#BookChapter
 eurio:BookChapter rdf:type owl:Class ;
                   rdfs:subClassOf eurio:ProjectPublication ;
                   rdfs:comment "A defined chapter of a book, usually with a separate title or number."@en ;
@@ -1395,8 +943,6 @@ eurio:BookChapter rdf:type owl:Class ;
                   rdfs:label "Book Chapter"@en ;
                   skos:broadMatch <http://purl.org/spar/fabio/BookChapter> .
 
-
-###  http://data.europa.eu/s66#ConferencePaper
 eurio:ConferencePaper rdf:type owl:Class ;
                       rdfs:subClassOf eurio:ProjectPublication ;
                       rdfs:comment "A paper, typically the realization of a research paper reporting original research findings, usually published within a conference proceedings volume."@en ;
@@ -1404,8 +950,6 @@ eurio:ConferencePaper rdf:type owl:Class ;
                       rdfs:label "Conference Paper"@en ;
                       skos:broadMatch <http://purl.org/spar/fabio/ConferencePaper> .
 
-
-###  http://data.europa.eu/s66#ContactPoint
 eurio:ContactPoint rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
                                      owl:onProperty eurio:faxNumber ;
@@ -1419,8 +963,6 @@ eurio:ContactPoint rdf:type owl:Class ;
                    rdfs:isDefinedBy eurio: ;
                    rdfs:label "Contact Point"@en .
 
-
-###  http://data.europa.eu/s66#Coordinates
 eurio:Coordinates rdf:type owl:Class ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
                                     owl:onProperty eurio:latitude ;
@@ -1436,8 +978,6 @@ eurio:Coordinates rdf:type owl:Class ;
                   skos:broadMatch <http://www.w3.org/ns/locn#Geometry> ;
                   skos:closeMatch schema:GeoCoordinates .
 
-
-###  http://data.europa.eu/s66#Country
 eurio:Country rdf:type owl:Class ;
               rdfs:subClassOf eurio:AdministrativeArea ,
               [ rdf:type owl:Restriction ;
@@ -1449,8 +989,6 @@ eurio:Country rdf:type owl:Class ;
               rdfs:label "Country"@en ;
               skos:broadMatch schema:Country .
 
-
-###  http://data.europa.eu/s66#DetectedAcronym
 eurio:DetectedAcronym rdf:type owl:Class ;
                       rdfs:subClassOf eurio:Acronym ;
                       owl:disjointWith eurio:TitleAcronym ;
@@ -1458,32 +996,6 @@ eurio:DetectedAcronym rdf:type owl:Class ;
                       rdfs:isDefinedBy eurio: ;
                       rdfs:label "Detected Acronym"@en .
 
-
-###  http://data.europa.eu/s66#Event
-#eurio:Event rdf:type owl:Class ;
-#            rdfs:subClassOf [ rdf:type owl:Restriction ;
-#                              owl:onProperty eurio:title ;
-#                              owl:allValuesFrom xsd:string
-#                            ] ,
-#                            [ rdf:type owl:Restriction ;
-#                              owl:onProperty eurio:title ;
-#                              owl:cardinality 1
-#                            ] ,
-#                            [ rdf:type owl:Restriction ;
-#                              owl:onProperty eurio:endDate ;
-#                              owl:cardinality 1
-#                            ] ,
-#                            [ rdf:type owl:Restriction ;
-#                              owl:onProperty eurio:startDate ;
-#                              owl:cardinality 1
-#                            ] ;
-#            rdfs:comment "An event happening at a certain time and location, such as a meeting, lecture, or conference. In CORDIS, it represents the events are organized as part of or are related to research projects."@en ;
-#            rdfs:isDefinedBy eurio: ;
-#            rdfs:label "Event"@en ;
-#            skos:broadMatch schema:Event .
-
-
-###  http://data.europa.eu/s66#ExploitableResult
 eurio:ExploitableResult rdf:type owl:Class ;
                         rdfs:subClassOf eurio:Result ;
                         rdfs:comment "An exploitable project result, e.g., a patent."@en ;
@@ -1491,8 +1003,6 @@ eurio:ExploitableResult rdf:type owl:Class ;
                         rdfs:label "Exploitable Result"@en ;
                         skos:broadMatch <http://purl.org/spar/fabio/PatentDocument> .
 
-
-###  http://data.europa.eu/s66#ForProfitOrganisation
 eurio:ForProfitOrganisation rdf:type owl:Class ;
                             rdfs:subClassOf eurio:Organisation ;
                             rdfs:comment "A for profit entity"@en ;
@@ -1500,8 +1010,6 @@ eurio:ForProfitOrganisation rdf:type owl:Class ;
                             rdfs:label "For Profit Organisation"@en ;
                             skos:broadMatch dg:ForProfitOrganisation .
 
-
-###  http://data.europa.eu/s66#FundingAgency
 eurio:FundingAgency rdf:type owl:Class ;
                     rdfs:subClassOf eurio:Organisation ;
                     rdfs:comment "An organisation that materially administrates funding schemes and disburses related grants. In the context of CORDIS, it represents the various European agencies responsible for funding research projects (e.g. ERC, EASME, REA, etc.)."@en ;
@@ -1509,8 +1017,6 @@ eurio:FundingAgency rdf:type owl:Class ;
                     rdfs:label "Funding Agency"@en ;
                     skos:broadMatch dg:FundingAgency .
 
-
-###  http://data.europa.eu/s66#FundingScheme
 eurio:FundingScheme rdf:type owl:Class ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                       owl:onProperty eurio:hasFundingSchemeCategory ;
@@ -1541,8 +1047,6 @@ eurio:FundingScheme rdf:type owl:Class ;
                     rdfs:label "Funding Scheme"@en ;
                     skos:broadMatch dg:FundingScheme .
 
-
-###  http://data.europa.eu/s66#Grant
 eurio:Grant rdf:type owl:Class ;
             rdfs:subClassOf [ rdf:type owl:Restriction ;
                               owl:onProperty eurio:funds ;
@@ -1589,8 +1093,6 @@ eurio:Grant rdf:type owl:Class ;
             rdfs:label "Grant"@en ;
             skos:broadMatch dg:Grant .
 
-
-###  http://data.europa.eu/s66#GrantPayment
 eurio:GrantPayment rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
                                      owl:onProperty eurio:hasPaymentAmount ;
@@ -1601,8 +1103,6 @@ eurio:GrantPayment rdf:type owl:Class ;
                    rdfs:label "Grant Payment"@en ;
                    skos:broadMatch dg:GrantPayment .
 
-
-###  http://data.europa.eu/s66#HigherOrSecondaryEducation
 eurio:HigherOrSecondaryEducation rdf:type owl:Class ;
                                  rdfs:subClassOf eurio:Organisation ;
                                  rdfs:comment "Institution that provides education."@en ;
@@ -1610,8 +1110,6 @@ eurio:HigherOrSecondaryEducation rdf:type owl:Class ;
                                  rdfs:label "Higher Or Secondary Education"@en ;
                                  skos:broadMatch schema:EducationalOrganization, dg:EducationOrganisation  .
 
-
-###  http://data.europa.eu/s66#JournalPaper
 eurio:JournalPaper rdf:type owl:Class ;
                    rdfs:subClassOf eurio:ProjectPublication ;
                    rdfs:comment "An article, typically the realization of a research paper reporting original research findings, published in a journal issue."@en ;
@@ -1619,8 +1117,6 @@ eurio:JournalPaper rdf:type owl:Class ;
                    rdfs:label "Journal Paper"@en ;
                    skos:broadMatch <http://purl.org/spar/fabio/JournalArticle> .
 
-
-###  http://data.europa.eu/s66#MonetaryAmount
 eurio:MonetaryAmount rdf:type owl:Class ;
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                        owl:onProperty eurio:isNet ;
@@ -1635,16 +1131,12 @@ eurio:MonetaryAmount rdf:type owl:Class ;
                      rdfs:label "Monetary Amount"@en ;
                      skos:broadMatch schema:MonetaryAmount .
 
-
-###  http://data.europa.eu/s66#NonPeerReviewedPublication
 eurio:NonPeerReviewedPublication rdf:type owl:Class ;
                                  rdfs:subClassOf eurio:ProjectPublication ;
                                  rdfs:comment "A work that hasn't undergone peer reviewing prior to its publication."@en ;
                                  rdfs:isDefinedBy eurio: ;
                                  rdfs:label "Non Peer-Reviewed Publication"@en .
 
-
-###  http://data.europa.eu/s66#Organisation
 eurio:Organisation rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
                                      owl:onProperty eurio:hasRole ;
@@ -1681,8 +1173,6 @@ eurio:Organisation rdf:type owl:Class ;
                    skos:broadMatch org:Organization ,
                    dg:Organisation .
 
-
-###  http://data.europa.eu/s66#OrganisationRole
 eurio:OrganisationRole rdf:type owl:Class ;
                        rdfs:subClassOf eurio:Role ,
                        [ rdf:type owl:Restriction ;
@@ -1699,16 +1189,12 @@ eurio:OrganisationRole rdf:type owl:Class ;
                        rdfs:label "Organisation Role"@en ;
                        skos:broadMatch dg:OrganisationRole .
 
-
-###  http://data.europa.eu/s66#OrganisationUnit
 eurio:OrganisationUnit rdf:type owl:Class ;
                        rdfs:comment "A department or unit which is part of some larger Organization and only has full recognition within the context of that Organization. In CORDIS, it represents for instance the different departments of a university that participate in a particular project."@en ;
                        rdfs:isDefinedBy eurio: ;
                        rdfs:label "Organisation Unit"@en ;
                        skos:broadMatch org:OrganizationalUnit .
 
-
-###  http://data.europa.eu/s66#Person
 eurio:Person rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                owl:onProperty eurio:hasRole ;
@@ -1734,8 +1220,6 @@ eurio:Person rdf:type owl:Class ;
              dg:Person ;
              skos:closeMatch <http://www.w3.org/ns/person#Person> .
 
-
-###  http://data.europa.eu/s66#PersonRole
 eurio:PersonRole rdf:type owl:Class ;
                  rdfs:subClassOf eurio:Role ,
                  [ rdf:type owl:Restriction ;
@@ -1755,8 +1239,6 @@ eurio:PersonRole rdf:type owl:Class ;
                  rdfs:label "Person Role"@en ;
                  skos:broadMatch dg:PersonRole .
 
-
-###  http://data.europa.eu/s66#PostalAddress
 eurio:PostalAddress rdf:type owl:Class ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                       owl:onProperty eurio:addressCountry ;
@@ -1796,8 +1278,6 @@ eurio:PostalAddress rdf:type owl:Class ;
                     skos:broadMatch schema:PostalAddress ,
                     <http://www.w3.org/ns/locn#Address> .
 
-
-###  http://data.europa.eu/s66#Project
 eurio:Project rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty eurio:hasInvolvedParty ;
@@ -1861,8 +1341,6 @@ eurio:Project rdf:type owl:Class ;
               rdfs:label "Project"@en ;
               skos:broadMatch dg:Project .
 
-
-###  http://data.europa.eu/s66#ProjectDeliverable
 eurio:ProjectDeliverable rdf:type owl:Class ;
                          rdfs:subClassOf eurio:Result ,
                          [ rdf:type owl:Restriction ;
@@ -1878,39 +1356,6 @@ eurio:ProjectDeliverable rdf:type owl:Class ;
                          rdfs:label "Project Deliverable"@en ;
                          skos:broadMatch <http://purl.org/spar/fabio/ProjectReportDocument> .
 
-
-###  http://data.europa.eu/s66#ProjectDivision
-#eurio:ProjectDivision rdf:type owl:Class ;
-#                      rdfs:subClassOf [ rdf:type owl:Restriction ;
-#                                        owl:onProperty eurio:personMonths ;
-#                                        owl:cardinality 1
-#                                      ] ,
-#                                      [ rdf:type owl:Restriction ;
-#                                        owl:onProperty eurio:description ;
-#                                        owl:cardinality 1
-#                                      ] ,
-#                                      [ rdf:type owl:Restriction ;
-#                                        owl:onProperty eurio:endDate ;
-#                                        owl:cardinality 1
-#                                      ] ,
-#                                      [ rdf:type owl:Restriction ;
-#                                        owl:onProperty eurio:startDate ;
-#                                        owl:cardinality 1
-#                                      ] ,
-#                                      [ rdf:type owl:Restriction ;
-#                                        owl:onProperty eurio:title ;
-#                                        owl:allValuesFrom xsd:string
-#                                      ] ,
-#                                      [ rdf:type owl:Restriction ;
-#                                        owl:onProperty eurio:title ;
-#                                        owl:cardinality 1
-#                                      ] ;
-#                      rdfs:comment "An abstract entity that represents a part of the work and activities that need to be carried out within a project. This entity can be specialized through different sub-entities to represent the different types of project divisions."@en ;
-#                      rdfs:isDefinedBy eurio: ;
-#                      rdfs:label "Project Division"@en .
-
-
-###  http://data.europa.eu/s66#ProjectPublication
 eurio:ProjectPublication rdf:type owl:Class ;
                          rdfs:subClassOf eurio:Result ,
                          [ rdf:type owl:Restriction ;
@@ -1950,8 +1395,6 @@ eurio:ProjectPublication rdf:type owl:Class ;
                          rdfs:label "Project Publication"@en ;
                          skos:broadMatch <http://purl.org/spar/fabio/Expression>.
 
-
-###  http://data.europa.eu/s66#ProjectReportSummary
 eurio:ProjectReportSummary rdf:type owl:Class ;
                            rdfs:subClassOf eurio:Result ,
                            [ rdf:type owl:Restriction ;
@@ -1979,8 +1422,6 @@ eurio:ProjectReportSummary rdf:type owl:Class ;
                            rdfs:label "Project Report Summary"@en ;
                            skos:broadMatch <http://purl.org/spar/fabio/ProjectReportSummary> .
 
-
-###  http://data.europa.eu/s66#PublicBody
 eurio:PublicBody rdf:type owl:Class ;
                  rdfs:subClassOf eurio:Organisation ;
                  rdfs:comment "Organisation or agency depending on a government, State or other supranational organisation and mainly operated by the government."@en ;
@@ -1989,8 +1430,6 @@ eurio:PublicBody rdf:type owl:Class ;
                  skos:closeMatch frapo:NotForProfitOrganization ,
                  dg:GovernamentalOrganisation .
 
-
-###  http://data.europa.eu/s66#ResearchOrganisation
 eurio:ResearchOrganisation rdf:type owl:Class ;
                            rdfs:subClassOf eurio:Organisation ;
                            rdfs:comment "Organisations devoted to research activities."@en ;
@@ -1998,8 +1437,6 @@ eurio:ResearchOrganisation rdf:type owl:Class ;
                            rdfs:label "Research Organisation"@en ;
                            skos:broadMatch dg:ResearchPerformingOrganisation .
 
-
-###  http://data.europa.eu/s66#Result
 eurio:Result rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                owl:onProperty eurio:url ;
@@ -2017,8 +1454,6 @@ eurio:Result rdf:type owl:Class ;
              rdfs:isDefinedBy eurio: ;
              rdfs:label "Result"@en .
 
-
-###  http://data.europa.eu/s66#Role
 eurio:Role rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty eurio:isInvolvedIn ;
@@ -2041,8 +1476,6 @@ eurio:Role rdf:type owl:Class ;
            rdfs:label "Role"@en ;
            skos:broadMatch dg:Role .
 
-
-###  http://data.europa.eu/s66#SME
 eurio:SME rdf:type owl:Class ;
           rdfs:subClassOf eurio:Organisation ;
           rdfs:comment "Small and Medium Enterprises."@en ;
@@ -2050,8 +1483,6 @@ eurio:SME rdf:type owl:Class ;
           rdfs:label "SME"@en ;
           skos:broadMatch frapo:SME .
 
-
-###  http://data.europa.eu/s66#Site
 eurio:Site rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty eurio:hasGeographicalLocation ;
@@ -2078,18 +1509,6 @@ eurio:Site rdf:type owl:Class ;
            rdfs:label "Site"@en ;
            skos:broadMatch org:Site .
 
-
-###  http://data.europa.eu/s66#Task
-#eurio:Task rdf:type owl:Class ;
-#           rdfs:subClassOf eurio:ProjectDivision ;
-#           owl:disjointWith eurio:WorkPackage ;
-#           rdfs:comment "A sub-division of a Work Package. Different tasks can proceed in parallel, within a work package, and cover one or more reporting periods of the project. A task must start and end with the time range of its parent Work Package."@en ;
-#           rdfs:isDefinedBy eurio: ;
-#           rdfs:label "Task"@en ;
-#           skos:broadMatch oegp:Task .
-
-
-###  http://data.europa.eu/s66#ThesisDissertation
 eurio:ThesisDissertation rdf:type owl:Class ;
                          rdfs:subClassOf eurio:ProjectPublication ;
                          rdfs:comment "A book authored by a student containing a formal presentations of research outputs submitted for examination in completion of a course of study at an institution of higher education, to fulfil the requirements for an academic degree. Also know as a dissertation."@en ;
@@ -2097,29 +1516,12 @@ eurio:ThesisDissertation rdf:type owl:Class ;
                          rdfs:label "Thesis"@en ;
                          skos:broadMatch <http://purl.org/spar/fabio/Thesis> .
 
-
-###  http://data.europa.eu/s66#TitleAcronym
 eurio:TitleAcronym rdf:type owl:Class ;
                    rdfs:subClassOf eurio:Acronym ;
                    rdfs:comment "An acronym explicitly defined as the title or name of another entity (e.g. Project, Organisation, Funding Scheme, etc.)."@en ;
                    rdfs:isDefinedBy eurio: ;
                    rdfs:label "Title Acronym"@en .
 
-
-###  http://data.europa.eu/s66#WorkPackage
-#eurio:WorkPackage rdf:type owl:Class ;
-#                  rdfs:subClassOf eurio:ProjectDivision ,
-#                                  [ rdf:type owl:Restriction ;
-#                                    owl:onProperty eurio:hasTask ;
-#                                    owl:minCardinality 1
-#                                  ] ;
-#                  rdfs:comment "A major subdivision of a project which leads to the completion of one of the goals, objectives or major deliverables within the project. Different work packages can proceed in parallel within a project."@en ;
-#                  rdfs:isDefinedBy eurio: ;
-#                  rdfs:label "Work Package"@en ;
-#                  skos:broadMatch oegp:WorkPackage .
-
-
-###  http://data.europa.eu/s66#WorkshopPaper
 eurio:WorkshopPaper rdf:type owl:Class ;
                     rdfs:subClassOf eurio:ProjectPublication ;
                     rdfs:comment "A paper, typically the realization of a research paper reporting original research findings, usually presented at a workshop and published within a workshop proceedings volume."@en ;
@@ -2127,8 +1529,6 @@ eurio:WorkshopPaper rdf:type owl:Class ;
                     rdfs:label "Workshop Paper"@en ;
                     skos:broadMatch <http://purl.org/spar/fabio/WorkshopPaper> .
 
-
-###  http://www.w3.org/2004/02/skos/core#Concept
 skos:Concept rdf:type owl:Class .
 
 
@@ -2176,6 +1576,3 @@ dg:EducationOrganisation skos:broadMatch schema:EducationalOrganization .
                 eurio:SME
               )
 ] .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
