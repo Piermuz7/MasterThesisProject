@@ -1,19 +1,26 @@
+import asyncio
+
 import streamlit as st
-from rag.agent import generate_response
+
+from rag.agent_workflow import execute_agent_workflow
 from rag.utils import write_message
 
 # page config
-st.set_page_config("Ebert", page_icon=":movie_camera:")
+st.set_page_config("EuroCollaBot", page_icon=":movie_camera:")
 
 # set up session state
 if "messages" not in st.session_state:
     st.session_state.messages = [
-        {"role": "assistant", "content": "Hi, I'm the GraphAcademy Chatbot!  How can I help you?"},
+        {"role": "assistant", "content": "Hi, I'm the EuroCollaBot!  How can I help you?"},
     ]
 
+# def handle_submit(message):
+#     with st.spinner('Thinking...'):
+#         response = generate_response(message)
+#         write_message('assistant', response)
 def handle_submit(message):
     with st.spinner('Thinking...'):
-        response = generate_response(message)
+        response = asyncio.run(execute_agent_workflow(message))
         write_message('assistant', response)
 
 # display messages in session state

@@ -8,6 +8,6 @@ class LlamaLLM(OllamaLLM, BaseLanguageModel):
     def __init__(self):
         super().__init__(
             temperature=0,
-            model="llama3.1",
+            model="llama3:8b",
             base_url="http://localhost:11434"
         )

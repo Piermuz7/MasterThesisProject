@@ -9,5 +9,6 @@ class ClaudeLLM(ChatAnthropic, BaseLanguageModel):
         super().__init__(
             temperature=0,
             anthropic_api_key=api_key,
-            model="claude-3-5-sonnet-20240620"
+            model="claude-3-5-sonnet-20241022",
+            max_tokens=1024,
         )
