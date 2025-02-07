@@ -3,12 +3,11 @@ from langchain_core.language_models import BaseLanguageModel
 
 
 class ClaudeLLM(ChatAnthropic, BaseLanguageModel):
-    """Claude LLM implementation that extends LangChain's BaseLanguageModel."""
-
+    """Claude LLM implementation that extends LlamaIndex's FunctionCallingLLM."""
     def __init__(self, api_key: str):
         super().__init__(
             temperature=0,
             anthropic_api_key=api_key,
             model="claude-3-5-sonnet-20241022",
-            max_tokens=1024,
+            max_tokens=8192,
         )

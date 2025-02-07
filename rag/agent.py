@@ -2,9 +2,9 @@ from langchain.tools import Tool
 from langchain.agents import AgentExecutor, create_react_agent
 from langchain.prompts import PromptTemplate
 
-from rag.graph import graph
+from rag.graph import graph_db
 
-from rag.tools import participant_information, project_information
+from rag.tools.sparql import project_information, participant_information
 from rag import llm
 
 """
@@ -85,7 +85,7 @@ def generate_response(prompt):
     """
     try:
         response = agent_executor.invoke({
-            "schema": graph.schema,
+            "schema": graph_db.schema,
             "input": prompt
         })
         return response['output']['result']

@@ -1,15 +1,13 @@
-from typing import Any, Coroutine
-
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 from llama_index.core.agent.workflow import FunctionAgent
 from pymongo import MongoClient
 
-from rag.embeddings.embedding_store import EmbeddingStore
+from rag.embeddings.mongo_db_embedding_store import EmbeddingStore
 
 import streamlit as st
 
-from rag.llm import llama_index_llm
+from rag.llm import get_llama_indexllm
 from rag.tools.search_web import search_web
 
 embedding_store = EmbeddingStore()
@@ -104,7 +102,7 @@ potential_collaborators_agent = FunctionAgent(
         Avoid to thank for the given input, mention your knowledge source or provide any unnecessary information.
         """
     ),
-    llm=llama_index_llm,
+    llm=get_llama_indexllm(),
     tools=[get_similar_projects, get_collaborators_of_similar_projects, search_web],
     can_handoff_to=[],
 )

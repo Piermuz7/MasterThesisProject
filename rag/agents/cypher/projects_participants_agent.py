@@ -1,8 +1,8 @@
 from llama_index.core.agent.workflow import FunctionAgent
 
-from rag.llm import llama_index_llm
-from rag.tools.participant_information import get_participant_information
-from rag.tools.project_information import get_project_info
+from rag.llm import get_llama_indexllm
+from rag.tools.cypher.participant_information import get_participant_information
+from rag.tools.cypher.project_information import get_project_info
 
 projects_participants_agent = FunctionAgent(
     name="EuropeanProjectsExpertAgent",
@@ -15,13 +15,17 @@ projects_participants_agent = FunctionAgent(
 
         Do not answer any questions using your pre-trained knowledge, only use the information provided in the context.
 
-        Use the get_participant_information tool to get information about a participant.
+        Use the following tools:
 
-        Use the get_project_info tool to get information about a project. 
+        **get_participant_information** tool to get information about a participant. 
+
+        **get_project_info** tool to get information about a project. 
+        
+        If you use both the tools, merge the answers and combine them in a final professional answer.
 
         """
     ),
-    llm=llama_index_llm,
+    llm=get_llama_indexllm(),
     tools=[get_project_info, get_participant_information],
     can_handoff_to=["PotentialCollaboratorsAgent"],
 )

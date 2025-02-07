@@ -2,7 +2,7 @@ from langchain_community.chains.graph_qa.ontotext_graphdb import OntotextGraphDB
 from langchain_core.prompts import PromptTemplate
 
 from rag import llm
-from rag.graph import graph
+from rag.graph import graph_db
 
 examples = [
     {
@@ -91,18 +91,6 @@ The question delimited by triple backticks is:
 ```
 """
 
-GRAPHDB_QA_TEMPLATE = """Task: Generate a natural language response from the results of a SPARQL query.
-You are an assistant that creates well-written and human understandable answers.
-The information part contains the information provided, which you can use to construct an answer.
-The information provided is authoritative, you must never doubt it or try to use your internal knowledge to correct it.
-Make your response sound like the information is coming from an AI assistant, but don't add any information.
-Don't use internal knowledge to answer the question, just say you don't know if no information is available.
-Information:
-{context}
-
-Question: {prompt}
-Helpful Answer:"""
-
 GRAPHDB_SPARQL_GENERATION_TEMPLATE = prompt_part1 + formatted_examples + prompt_part2
 
 GRAPHDB_SPARQL_GENERATION_PROMPT = PromptTemplate(
@@ -111,10 +99,9 @@ GRAPHDB_SPARQL_GENERATION_PROMPT = PromptTemplate(
 )
 
 sparql_qa = OntotextGraphDBQAChain.from_llm(
-    llm.get_llm(),
-    graph=graph,
+    llm=llm.get_langchain_llm(),
+    graph=graph_db,
     sparql_generation_prompt=GRAPHDB_SPARQL_GENERATION_PROMPT,
-    qa_template=GRAPHDB_QA_TEMPLATE,
     allow_dangerous_requests=True,
     verbose=True
 )
