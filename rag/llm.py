@@ -1,4 +1,4 @@
-from langchain_core.language_models import BaseLanguageModel
+from langchain_core.language_models import BaseChatModel
 from llama_index.core.llms.function_calling import FunctionCallingLLM
 import toml
 
@@ -18,9 +18,9 @@ llm_type = config["llm"]["PROVIDER"]
 api_key = config["api_key"]["ANTHROPIC_KEY"]
 
 
-def get_langchain_llm() -> BaseLanguageModel:
+def get_langchain_llm() -> BaseChatModel:
     return LLMFactoryLC.get_llm(llm_type, api_key)
 
 
-def get_llama_indexllm() -> FunctionCallingLLM:
+def get_llama_index_llm() -> FunctionCallingLLM:
     return LLMFactoryLI.get_llm(llm_type, api_key)

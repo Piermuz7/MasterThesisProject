@@ -1,20 +1,16 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
+from langchain_community.vectorstores import Neo4jVector
 
 from llama_index.core.agent.workflow import FunctionAgent
-from pymongo import MongoClient
 
-from rag.embeddings.mongo_db_embedding_store import EmbeddingStore
+from rag.embeddings.neo4j_embedding_service import get_embedder
 
 import streamlit as st
 
-from rag.llm import get_llama_indexllm
+from rag.llm import get_llama_index_llm
 from rag.tools.search_web import search_web
 
-embedding_store = EmbeddingStore()
-
-mongo_client = MongoClient(st.secrets["MONGO_URI"])
-db = mongo_client[st.secrets["DB_NAME"]]
-collection = db[st.secrets["COLLECTION_NAME"]]
+embedder = get_embedder()
 
 
 async def get_collaborators_of_similar_projects(project_IRIs) -> any:
@@ -64,17 +60,20 @@ async def get_collaborators_of_similar_projects(project_IRIs) -> any:
     return results
 
 
-async def get_similar_projects(user_question: str) -> list[str]:
+async def get_similar_projects(project_description: str):
     "Finds similar project to a given project description"
-    project_IRIs_by_similarity = embedding_store.find_similar_entities(
-        query_text=f"A project with abstract similar to: {user_question}.",
-        property_name="abstract",
-        k=3
+    db = Neo4jVector.from_existing_graph(
+        embedder,
+        url=st.secrets["NEO4J_URI"],
+        username=st.secrets["NEO4J_USERNAME"],
+        password=st.secrets["NEO4J_PASSWORD"],
+        index_name="abstractIndex",
+        node_label="ns3__Project",
+        text_node_properties=["ns3__abstract"],
+        embedding_node_property="abstractEmbedding",
     )
 
-    project_IRIs = [iri for iri, _ in project_IRIs_by_similarity]
-
-    return project_IRIs
+    return db.similarity_search_with_relevance_scores(project_description, k=3)
 
 
 potential_collaborators_agent = FunctionAgent(
@@ -89,9 +88,22 @@ potential_collaborators_agent = FunctionAgent(
         
         You need to find similar projects based on the project description. Then, you need to find the collaborators for each of the similar projects.
         
-        First of all use the get_similar_projects tool to find similar projects based on the project description. This tool will return a list of project IRIs.
+        First of all use the get_similar_projects tool to find similar projects that have their abstracts similar to the given project description.
         
-        Once you have the project IRIs, use the get_collaborators_of_similar_projects tool to find the collaborators for each of the similar projects.
+        Once you have found the similar projects, run the following Cypher query to find the collaborators for each of the similar projects:
+    
+        MATCH (project:ns3__Project {title: 'PROJECT_TITLE'})
+        MATCH (project)-[:ns3__hasInvolvedParty]->(org_role:ns3__OrganisationRole)
+        MATCH (project)-[:ns3__hasInvolvedParty]->(per_role:ns3__PersonRole)
+        MATCH (org_role)-[:ns3__isRoleOf]->(org:ns3__Organisation)
+        MATCH (per_role)-[:ns3__isRoleOf]->(per:ns3__Person)
+        MATCH (per_role)-[:ns3__isInvolvedIn]->(project)
+        MATCH (per_role)-[:ns3__isEmployedBy]->(org)
+        
+        RETURN DISTINCT 
+            per.rdfs__label AS person_full_name,
+            org.rdfs__label AS organisation,
+            project.ns3__title AS project_title;
         
         Finally, provide a list of potential collaborators for the given project description.
         Explain why you think these collaborators are relevant, highlighting that they have worked on similar found projects.
@@ -102,7 +114,9 @@ potential_collaborators_agent = FunctionAgent(
         Avoid to thank for the given input, mention your knowledge source or provide any unnecessary information.
         """
     ),
-    llm=get_llama_indexllm(),
-    tools=[get_similar_projects, get_collaborators_of_similar_projects, search_web],
+    llm=get_llama_index_llm(),
+    tools=[get_similar_projects, search_web],
     can_handoff_to=[],
 )
+
+# TODO: fare un ttool che prende i titoli dei progetti e poi runna la query per trovare i collaboratori

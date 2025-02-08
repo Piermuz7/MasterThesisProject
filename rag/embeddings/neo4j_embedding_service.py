@@ -5,6 +5,8 @@ from langchain_community.vectorstores import Neo4jVector
 
 embedder = OllamaEmbeddings(model="all-minilm:l6-v2")
 
+def get_embedder():
+    return embedder
 
 
 def update_vector_indexes():

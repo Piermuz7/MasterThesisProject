@@ -27,8 +27,10 @@ if len(sys.argv) != 4:
     def handle_submit(message):
         with st.spinner('Thinking...'):
             if query_language == 'sparql':
+                print('Executing SPARQL agent workflow')
                 response = asyncio.run(execute_sparql_agent_workflow(message))
             else:
+                print('Executing Cypher agent workflow')
                 response = asyncio.run(execute_cypher_agent_workflow(message))
             write_message('assistant', response)
 

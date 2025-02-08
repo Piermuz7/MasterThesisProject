@@ -1,88 +1,67 @@
+from langchain_anthropic import ChatAnthropic
 from langchain_neo4j import GraphCypherQAChain
-from langchain_core.prompts import PromptTemplate
+from langchain_core.prompts.prompt import PromptTemplate
 
 from rag import llm
 from rag.graph import neo4j_graph
 
-examples = [
-    {
-        "question": "List the person name and organisation of the person who is involved in the project named 'Topology driven methods for complex systems':",
-        "query": """
-                    MATCH (project:ns3__Project {{ns3__title: 'Topology driven methods for complex systems'}})
-                    MATCH (project)-[:ns3__hasInvolvedParty]->(org_role:ns3__OrganisationRole)
-                    MATCH (project)-[:ns3__hasInvolvedParty]->(per_role:ns3__PersonRole)
-                    MATCH (org_role)-[:ns3__isRoleOf]->(org:ns3__Organisation)
-                    MATCH (per_role)-[:ns3__isRoleOf]->(per:ns3__Person)
-                    MATCH (per_role)-[:ns3__isInvolvedIn]->(project)
-                    MATCH (per_role)-[:ns3__isEmployedBy]->(org)
-                    
-                    RETURN DISTINCT 
-                        per.rdfs__label AS person_full_name,
-                        org.rdfs__label AS organisation
-                """
-    },
-    {
-        "question": "Find the number of participants who is involved in the project named 'Topology driven methods for complex systems':",
-        "query": """
-                    MATCH (project:ns3__Project {{ns3__title: 'Topology driven methods for complex systems'}})
-                    MATCH (project)-[:ns3__hasInvolvedParty]->(org_role:ns3__OrganisationRole)
-                    MATCH (project)-[:ns3__hasInvolvedParty]->(per_role:ns3__PersonRole)
-                    MATCH (org_role)-[:ns3__isRoleOf]->(org:ns3__Organisation)
-                    MATCH (per_role)-[:ns3__isRoleOf]->(per:ns3__Person)
-                    MATCH (per_role)-[:ns3__isInvolvedIn]->(project)
-                    MATCH (per_role)-[:ns3__isEmployedBy]->(org)
-                    
-                    RETURN COUNT(DISTINCT per) AS participant_count
-                """
-    }
-]
-
-formatted_examples = "\n\n".join([
-    f"Example {i + 1}:\nQuestion: {ex['question']}\nCypher Query: {ex['query']}"
-    for i, ex in enumerate(examples)
-])
-
-prompt_part1 = """
-You are a Cypher expert about the EURIO graph database.
-Your task is to generate Cypher statements to query the graph database.
-
-The ontology schema is:
+CYPHER_GENERATION_TEMPLATE = """Task:Generate Cypher statement to query a graph database.
+Instructions:
+Use only the provided relationship types and properties in the schema.
+Do not use any other relationship types or properties that are not provided.
+Schema:
 {schema}
+Note: Do not include any explanations or apologies in your responses.
+Do not respond to any questions that might ask anything else than for you to construct a Cypher statement.
+Do not include any text except the generated Cypher statement.
+Examples: Here are a few examples of generated Cypher statements for particular questions:
 
-Use only the classes and properties provided in the schema to construct the Cypher query.
-Do not use any classes or properties that are not explicitly provided in the Cypher query.
-Include all necessary prefixes.
-Do not include any explanations or apologies in your responses.
-Do not wrap the query in backticks.
-Do not include any text except the Cypher query generated.
+1. List the person name and organisation of the person who is involved in the project named 'Topology driven methods for complex systems':
+    
+    MATCH (project:ns3__Project {{ns3__title: 'Topology driven methods for complex systems'}})
+    MATCH (project)-[:ns3__hasInvolvedParty]->(org_role:ns3__OrganisationRole)
+    MATCH (project)-[:ns3__hasInvolvedParty]->(per_role:ns3__PersonRole)
+    MATCH (org_role)-[:ns3__isRoleOf]->(org:ns3__Organisation)
+    MATCH (per_role)-[:ns3__isRoleOf]->(per:ns3__Person)
+    MATCH (per_role)-[:ns3__isInvolvedIn]->(project)
+    MATCH (per_role)-[:ns3__isEmployedBy]->(org)
+    
+    RETURN DISTINCT 
+        per.rdfs__label AS person_full_name,
+        org.rdfs__label AS organisation_name
+        
+        
+2. Find the number of participants who is involved in the project named 'Topology driven methods for complex systems':
 
-Follow these rules:
-    1.  If the question asks to "find" or "list" participants, use Example 1.
-        Provide a list of participants with their names and organisations.
-        Format each entry as:
-        - [person_full_name] ([organisation])
+    MATCH (project:ns3__Project {{ns3__title: 'Topology driven methods for complex systems'}})
+    MATCH (project)-[:ns3__hasInvolvedParty]->(org_role:ns3__OrganisationRole)
+    MATCH (project)-[:ns3__hasInvolvedParty]->(per_role:ns3__PersonRole)
+    MATCH (org_role)-[:ns3__isRoleOf]->(org:ns3__Organisation)
+    MATCH (per_role)-[:ns3__isRoleOf]->(per:ns3__Person)
+    MATCH (per_role)-[:ns3__isInvolvedIn]->(project)
+    MATCH (per_role)-[:ns3__isEmployedBy]->(org)
+    
+    RETURN COUNT(DISTINCT per) AS participant_count
 
-    2.  If the question asks to "count" or "determine the number of" participants, use Example 2.
 
-Given an input question, create a syntactically very accurate Cypher query based on the following examples:
-"""
-
-prompt_part2 = """
 The question is:
-{prompt}
-"""
+{question}"""
 
-CYPHER_GENERATION_TEMPLATE = prompt_part1 + formatted_examples + prompt_part2
-
-Cypher_GENERATION_PROMPT = PromptTemplate(
+CYPHER_GENERATION_PROMPT = PromptTemplate(
     input_variables=["schema", "prompt"],
     template=CYPHER_GENERATION_TEMPLATE,
 )
 
 cypher_qa = GraphCypherQAChain.from_llm(
-    llm=llm.get_langchain_llm(),
+    ChatAnthropic(
+        temperature=0,
+        model_name="claude-3-5-sonnet-20241022",
+        max_tokens_to_sample=8192,
+        api_key=llm.api_key,
+        max_retries=3
+    ),
     graph=neo4j_graph,
-    cypher_prompt=Cypher_GENERATION_PROMPT,
+    cypher_prompt=CYPHER_GENERATION_PROMPT,
     allow_dangerous_requests=True,
     verbose=True
 )
