@@ -1,4 +1,4 @@
-from SPARQLWrapper import SPARQLWrapper, JSON
+from neo4j import GraphDatabase
 from langchain_community.vectorstores import Neo4jVector
 
 from llama_index.core.agent.workflow import FunctionAgent
@@ -7,57 +7,11 @@ from rag.embeddings.neo4j_embedding_service import get_embedder
 
 import streamlit as st
 
-from rag.llm import get_llama_index_llm
 from rag.tools.search_web import search_web
 
+from rag import llm
+
 embedder = get_embedder()
-
-
-async def get_collaborators_of_similar_projects(project_IRIs) -> any:
-    "Get collaborators for a given project IRI."
-    results = []
-
-    # Initialize SPARQLWrapper
-    sparql = SPARQLWrapper(st.secrets["GRAPHDB_URL"])
-    sparql.setReturnFormat(JSON)
-
-    for project_iri in project_IRIs:
-        query = f"""
-                PREFIX eurio: <http://data.europa.eu/s66#>
-                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-                SELECT DISTINCT ?person_full_name ?organisation ?project_title
-                WHERE {{
-                    BIND (<{project_iri}> as ?project) 
-                    ?project a eurio:Project.
-                    ?project eurio:title ?project_title.
-                    ?project eurio:hasInvolvedParty ?party .
-                    ?party a eurio:OrganisationRole.
-                    ?party rdfs:label ?party_title.
-                    ?party eurio:isRoleOf ?role .
-                    ?role rdfs:label ?organisation.
-                    ?person eurio:isInvolvedIn ?project.
-                    ?person eurio:isEmployedBy ?role .
-                    ?person eurio:isRoleOf ?p.
-                    ?p rdfs:label ?person_full_name.
-                }}
-            """
-
-        sparql.setQuery(query)
-
-        try:
-            response = sparql.query().convert()
-            for result in response["results"]["bindings"]:
-                results.append({
-                    "full_name_person": result.get("person_full_name", {}).get("value", ""),
-                    "organisation": result.get("organisation", {}).get("value", ""),
-                    "project_title": result.get("project_title", {}).get("value", "")
-                })
-
-        except Exception as e:
-            print(f"Error querying {project_iri}: {e}")
-
-    return results
 
 
 async def get_similar_projects(project_description: str):
@@ -73,7 +27,43 @@ async def get_similar_projects(project_description: str):
         embedding_node_property="abstractEmbedding",
     )
 
-    return db.similarity_search_with_relevance_scores(project_description, k=3)
+    x = db.similarity_search_with_relevance_scores(project_description, k=3)
+    return x
+
+
+async def get_collaborators_of_similar_projects(project_URIs) -> any:
+    "Get collaborators for a given project URI."
+    results = []
+
+    driver = GraphDatabase.driver(st.secrets["NEO4J_URI"],
+                                  auth=(st.secrets["NEO4J_USERNAME"], st.secrets["NEO4J_PASSWORD"]))
+
+    for project_uri in project_URIs:
+
+        with driver.session() as session:
+            query = f"""
+                    MATCH (project)-[:ns3__hasInvolvedParty]->(org_role:ns3__OrganisationRole)
+                    MATCH (project)-[:ns3__hasInvolvedParty]->(per_role:ns3__PersonRole)
+                    MATCH (org_role)-[:ns3__isRoleOf]->(org:ns3__Organisation)
+                    MATCH (per_role)-[:ns3__isRoleOf]->(per:ns3__Person)
+                    MATCH (per_role)-[:ns3__isInvolvedIn]->(project)
+                    MATCH (per_role)-[:ns3__isEmployedBy]->(org)
+                    WHERE project.uri = '{project_uri}'
+                    RETURN DISTINCT 
+                        per.rdfs__label AS person_full_name,
+                        org.rdfs__label AS organisation,
+                        project.ns3__title AS project_title;
+                """
+
+            response = session.run(query).data()
+            for record in response:
+                results.append({
+                    "full_name_person": record.get("person_full_name", ""),
+                    "organisation": record.get("organisation", ""),
+                    "project_title": record.get("project_title", "")
+                })
+
+    return results
 
 
 potential_collaborators_agent = FunctionAgent(
@@ -89,34 +79,34 @@ potential_collaborators_agent = FunctionAgent(
         You need to find similar projects based on the project description. Then, you need to find the collaborators for each of the similar projects.
         
         First of all use the get_similar_projects tool to find similar projects that have their abstracts similar to the given project description.
+        This tool is used to find similar projects and to consider all the relevant information about a project such as the title, abstract, the uri, and other details.
+        The uri of each project is used to find the collaborators for each of the similar projects.
         
-        Once you have found the similar projects, run the following Cypher query to find the collaborators for each of the similar projects:
-    
-        MATCH (project:ns3__Project {title: 'PROJECT_TITLE'})
-        MATCH (project)-[:ns3__hasInvolvedParty]->(org_role:ns3__OrganisationRole)
-        MATCH (project)-[:ns3__hasInvolvedParty]->(per_role:ns3__PersonRole)
-        MATCH (org_role)-[:ns3__isRoleOf]->(org:ns3__Organisation)
-        MATCH (per_role)-[:ns3__isRoleOf]->(per:ns3__Person)
-        MATCH (per_role)-[:ns3__isInvolvedIn]->(project)
-        MATCH (per_role)-[:ns3__isEmployedBy]->(org)
-        
-        RETURN DISTINCT 
-            per.rdfs__label AS person_full_name,
-            org.rdfs__label AS organisation,
-            project.ns3__title AS project_title;
+        Once you have found the similar projects, use the get_collaborators_of_similar_projects tool to find the collaborators for each of the similar projects.
+        This tool is used to find the collaborators for a given project URI.
         
         Finally, provide a list of potential collaborators for the given project description.
         Explain why you think these collaborators are relevant, highlighting that they have worked on similar found projects.
-        Moreover, use the search_web tool to find more information about the potential collaborators and their research areas on the Web. 
+        
+        Only when you have got the list of potential collaborators, use the search_web tool to find more information about the potential collaborators and their research areas on the Web. 
         Make a list of keywords to highlight the research topics and areas for each suggested collaborator.
+
+        If you did not find any similar projects or collaborators, do not use the search_web tool.
+        In this case, provide a professional response explaining that you did not find any similar projects or collaborators.
 
         Remember to maintain a professional and informative tone throughout your response. Your suggestions should be practical and directly applicable to someone looking for research collaboration.
         Avoid to thank for the given input, mention your knowledge source or provide any unnecessary information.
         """
     ),
-    llm=get_llama_index_llm(),
-    tools=[get_similar_projects, search_web],
+    llm=llm.get_llama_index_anthropic_llm(),
+    tools=[get_similar_projects, get_collaborators_of_similar_projects, search_web],
     can_handoff_to=[],
 )
 
 # TODO: fare un ttool che prende i titoli dei progetti e poi runna la query per trovare i collaboratori
+'''
+llm = Gemini(
+    model="models/gemini-2.0-flash",
+    api_key=st.secrets["api_key"]["GOOGLE_KEY"],
+),
+'''

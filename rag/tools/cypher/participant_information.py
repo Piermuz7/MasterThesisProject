@@ -1,9 +1,10 @@
-from langchain_anthropic import ChatAnthropic
 from langchain_neo4j import GraphCypherQAChain
 from langchain_core.prompts.prompt import PromptTemplate
 
 from rag import llm
 from rag.graph import neo4j_graph
+
+import streamlit as st
 
 CYPHER_GENERATION_TEMPLATE = """Task:Generate Cypher statement to query a graph database.
 Instructions:
@@ -52,14 +53,8 @@ CYPHER_GENERATION_PROMPT = PromptTemplate(
     template=CYPHER_GENERATION_TEMPLATE,
 )
 
-cypher_qa = GraphCypherQAChain.from_llm(
-    ChatAnthropic(
-        temperature=0,
-        model_name="claude-3-5-sonnet-20241022",
-        max_tokens_to_sample=8192,
-        api_key=llm.api_key,
-        max_retries=3
-    ),
+chain = GraphCypherQAChain.from_llm(
+    llm.get_langchain_anthropic_llm(),
     graph=neo4j_graph,
     cypher_prompt=CYPHER_GENERATION_PROMPT,
     allow_dangerous_requests=True,
@@ -68,9 +63,9 @@ cypher_qa = GraphCypherQAChain.from_llm(
 
 
 async def get_participant_information(user_question: str) -> str:
-    "List the person name and organisation of the person who is involved in a given project title"
+    "List the person name and organisation name of the person who is involved in a given project title"
     try:
         tool_input = {"query": user_question}
-        return cypher_qa.invoke(input=tool_input)
+        return chain.invoke(input=tool_input)
     except Exception as e:
         return str(e)

@@ -1,4 +1,3 @@
-from langchain_anthropic import ChatAnthropic
 from langchain_neo4j import GraphCypherQAChain
 from langchain_core.prompts.prompt import PromptTemplate
 
@@ -43,13 +42,7 @@ CYPHER_GENERATION_PROMPT = PromptTemplate(
 )
 
 chain = GraphCypherQAChain.from_llm(
-    llm=ChatAnthropic(
-        temperature=0,
-        model_name="claude-3-5-sonnet-20241022",
-        max_tokens_to_sample=8192,
-        api_key=llm.api_key,
-        max_retries=3
-    ),
+    llm.get_langchain_anthropic_llm(),
     graph=neo4j_graph,
     verbose=True,
     cypher_prompt=CYPHER_GENERATION_PROMPT,

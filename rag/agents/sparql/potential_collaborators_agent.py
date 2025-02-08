@@ -7,7 +7,7 @@ from rag.embeddings.mongo_db_embedding_store import EmbeddingStore
 
 import streamlit as st
 
-from rag.llm import get_llama_index_llm
+from rag import llm
 from rag.tools.search_web import search_web
 
 embedding_store = EmbeddingStore()
@@ -15,7 +15,7 @@ embedding_store = EmbeddingStore()
 mongo_client = MongoClient(st.secrets["MONGO_URI"])
 db = mongo_client[st.secrets["DB_NAME"]]
 collection = db[st.secrets["COLLECTION_NAME"]]
-
+#todo: recheck tutto su graphdb
 
 async def get_collaborators_of_similar_projects(project_IRIs) -> any:
     "Get collaborators for a given project IRI."
@@ -102,7 +102,7 @@ potential_collaborators_agent = FunctionAgent(
         Avoid to thank for the given input, mention your knowledge source or provide any unnecessary information.
         """
     ),
-    llm=get_llama_index_llm(),
+    llm=llm.get_llama_index_anthropic_llm(),
     tools=[get_similar_projects, get_collaborators_of_similar_projects, search_web],
     can_handoff_to=[],
 )

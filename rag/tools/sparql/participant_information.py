@@ -99,7 +99,7 @@ GRAPHDB_SPARQL_GENERATION_PROMPT = PromptTemplate(
 )
 
 sparql_qa = OntotextGraphDBQAChain.from_llm(
-    llm=llm.get_langchain_llm(),
+    llm=llm.get_langchain_anthropic_llm(),
     graph=graph_db,
     sparql_generation_prompt=GRAPHDB_SPARQL_GENERATION_PROMPT,
     allow_dangerous_requests=True,
