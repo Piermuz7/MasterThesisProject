@@ -1,5 +1,5 @@
+from langchain_neo4j import Neo4jVector
 from neo4j import GraphDatabase
-from langchain_community.vectorstores import Neo4jVector
 
 from llama_index.core.agent.workflow import FunctionAgent
 
@@ -31,7 +31,7 @@ async def get_similar_projects(project_description: str):
     return x
 
 
-async def get_collaborators_of_similar_projects(project_URIs) -> any:
+async def get_collaborators_of_similar_projects(project_URIs: list[str]) -> any:
     "Get collaborators for a given project URI."
     results = []
 
@@ -98,15 +98,7 @@ potential_collaborators_agent = FunctionAgent(
         Avoid to thank for the given input, mention your knowledge source or provide any unnecessary information.
         """
     ),
-    llm=llm.get_llama_index_anthropic_llm(),
+    llm=llm.llama_index_anthropic_llm,
     tools=[get_similar_projects, get_collaborators_of_similar_projects, search_web],
     can_handoff_to=[],
 )
-
-# TODO: fare un ttool che prende i titoli dei progetti e poi runna la query per trovare i collaboratori
-'''
-llm = Gemini(
-    model="models/gemini-2.0-flash",
-    api_key=st.secrets["api_key"]["GOOGLE_KEY"],
-),
-'''

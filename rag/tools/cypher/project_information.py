@@ -42,7 +42,7 @@ CYPHER_GENERATION_PROMPT = PromptTemplate(
 )
 
 chain = GraphCypherQAChain.from_llm(
-    llm.get_langchain_anthropic_llm(),
+    llm.langchain_anthropic_llm,
     graph=neo4j_graph,
     verbose=True,
     cypher_prompt=CYPHER_GENERATION_PROMPT,

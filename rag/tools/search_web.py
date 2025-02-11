@@ -1,7 +1,7 @@
 from duckduckgo_search import DDGS
 
 
-async def search_web(query: str, num_results=5):
+async def search_web(query: str, num_results: int=5):
     "Perform a web search using DuckDuckGo and return relevant results."
     results = []
 

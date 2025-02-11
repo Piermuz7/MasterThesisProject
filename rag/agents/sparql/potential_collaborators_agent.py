@@ -102,7 +102,7 @@ potential_collaborators_agent = FunctionAgent(
         Avoid to thank for the given input, mention your knowledge source or provide any unnecessary information.
         """
     ),
-    llm=llm.get_llama_index_anthropic_llm(),
+    llm=llm.llama_index_anthropic_llm,
     tools=[get_similar_projects, get_collaborators_of_similar_projects, search_web],
     can_handoff_to=[],
 )

@@ -4,8 +4,6 @@ from langchain_core.prompts.prompt import PromptTemplate
 from rag import llm
 from rag.graph import neo4j_graph
 
-import streamlit as st
-
 CYPHER_GENERATION_TEMPLATE = """Task:Generate Cypher statement to query a graph database.
 Instructions:
 Use only the provided relationship types and properties in the schema.
@@ -54,7 +52,7 @@ CYPHER_GENERATION_PROMPT = PromptTemplate(
 )
 
 chain = GraphCypherQAChain.from_llm(
-    llm.get_langchain_anthropic_llm(),
+    llm.langchain_anthropic_llm,
     graph=neo4j_graph,
     cypher_prompt=CYPHER_GENERATION_PROMPT,
     allow_dangerous_requests=True,

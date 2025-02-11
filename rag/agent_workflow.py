@@ -7,6 +7,7 @@ from rag.agents.sparql.projects_participants_agent import projects_participants_
 from rag.agents.cypher.potential_collaborators_agent import potential_collaborators_agent as pot_col_cy_agent
 from rag.agents.cypher.projects_participants_agent import projects_participants_agent as pr_cy_agent
 
+
 async def execute_sparql_agent_workflow(user_msg: str):
     agent_workflow = AgentWorkflow(
         agents=[pr_sp_agent, pot_col_sp_agent],

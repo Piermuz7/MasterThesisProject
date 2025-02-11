@@ -1,13 +1,8 @@
 from llama_index.core.agent.workflow import FunctionAgent
-from llama_index.llms.anthropic import Anthropic
-from llama_index.llms.gemini import Gemini
 
 from rag import llm
 from rag.tools.cypher.participant_information import get_participant_information
 from rag.tools.cypher.project_information import get_project_info
-from llama_index.llms.anthropic import Anthropic
-
-import streamlit as st
 
 projects_participants_agent = FunctionAgent(
     name="EuropeanProjectsExpertAgent",
@@ -45,13 +40,7 @@ projects_participants_agent = FunctionAgent(
 
         """
     ),
-    llm=llm.get_llama_index_anthropic_llm(),
+    llm=llm.llama_index_anthropic_llm,
     tools=[get_project_info, get_participant_information],
     can_handoff_to=["PotentialCollaboratorsAgent"],
 )
-'''
-    llm=Gemini(
-        model="models/gemini-2.0-flash",
-        api_key=st.secrets["api_key"]["GOOGLE_KEY"],
-    ),
-    '''
