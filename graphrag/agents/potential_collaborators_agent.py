@@ -1,69 +1,75 @@
-from langchain_neo4j import Neo4jVector
-from neo4j import GraphDatabase
+from SPARQLWrapper import SPARQLWrapper, JSON
 
 from llama_index.core.agent.workflow import FunctionAgent
 
-from rag.embeddings.neo4j_embedding_service import get_embedder
+from graphrag.embeddings.graph_embedding_service import GraphEmbeddingStore
 
 import streamlit as st
 
-from rag.tools.search_web import search_web
+from graphrag import llm
+from graphrag.tools.search_web import search_web
 
-from rag import llm
-
-embedder = get_embedder()
-
-
-async def get_similar_projects(project_description: str):
-    "Finds similar project to a given project description"
-    db = Neo4jVector.from_existing_graph(
-        embedder,
-        url=st.secrets["NEO4J_URI"],
-        username=st.secrets["NEO4J_USERNAME"],
-        password=st.secrets["NEO4J_PASSWORD"],
-        index_name="abstractIndex",
-        node_label="ns3__Project",
-        text_node_properties=["ns3__abstract"],
-        embedding_node_property="abstractEmbedding",
-    )
-
-    x = db.similarity_search_with_relevance_scores(project_description, k=3)
-    return x
+embedding_store = GraphEmbeddingStore()
 
 
-async def get_collaborators_of_similar_projects(project_URIs: list[str]) -> any:
-    "Get collaborators for a given project URI."
+async def get_collaborators_of_similar_projects(project_IRIs) -> any:
+    "Get collaborators for a given project IRI."
     results = []
 
-    driver = GraphDatabase.driver(st.secrets["NEO4J_URI"],
-                                  auth=(st.secrets["NEO4J_USERNAME"], st.secrets["NEO4J_PASSWORD"]))
+    # Initialize SPARQLWrapper
+    sparql = SPARQLWrapper(st.secrets["GRAPHDB_URL"])
+    sparql.setReturnFormat(JSON)
 
-    for project_uri in project_URIs:
+    for project_iri in project_IRIs:
+        query = f"""
+                PREFIX eurio: <http://data.europa.eu/s66#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-        with driver.session() as session:
-            query = f"""
-                    MATCH (project)-[:ns3__hasInvolvedParty]->(org_role:ns3__OrganisationRole)
-                    MATCH (project)-[:ns3__hasInvolvedParty]->(per_role:ns3__PersonRole)
-                    MATCH (org_role)-[:ns3__isRoleOf]->(org:ns3__Organisation)
-                    MATCH (per_role)-[:ns3__isRoleOf]->(per:ns3__Person)
-                    MATCH (per_role)-[:ns3__isInvolvedIn]->(project)
-                    MATCH (per_role)-[:ns3__isEmployedBy]->(org)
-                    WHERE project.uri = '{project_uri}'
-                    RETURN DISTINCT 
-                        per.rdfs__label AS person_full_name,
-                        org.rdfs__label AS organisation,
-                        project.ns3__title AS project_title;
-                """
+                SELECT DISTINCT ?person_full_name ?organisation ?project_title
+                WHERE {{
+                    BIND (<{project_iri}> as ?project) 
+                    ?project a eurio:Project.
+                    ?project eurio:title ?project_title.
+                    ?project eurio:hasInvolvedParty ?party .
+                    ?party a eurio:OrganisationRole.
+                    ?party rdfs:label ?party_title.
+                    ?party eurio:isRoleOf ?role .
+                    ?role rdfs:label ?organisation.
+                    ?person eurio:isInvolvedIn ?project.
+                    ?person eurio:isEmployedBy ?role .
+                    ?person eurio:isRoleOf ?p.
+                    ?p rdfs:label ?person_full_name.
+                }}
+            """
 
-            response = session.run(query).data()
-            for record in response:
+        sparql.setQuery(query)
+
+        try:
+            response = sparql.query().convert()
+            for result in response["results"]["bindings"]:
                 results.append({
-                    "full_name_person": record.get("person_full_name", ""),
-                    "organisation": record.get("organisation", ""),
-                    "project_title": record.get("project_title", "")
+                    "full_name_person": result.get("person_full_name", {}).get("value", ""),
+                    "organisation": result.get("organisation", {}).get("value", ""),
+                    "project_title": result.get("project_title", {}).get("value", "")
                 })
 
+        except Exception as e:
+            print(f"Error querying {project_iri}: {e}")
+
     return results
+
+
+async def get_similar_projects(user_question: str) -> list[str]:
+    "Finds similar project to a given project description"
+    project_IRIs_by_similarity = embedding_store.similarity_search_with_relevance_score(
+        query_text=f"A project with abstract similar to: {user_question}.",
+        property_name="abstract",
+        k=3
+    )
+
+    project_IRIs = [item['iri'] for item in project_IRIs_by_similarity]
+
+    return project_IRIs
 
 
 potential_collaborators_agent = FunctionAgent(
@@ -82,8 +88,9 @@ potential_collaborators_agent = FunctionAgent(
         This tool is used to find similar projects and to consider all the relevant information about a project such as the title, abstract, the uri, and other details.
         The uri of each project is used to find the collaborators for each of the similar projects.
         
-        Once you have found the similar projects, use the get_collaborators_of_similar_projects tool to find the collaborators for each of the similar projects.
+        Once you have the project IRIs, use the get_collaborators_of_similar_projects tool to find the collaborators for each of the found similar projects.
         This tool is used to find the collaborators for a given project URI.
+        You must consider and use all the project IRIs returned by the get_similar_projects tool.
         
         Finally, provide a list of potential collaborators for the given project description.
         Explain why you think these collaborators are relevant, highlighting that they have worked on similar found projects.
@@ -98,7 +105,7 @@ potential_collaborators_agent = FunctionAgent(
         Avoid to thank for the given input, mention your knowledge source or provide any unnecessary information.
         """
     ),
-    llm=llm.llama_index_anthropic_llm,
+    llm=llm.llama_index_azure_openai_llm,
     tools=[get_similar_projects, get_collaborators_of_similar_projects, search_web],
     can_handoff_to=[],
 )

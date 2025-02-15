@@ -1,8 +1,8 @@
 from langchain_community.chains.graph_qa.ontotext_graphdb import OntotextGraphDBQAChain
 from langchain_core.prompts import PromptTemplate
 
-from rag import llm
-from rag.graph import graph_db
+from graphrag import llm
+from graphrag.graph import graph_db
 
 examples = [
     {
@@ -52,6 +52,11 @@ The ontology schema delimited by triple backticks in Turtle format is:
 ```
 {schema}
 ```
+
+Note: Do not include any explanations or apologies in your responses.
+Do not respond to any questions that might ask anything else than for you to construct a SPARQL statement.
+Do not include any text except the generated SPARQL statement.
+
 Use only the classes and properties provided in the schema to construct the SPARQL query.
 Do not use any classes or properties that are not explicitly provided in the SPARQL query.
 Include all necessary prefixes.
@@ -76,7 +81,7 @@ GRAPHDB_SPARQL_GENERATION_PROMPT = PromptTemplate(
 )
 
 sparql_qa = OntotextGraphDBQAChain.from_llm(
-    llm=llm.langchain_anthropic_llm,
+    llm=llm.langchain_azure_openai_llm,
     graph=graph_db,
     sparql_generation_prompt=GRAPHDB_SPARQL_GENERATION_PROMPT,
     verbose=True,

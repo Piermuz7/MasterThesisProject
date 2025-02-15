@@ -1,15 +1,11 @@
 import asyncio
-import sys
 
 import streamlit as st
 
-from rag.agent_workflow import execute_sparql_agent_workflow, execute_cypher_agent_workflow
-from rag.utils import write_message
+from graphrag.agent_workflow import execute_agent_workflow
+from graphrag.utils import write_message
 
-if len(sys.argv) != 4:
-
-    query_language = sys.argv[1]
-
+if __name__ == "__main__":
     # page config
     st.set_page_config("European Projects Bot", page_icon=":movie_camera:")
 
@@ -26,12 +22,7 @@ if len(sys.argv) != 4:
     #         write_message('assistant', response)
     def handle_submit(message):
         with st.spinner('Thinking...'):
-            if query_language == 'sparql':
-                # print('Executing SPARQL agent workflow')
-                response = asyncio.run(execute_sparql_agent_workflow(message))
-            else:
-                # print('Executing Cypher agent workflow')
-                response = asyncio.run(execute_cypher_agent_workflow(message))
+            response = asyncio.run(execute_agent_workflow(message))
             write_message('assistant', response)
 
 
