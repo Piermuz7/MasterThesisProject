@@ -2,6 +2,9 @@ queries = [
     "What is the abstract of a project named 'IMproving Preparedness and RIsk maNagemenT for flash floods and debriS flow events'?",
     "What are the general information of the project named 'Topology driven methods for complex systems'?",
     "5 title of projects with abstract similar to: Many complex systems are characterized by multi-level properties that make the study of their dynamics and of their emerging phenomena a daunting task. The huge amount of data available in modern sciences can be expected to support great progress in these studies, even though the nature of the data varies. Given that, it is crucial to extract as much as possible features from data, including qualitative (topological) ones. The goal of this project is to provide methods driven by the topology of data for describing the dynamics of multi-level complex systems. To this end the project will develop new mathematical and computational formalisms accounting for topological effects. To pursue these objectives the project brings together scientists from many diverse fields including as topology and geometry, statistical physics and information theory, computer science and biology. The proposed methods, obtained through concerted efforts, will cover different aspects of the science of complexity ranging from foundations, to simulations through modelling and analysis, and are expected to constitute the building blocks for a new generalized theory of complexity.",
+    "Who was the coordinator of the project named 'Topology driven methods for complex systems'?",
+    "Who were the participants of the project named 'Topology driven methods for complex systems'?",
+    "Number of participants were involved in the project named 'Topology driven methods for complex systems'"
 ]
 
 ground_truths = [
@@ -42,5 +45,8 @@ The project involved collaboration among several prestigious institutions and re
     """,
     """
     Topology driven methods for complex systems, Topological Complex Systems, Understanding Random Systems via Algebraic Topology, Self-Organised information PrOcessing, CriticaLity and Emergence in multilevel Systems, Hierarchical Analysis of Complex Dynamical Systems.
-    """
+    """,
+    " Emanuela Merelli from UNIVERSITA DEGLI STUDI DI CAMERINO",
+    "Béatrice SAINT-CRICQ from CENTRE NATIONAL DE LA RECHERCHE SCIENTIFIQUE CNRS, Céline Damon from UNIVERSITE D'AIX MARSEILLE, Vanessa Wolters from UNIVERSITEIT VAN AMSTERDAM, Christian Reidys from SYDDANSK UNIVERSITET, Roberto Palermo from ISTITUTO PER L'INTERSCAMBIO SCIENTIFICO."
+    "The number of participants involved in the project named 'Topology driven methods for complex systems' is 6."
 ]

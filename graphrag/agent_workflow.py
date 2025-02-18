@@ -4,11 +4,12 @@ from llama_index.core.agent.workflow import (AgentOutput, AgentStream,
 
 from graphrag.agents.potential_collaborators_agent import potential_collaborators_agent as pot_col_agent
 from graphrag.agents.projects_participants_agent import projects_participants_agent as pr_agent
+from graphrag.agents.potential_consortium_organisations_agent import potential_consortium_organisations_agent as pot_con_org_agent
 
 
 async def execute_agent_workflow(user_msg: str):
     agent_workflow = AgentWorkflow(
-        agents=[pr_agent, pot_col_agent],
+        agents=[pr_agent, pot_col_agent, pot_con_org_agent],
         root_agent=pr_agent.name,
         initial_state={
         },

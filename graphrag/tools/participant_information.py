@@ -11,21 +11,25 @@ examples = [
                     PREFIX eurio: <http://data.europa.eu/s66#>
                     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
                     
-                    SELECT DISTINCT ?person_full_name ?organisation
+                    SELECT DISTINCT ?person_full_name ?organisation ?postal_address ?role_label
                     WHERE {{
                         ?project a eurio:Project .
                         ?project eurio:title "Topology driven methods for complex systems".
-                        ?project eurio:title ?project_title.
                         ?project eurio:hasInvolvedParty ?party .
                         ?party a eurio:OrganisationRole.
                         ?party rdfs:label ?party_title.
+                        ?party eurio:roleLabel ?role_label.
                         ?party eurio:isRoleOf ?role .
                         ?role rdfs:label ?organisation.
+                        ?role eurio:hasSite ?site.
+                        ?site eurio:hasAddress ?address.
+                        ?address eurio:fullAddress ?postal_address.
                         ?person eurio:isInvolvedIn ?project.
                         ?person eurio:isEmployedBy ?role .
                         ?person eurio:isRoleOf ?p.
                         ?p rdfs:label ?person_full_name.
                     }}
+                    ORDER BY ?role_label
                 """
     },
     {
@@ -82,7 +86,7 @@ Follow these rules:
     1.  If the question asks to "find" or "list" participants, use Example 1.
         Provide a list of participants with their names and organisations.
         Format each entry as:
-        - [person_full_name] ([organisation])
+        - [person_full_name] ([organisation]), [postal_address] , ([role_label])
 
     2.  If the question asks to "count" or "determine the number of" participants, use Example 2.
 

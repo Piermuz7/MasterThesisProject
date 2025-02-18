@@ -21,12 +21,16 @@ projects_participants_agent = FunctionAgent(
 
         For **get_participant_information** tool, follow these rules:
         
-        1. If the questions asks to find the participants of a project, return only the list of participants of the project. Such list must be a list of full names of the participants and the organisation where each participant is employed.
+        1. If the questions asks to find the participants of a project, return only the list of participants of the project.
+        Such list must be a list of full names of the participants and the organisation where each participant is employed.
+        Every participant has its related role label, such as "coordinator" or "participant" or "international partner" or "partner" or "third party".
         
             Structure of the participant list:
-                * [participant_full_name] from [organisation_name]
-                * [participant_full_name] from [organisation_name]
-                * ...
+                Coordinator: [participant_full_name] from [organisation_name], [postal_address]
+                Participants:
+                1 [participant_full_name] from [organisation_name], [postal_address]
+                2 [participant_full_name] from [organisation_name], [postal_address]
+                N ...
 
         **get_project_info** tool to get information about a project. For example, you can use this tool to get the project title, the project abstract, the project funding, the project start date, the project end date, the project website.
         
@@ -42,5 +46,5 @@ projects_participants_agent = FunctionAgent(
     ),
     llm=llm.llama_index_azure_openai_llm,
     tools=[get_project_info, get_participant_information],
-    can_handoff_to=["PotentialCollaboratorsAgent"],
+    can_handoff_to=["PotentialCollaboratorsAgent", "PotentialConsortiumOrganisationsAgent"],
 )

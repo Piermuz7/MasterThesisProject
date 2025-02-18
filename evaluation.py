@@ -1,3 +1,5 @@
+import glob
+
 from datasets import Dataset
 from langchain_community.chains.graph_qa.ontotext_graphdb import OntotextGraphDBQAChain
 
@@ -13,6 +15,11 @@ from graphrag.embeddings.graph_embedding_service import GraphEmbeddingStore
 
 from graphrag.graph import graph_db
 import graphrag.llm as llm
+
+import os
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
+# TODO: understand how to evaluate using agents
 
 llm = llm.langchain_azure_openai_llm
 
@@ -227,4 +234,27 @@ score = evaluate(dataset,
                  embeddings=embedder
                  )
 score_df = score.to_pandas()
-score_df.to_csv("evaluation/evaluation_scores_openai.csv", encoding="utf-8", index=False)
+
+llm_name = "openai"
+# llm_name = "claude"
+base_filename = "evaluation/evaluation_scores_" + llm_name
+extension = ".csv"
+
+# Find existing files that match the pattern
+existing_files = glob.glob(f"{base_filename}*{extension}")
+
+# Determine the next available filename
+if existing_files:
+    highest_num = 0
+    for file in existing_files:
+        parts = file.replace(base_filename, "").replace(extension, "")
+        if parts.startswith("_") and parts[1:].isdigit():
+            highest_num = max(highest_num, int(parts[1:]))
+    new_filename = f"{base_filename}_{highest_num + 1}{extension}"
+else:
+    new_filename = f"{base_filename}{extension}"
+
+# Save the file with the new name
+score_df.to_csv(new_filename, encoding="utf-8", index=False)
+
+print(f"Saved file as: {new_filename}")

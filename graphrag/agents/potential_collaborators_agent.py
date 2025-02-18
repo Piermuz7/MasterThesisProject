@@ -25,7 +25,7 @@ async def get_collaborators_of_similar_projects(project_IRIs) -> any:
                 PREFIX eurio: <http://data.europa.eu/s66#>
                 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-                SELECT DISTINCT ?person_full_name ?organisation ?project_title
+                SELECT DISTINCT ?person_full_name ?organisation ?postal_address ?project_title
                 WHERE {{
                     BIND (<{project_iri}> as ?project) 
                     ?project a eurio:Project.
@@ -35,6 +35,9 @@ async def get_collaborators_of_similar_projects(project_IRIs) -> any:
                     ?party rdfs:label ?party_title.
                     ?party eurio:isRoleOf ?role .
                     ?role rdfs:label ?organisation.
+                    ?role eurio:hasSite ?site.
+                    ?site eurio:hasAddress ?address.
+                    ?address eurio:fullAddress ?postal_address.
                     ?person eurio:isInvolvedIn ?project.
                     ?person eurio:isEmployedBy ?role .
                     ?person eurio:isRoleOf ?p.
@@ -50,6 +53,7 @@ async def get_collaborators_of_similar_projects(project_IRIs) -> any:
                 results.append({
                     "full_name_person": result.get("person_full_name", {}).get("value", ""),
                     "organisation": result.get("organisation", {}).get("value", ""),
+                    "postal_address": result.get("postal_address", {}).get("value", ""),
                     "project_title": result.get("project_title", {}).get("value", "")
                 })
 
@@ -97,6 +101,26 @@ potential_collaborators_agent = FunctionAgent(
         
         Only when you have got the list of potential collaborators, use the search_web tool to find more information about the potential collaborators and their research areas on the Web. 
         Make a list of keywords to highlight the research topics and areas for each suggested collaborator.
+        
+        Structure of the potential collaborators list:
+        
+        1.  [person_full_name]
+            
+            • Organisation: [organisation_name], [postal_address]
+            
+            • Project title: [project_title]
+            
+            • Research areas: [research_areas]
+            
+        2.  [person_full_name]
+            
+            • Organisation: [organisation_name], [postal_address]
+            
+            • Project title: [project_title]
+            
+            • Research areas: [research_areas]
+            
+        N.  ...
 
         If you did not find any similar projects or collaborators, do not use the search_web tool.
         In this case, provide a professional response explaining that you did not find any similar projects or collaborators.

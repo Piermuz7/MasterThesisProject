@@ -1,18 +1,17 @@
-from duckduckgo_search import DDGS
+from googlesearch import search
 
-
-async def search_web(query: str, num_results: int=5):
-    "Perform a web search using DuckDuckGo and return relevant results."
+async def search_web(query: str, num_results: int = 5):
+    """Perform a web search using Google Search and return relevant results."""
     results = []
 
-    with DDGS() as ddgs:
-        search_results = ddgs.text(query, max_results=num_results)
+    # Perform search with advanced=True to get more metadata
+    search_results = search(query, advanced=True, num_results=num_results)
 
     for res in search_results:
         results.append({
-            "title": res["title"],
-            "url": res["href"],
-            "snippet": res.get("body", "No description available.")
+            "title": res.title,
+            "url": res.url,
+            "snippet": res.description if res.description else "No description available."
         })
 
     return results
