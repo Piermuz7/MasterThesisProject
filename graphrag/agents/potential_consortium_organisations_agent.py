@@ -72,8 +72,6 @@ async def get_similar_projects(user_question: str) -> list[str]:
 
     return project_IRIs
 
-# TODO: finire
-
 potential_consortium_organisations_agent = FunctionAgent(
     name="PotentialConsortiumOrganisationsAgent",
     description="This agent suggest potential organisations for a given project description, in order to form a consortium.",
@@ -85,15 +83,22 @@ potential_consortium_organisations_agent = FunctionAgent(
         Your response should include a list of potential organisations, their postal addresses, and a brief explanation of why they are relevant to the project.
 
         You need to find similar projects based on the project description. Then, you need to find the organisations involved in each of the similar projects.
+        Follow these ordered steps. You must use only the tools provided.
+
+        Step1:
 
         First of all use the get_similar_projects tool to find similar projects that have their abstracts similar to the given project description.
         This tool is used to find similar projects and to consider all the relevant information about a project such as the title, abstract, the uri, and other details.
         The uri of each project is used to find the organisations involved in each of the similar projects.
 
+        Step2:
+
         Once you have the project IRIs, use the get_organisations_of_similar_projects tool to find the organisations involved in each of the similar projects.
         This tool is used to find the organisations involved in a project and to consider all the relevant information about an organisation such as the name, the role, and the postal address.
         You must consider and use all the project IRIs returned by the get_similar_projects tool.
 
+        Step3:
+    
         Finally, provide one or more consortium lists of potential organisations, their postal addresses, and a brief explanation of why they are relevant to the project.
         Explain why you think these organisations are suitable to collaborate as a consortium based on the project's content.
         

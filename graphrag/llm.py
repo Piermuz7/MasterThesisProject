@@ -19,7 +19,7 @@ config = toml.load(".streamlit/secrets.toml")
 
 # Switch between Anthropic and Azure OpenAI LLMs.
 
-# api_key = config["api_key"]["ANTHROPIC_KEY"]
+#api_key = config["api_key"]["ANTHROPIC_KEY"]
 api_key = config["api_key"]["AZURE_OPENAI_API_KEY"]
 
 langchain_anthropic_llm = ChatAnthropic(
@@ -31,7 +31,7 @@ langchain_anthropic_llm = ChatAnthropic(
 )
 
 llama_index_anthropic_llm = Anthropic(temperature=0,
-                                      api_key=st.secrets["api_key"]["ANTHROPIC_KEY"],
+                                      api_key=api_key,
                                       model="claude-3-5-sonnet-20241022",
                                       max_tokens=8192,
                                       )

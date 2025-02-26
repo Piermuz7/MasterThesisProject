@@ -1,8 +1,52 @@
+from SPARQLWrapper import SPARQLWrapper, JSON
 from llama_index.core.agent.workflow import FunctionAgent
 
 from graphrag import llm
 from graphrag.tools.participant_information import get_participant_information
 from graphrag.tools.project_information import get_project_info
+from graphrag.embeddings.graph_embedding_service import GraphEmbeddingStore
+import streamlit as st
+
+embedding_store = GraphEmbeddingStore()
+
+
+async def get_similar_projects(user_question: str) -> list[str]:
+    "Finds similar project to a given project description"
+    project_IRIs_by_similarity = embedding_store.similarity_search_with_relevance_score(
+        query_text=f"A project with abstract similar to: {user_question}.",
+        property_name="abstract",
+        k=3
+    )
+
+    project_IRIs = [item['iri'] for item in project_IRIs_by_similarity]
+    results = []
+    # Initialize SPARQLWrapper
+    sparql = SPARQLWrapper(st.secrets["GRAPHDB_URL"])
+    sparql.setReturnFormat(JSON)
+
+    for project_iri in project_IRIs:
+        query = f"""
+                PREFIX eurio: <http://data.europa.eu/s66#>
+
+                SELECT DISTINCT ?project_title
+                WHERE {{
+                    BIND (<{project_iri}> as ?project) 
+                    ?project a eurio:Project.
+                    ?project eurio:title ?project_title.
+                }}
+            """
+
+        sparql.setQuery(query)
+
+        try:
+            response = sparql.query().convert()
+            for result in response["results"]["bindings"]:
+                results.append(result.get("project_title", {}).get("value", ""))
+
+        except Exception as e:
+            print(f"Error querying {project_iri}: {e}")
+    return results
+
 
 projects_participants_agent = FunctionAgent(
     name="EuropeanProjectsExpertAgent",
@@ -41,10 +85,12 @@ projects_participants_agent = FunctionAgent(
         3. If the question asks for a list of projects of a specific topics with their abstracts, return a list of relevant project titles with their abstracts. 
         
         If you use both the tools, merge the answers and combine them in a final professional answer.
+        
+        If you need to find similar projects based on the project description, use the **get_similar_projects** tool to find the titles of similar projects that have their abstracts similar to the given project description.
 
         """
     ),
     llm=llm.llama_index_azure_openai_llm,
-    tools=[get_project_info, get_participant_information],
+    tools=[get_project_info, get_participant_information, get_similar_projects],
     can_handoff_to=["PotentialCollaboratorsAgent", "PotentialConsortiumOrganisationsAgent"],
 )

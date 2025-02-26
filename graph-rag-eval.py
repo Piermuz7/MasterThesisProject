@@ -15,11 +15,11 @@ from graphrag.embeddings.graph_embedding_service import GraphEmbeddingStore
 
 from graphrag.graph import graph_db
 import graphrag.llm as llm
-
+from evaluation.qa import queries, ground_truths
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
-# TODO: understand how to evaluate using agents
+# TODO: maybe useful to evaluate only GraphRAG without agents...
 
 llm = llm.langchain_azure_openai_llm
 
@@ -85,7 +85,7 @@ sparql_qa = OntotextGraphDBQAChain.from_llm(
     sparql_generation_prompt=SPARQL_GENERATION_PROMPT,
     allow_dangerous_requests=True,
 )
-
+'''
 queries = [
     "What is the abstract of a project named 'IMproving Preparedness and RIsk maNagemenT for flash floods and debriS flow events'?",
     "What are the general information of the project named 'Topology driven methods for complex systems'?",
@@ -132,6 +132,7 @@ The project involved collaboration among several prestigious institutions and re
     Topology driven methods for complex systems, Topological Complex Systems, Understanding Random Systems via Algebraic Topology, Self-Organised information PrOcessing, CriticaLity and Emergence in multilevel Systems, Hierarchical Analysis of Complex Dynamical Systems.
     """
 ]
+'''
 
 results = []
 contexts = []

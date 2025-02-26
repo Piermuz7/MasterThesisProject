@@ -1,0 +1,761 @@
+user_input,retrieved_contexts,response,reference,faithfulness,answer_relevancy,context_precision,context_recall,context_entity_recall,semantic_similarity,answer_correctness,harmfulness
+Suggest organizations for a consortium focused on renewable energy innovation,"['SAMSO ENERGY AGENCY FORENING. STRANDENGEN 1, 8305 SAMSO, DK. INsular regions cooperation for maximising the environmental and economic benefits from the research in Renewable Energy Sources', 'Brdr. Stjerne K/S. Smede - og Maskinforretning. Besser Smedegade 7, 8305 Samsø, DK. INsular regions cooperation for maximising the environmental and economic benefits from the research in Renewable Energy Sources', 'IDRYMA TECHNOLOGIAS KAI EREVNAS. N PLASTIRA STR 100, 70013 IRAKLEIO, EL. INsular regions cooperation for maximising the environmental and economic benefits from the research in Renewable Energy Sources', 'INSTITUTO TECNOLOGICO DE CANARIAS,S.A.. CALLE CEBRIAN 3, 35003 Las Palmas de Gran Canaria, ES. INsular regions cooperation for maximising the environmental and economic benefits from the research in Renewable Energy Sources', ""DOBON'S TECHNOLOGY S.L.. San Juan Bautista 48, 38001 Santa Cruz de Tenerife, ES. INsular regions cooperation for maximising the environmental and economic benefits from the research in Renewable Energy Sources"", 'ANONYMY ETAIRIA TOURISTIKON EPIXEIRHSEON AKTHS BOLAKA-GLYKORIZA T.E.A.B. A.E.. PAPANASTASIOU 28A, 71306 HERAKLION, EL. INsular regions cooperation for maximising the environmental and economic benefits from the research in Renewable Energy Sources', 'REGION OF CRETE - REGIONAL ENERGY AGENCY OF CRETE. KOUNTOURIOTI SQUARE, 71202 HERAKLION, EL. INsular regions cooperation for maximising the environmental and economic benefits from the research in Renewable Energy Sources', 'SAMSO ENERGIAKADEMI FORENING. STRANDENGEN 1, 8305 SAMSO, DK. INsular regions cooperation for maximising the environmental and economic benefits from the research in Renewable Energy Sources', 'TECHNOLOGY TRANSFER ASSOCIATION UNION OF JURIDICAL PERSONS. KHANJYAN STREET 19, 375010 YEREVAN, AM. ENER2I (ENErgy Research to Innovation): Reinforcing cooperation with ENP countries on bridging the gap between energy research and energy innovation', 'EE ENERGY ENGINEERS GMBH. MUNSCHEIDSTRASSE 14, 45886 GELSENKIRCHEN, DE. ENER2I (ENErgy Research to Innovation): Reinforcing cooperation with ENP countries on bridging the gap between energy research and energy innovation', 'REGIONALIS INFORMACIOS ES FEJLESZTO TUDASKOZPONT KORLATOLT FELELOSSEGU TARSASAG. HUVOSVOLGYI UTCA 54 V EP 1 EM, 1021 Budapest, HU. ENER2I (ENErgy Research to Innovation): Reinforcing cooperation with ENP countries on bridging the gap between energy research and energy innovation', 'NATIONAL ACADEMY OF SCIENCES OF THE REPUBLIC OF ARMENIA. 24 MARSHAL BAGHRAMIAN AVENUE, 375019 YEREVAN, AM. ENER2I (ENErgy Research to Innovation): Reinforcing cooperation with ENP countries on bridging the gap between energy research and energy innovation', 'ORGANIZATIA PENTRU DEZVOLTAREA SECTORULUI INTREPRINDERILOR MICI SI MIJLOCII. 134 STEFAN CEL MARE SI SFINT BD, 2012 CHISINAU, MD. ENER2I (ENErgy Research to Innovation): Reinforcing cooperation with ENP countries on bridging the gap between energy research and energy innovation', 'BELARUSIAN INSTITUTE OF SYSTEM ANALYSIS AND INFORMATION SUPPORT OF SCIENTIFIC AND TECHNICAL SPHERE. Pobediteley Prospect  7, 220004 MINSK, BY. ENER2I (ENErgy Research to Innovation): Reinforcing cooperation with ENP countries on bridging the gap between energy research and energy innovation', 'AGENTIA PENTRU INOVARE SI TRANSFERTEHNOLOGIC. STEFAN CEL MARE BOULEVARD 1 OF 440, 2001 CHISINAU, MD. ENER2I (ENErgy Research to Innovation): Reinforcing cooperation with ENP countries on bridging the gap between energy research and energy innovation', 'ZENTRUM FUR SOZIALE INNOVATION GMBH. LINKE WIENZEILE 246, 1150 WIEN, AT. ENER2I (ENErgy Research to Innovation): Reinforcing cooperation with ENP countries on bridging the gap between energy research and energy innovation', 'ZENTRUM FUER SOZIALE INNOVATION. Linke Wienzeile 246, 1150 WIEN, AT. ENER2I (ENErgy Research to Innovation): Reinforcing cooperation with ENP countries on bridging the gap between energy research and energy innovation', 'BELARUSIAN INNOVATIVE FUND. V KHORUZHEJ STREET 31A 403, 220002 MINSK, BY. ENER2I (ENErgy Research to Innovation): Reinforcing cooperation with ENP countries on bridging the gap between energy research and energy innovation', 'EUROPEAN SUSTAINABLE ENERGY INNOVATION ALLIANCE - ESEIA, VEREIN FUR FORDERUNG DER EUROPAIESCHEN INNOVATION FUR ERNEUERBARE ENERGIEN. Munzgrabenstrasse 11/5, 8010 Graz, AT. ENER2I (ENErgy Research to Innovation): Reinforcing cooperation with ENP countries on bridging the gap between energy research and energy innovation', 'ENERGOEPEKTUROBIS TSENTRI SAKARTVELO. D. GAMREKELI STR. 19, 0160 TBILISI, GE. ENER2I (ENErgy Research to Innovation): Reinforcing cooperation with ENP countries on bridging the gap between energy research and energy innovation', 'SCOTTISH RENEWABLES FORUM LIMITED LBG. BATH STREET 49 - 3RD FLOOR, G2 2DL GLASGOW, UK. European North Sea Energy Alliance', 'SCOTTISH ENTERPRISE. WATERLOO STREET 50, G2 8LU GLASGOW, UK. European North Sea Energy Alliance', 'WACHSTUMSREGION EMS-ACHSE E.V. HAUPTKANAL LINKS 60, 26871 PAPENBURG, DE. European North Sea Energy Alliance', 'UNIVERSITY OF STRATHCLYDE. Richmond Street 16, G1 1XQ Glasgow, UK. European North Sea Energy Alliance', 'Lyse Produksjon AS. Breiflatveien  18, 4069 Stavanger, NO. European North Sea Energy Alliance', 'STICHTING ENERGY VALLEY. NIJENBORH 6, 9747 AG GRONINGEN, NL. European North Sea Energy Alliance', 'ROGALAND FYLKESKOMMUNE. ARKITEKT ECKHOFFS GATE 1, 4001 STAVANGER, NO. European North Sea Energy Alliance', 'UNIVERSITETET I STAVANGER. KJELL ARHOLMS GATE 41, 4021 Stavanger, NO. European North Sea Energy Alliance']","Based on the provided data, here are some suggested organizations for a consortium focused on renewable energy innovation:
+
+### Consortium list 1:
+
+1. **INNOVA BIC - BUSINESS INNOVATION CENTRE SRL**
+   - **Location**: Via Consolato del Mare 41, 98122 MESSINA, IT
+   - **Potential contribution**: Expertise in business innovation and technology transfer in renewable energy.
+
+2. **UNIVERSITE DE NANTES**
+   - **Location**: QUAI DE TOURVILLE 1, 44035 NANTES CEDEX 1, FR
+   - **Potential contribution**: Academic research and development in renewable energy technologies.
+
+3. **EUREC EESV**
+   - **Location**: PLACE DU CHAMPS DE MARS 2, 1050 BRUXELLES, BE
+   - **Potential contribution**: Expertise in renewable energy education and training.
+
+4. **YILDIZ TECHNICAL UNIVERSITY**
+   - **Location**: BARBAROS BULVARI YILDIZ KAMPUS, 34349 ISTANBUL, TR
+   - **Potential contribution**: Academic research and development in renewable energy systems.
+
+5. **CENTRE FOR RENEWABLE ENERGY SOURCES AND SAVING FONDATION**
+   - **Location**: MARATHONOS 19TH KM, 19009 PIKERMI, EL
+   - **Potential contribution**: Expertise in renewable energy technologies and energy saving solutions.
+
+### Consortium list 2:
+
+1. **TECHNOLOGY TRANSFER ASSOCIATION UNION OF JURIDICAL PERSONS**
+   - **Location**: KHANJYAN STREET 19, 375010 YEREVAN, AM
+   - **Potential contribution**: Expertise in technology transfer and innovation in renewable energy.
+
+2. **EE ENERGY ENGINEERS GMBH**
+   - **Location**: MUNSCHEIDSTRASSE 14, 45886 GELSENKIRCHEN, DE
+   - **Potential contribution**: Expertise in engineering solutions for renewable energy systems.
+
+3. **REGIONALIS INFORMACIOS ES FEJLESZTO TUDASKOZPONT KORLATOLT FELELOSSEGU TARSASAG**
+   - **Location**: HUVOSVOLGYI UTCA 54 V EP 1 EM, 1021 Budapest, HU
+   - **Potential contribution**: Expertise in regional development and innovation in renewable energy.
+
+4. **NATIONAL ACADEMY OF SCIENCES OF THE REPUBLIC OF ARMENIA**
+   - **Location**: 24 MARSHAL BAGHRAMIAN AVENUE, 375019 YEREVAN, AM
+   - **Potential contribution**: Academic research and development in renewable energy technologies.
+
+5. **ORGANIZATIA PENTRU DEZVOLTAREA SECTORULUI INTREPRINDERILOR MICI SI MIJLOCII**
+   - **Location**: 134 STEFAN CEL MARE SI SFINT BD, 2012 CHISINAU, MD
+   - **Potential contribution**: Expertise in supporting small and medium-sized enterprises (SMEs) in renewable energy innovation.
+
+### Consortium list 3:
+
+1. **Contren SA**
+   - **Location**: RUE DU COLLEGE, N/A La Chaux-de-Fonds, CH
+   - **Potential contribution**: Expertise in sustainable energy solutions and community energy projects.
+
+2. **AGENCIJA ZA PRESTRUKTURIRANJE ENERGETIKE DOO**
+   - **Location**: LITIJSKA 45, 1000 LJUBLJANA, SI
+   - **Potential contribution**: Expertise in energy restructuring and renewable energy projects.
+
+3. **Ökoregion Kaindorf**
+   - **Location**: Kaindorf, N/A Kaindorf, AT
+   - **Potential contribution**: Expertise in regional sustainable energy initiatives.
+
+4. **COMMUNE DE CERNIER**
+   - **Location**: rue de l'Epervier - Hôtel de Ville, N/A CERNIER, CH
+   - **Potential contribution**: Expertise in community-based renewable energy projects.
+
+5. **FH JOANNEUM GESELLSCHAFT MBH**
+   - **Location**: ALTE POSTSTRASSE 149, 8020 Graz, AT
+   - **Potential contribution**: Academic research and development in renewable energy technologies.
+
+These organizations have been selected based on their involvement in similar projects and their potential contributions to a renewable energy innovation project. Each organization brings unique expertise and experience that can complement each other to form a strong consortium.","
+    Consortium list 1:
+    [INNOVA BIC - BUSINESS INNOVATION CENTRE SRL - Potential contribution: Expertise in business innovation and support for renewable energy projects.], 
+    [UNIVERSITE DE NANTES - Potential contribution: Academic research and development in renewable energy technologies.], 
+    [EUREC EESV - Potential contribution: Expertise in renewable energy education and training.], 
+    [YILDIZ TECHNICAL UNIVERSITY - Potential contribution: Research and development in renewable energy technologies.], 
+    [UNIVERSITE CADI AYYAD - Potential contribution: Academic research in renewable energy.]
+    
+    Consortium list 2:
+    [TECHNOLOGY TRANSFER ASSOCIATION UNION OF JURIDICAL PERSONS - Potential contribution: Technology transfer and innovation in renewable energy.], 
+    [EE ENERGY ENGINEERS GMBH - Potential contribution: Engineering solutions for renewable energy.], 
+    [REGIONALIS INFORMACIOS ES FEJLESZTO TUDASKOZPONT - Potential contribution: Regional development and innovation in renewable energy.], 
+    [NATIONAL ACADEMY OF SCIENCES OF THE REPUBLIC OF ARMENIA - Potential contribution: Academic research and development in renewable energy.], 
+    [ORGANIZATIA PENTRU DEZVOLTAREA SECTORULUI INTREPRINDERILOR MICI SI MIJLOCII - Potential contribution: Support for small and medium enterprises in renewable energy.]
+    
+    Consortium list 3:
+    [Contren SA - Potential contribution: Industrial expertise in renewable energy solutions.], 
+    [AGENCIJA ZA PRESTRUKTURIRANJE ENERGETIKE DOO - Potential contribution: Energy restructuring and innovation.], 
+    [Ökoregion Kaindorf - Potential contribution: Regional development and sustainability in renewable energy.], 
+    [COMMUNE DE CERNIER - Potential contribution: Local government support for renewable energy projects.], 
+    [FH JOANNEUM GESELLSCHAFT MBH - Potential contribution: Academic research and development in renewable energy.]
+    ",0.3939393939393939,0.9735565243924026,0.10263157894223685,0.2777777777777778,0.26666666648888887,0.7236601073947491,0.637436765979122,0
+Which companies and universities are best suited for a project on digital twins in manufacturing?,"['KEY MANAGEMENT CONSULT B.V.. MOERGESTELSEWEG 34, 5062 DE OISTERWIJK, NL. Innovation for Digital Fabrication', 'XENNIA TECHNOLOGY LIMITED. WORKS ROAD MONROE HOUSE, SG6 1LN LETCHWORTH, UK. Innovation for Digital Fabrication', 'INNOVATIONLAB GMBH. SPEYERER STRASSE 4, 69115 Heidelberg, DE. Innovation for Digital Fabrication', 'TEESSIDE UNIVERSITY. BOROUGH ROAD, TS1 3BA MIDDLESBROUGH, UK. Innovation for Digital Fabrication', 'THE CHANCELLOR MASTERS AND SCHOLARS OF THE UNIVERSITY OF CAMBRIDGE. TRINITY LANE THE OLD SCHOOLS, CB2 1TN CAMBRIDGE, UK. Innovation for Digital Fabrication', 'LOUGHBOROUGH UNIVERSITY. ASHBY ROAD, LE11 3TU LOUGHBOROUGH, UK. Innovation for Digital Fabrication', 'XAARJET LIMITED. MILTON ROAD SCIENCE PARK 316, CB4 0XR CAMBRIDGE, UK. Innovation for Digital Fabrication', 'CENTRE FOR PROCESS INNOVATION LIMITED LBG. WILTON CENTRE WILTON, TS10 4RF REDCAR CLEVELAND, UK. Innovation for Digital Fabrication', 'CENTITVC - CENTRO DE NANOTECNOLOGIAE MATERIAIS TECNICOS FUNCIONAIS EINTELIGENTES. RUA FERNANDO MESQUITA 2785 QUINTA DA MAIA, 4760 034 VILA NOVA DE FAMALICAO, PT. Innovation for Digital Fabrication', 'CANON PRODUCTION PRINTING NETHERLANDS BV. SINT URBANUSWEG 43, 5914 CA Venlo, NL. Innovation for Digital Fabrication', 'FRAUNHOFER GESELLSCHAFT ZUR FORDERUNG DER ANGEWANDTEN FORSCHUNG EV. HANSASTRASSE 27C, 80686 MUNCHEN, DE. Innovation for Digital Fabrication', '3D-Micromac AG. Technologie-Campus 8, 09126 Chemnitz, DE. Innovation for Digital Fabrication', 'OLED TECHNOLOGIES & SOLUTIONS BV. JAN CAMPERTSTRAAT 7A, 6416 SG HEERLEN, NL. Innovation for Digital Fabrication', 'NEDERLANDSE ORGANISATIE VOOR TOEGEPAST NATUURWETENSCHAPPELIJK ONDERZOEK TNO. ANNA VAN BUERENPLEIN 1, 2595 DA DEN HAAG, NL. Innovation for Digital Fabrication', 'THE UNIVERSITY OF MANCHESTER. OXFORD ROAD, M13 9PL MANCHESTER, UK. Innovation for Digital Fabrication', 'SINTEF MANUFACTURING AS. BYGNING 100, RAUFOSS INDUSTRIPARK, 2830 Raufoss, NO. Innovation for Digital Fabrication', 'NANOGAP SUB-NM-POWDER SA. RUA DA XESTA NAVE 78A2, 15895 AMES A CORUNA, ES. Innovation for Digital Fabrication', 'OLED TECHNOLOGIES BV. JAN CAMPERTSTRAAT 7 A, 6416 SG HEERLEN, NL. Innovation for Digital Fabrication', 'ERABERRIKUNTZAN ETA EZAGUTZAN ADITUAK DIREN PERTSONEN MUGIKORTEASUNA SUSTATZEKO ELKARTEA. PARQUE TECHNOLOGICO DE BIZKAIA -LAGA BIDEA EDIF 804 300, 48160 DERIO-BIZKAIA, ES. Future Internet Web-Entrepreneurship for 3D Printing Virtual Fabrication in Europe', ""ENGINEERING - INGEGNERIA INFORMATICA SPA. PIAZZALE DELL'AGRICOLTURA 24, 00144 ROMA, IT. Future Internet Web-Entrepreneurship for 3D Printing Virtual Fabrication in Europe"", 'ASOCIACION DE EMPRESAS TECNOLOGICAS INNOVALIA. CALLE RODRIGUEZ ARIAS 6 DPTO 605, 48008 Bilbao, ES. Future Internet Web-Entrepreneurship for 3D Printing Virtual Fabrication in Europe', 'BWCON GMBH. SEYFFERSTRASSE 34, 70197 Stuttgart, DE. Future Internet Web-Entrepreneurship for 3D Printing Virtual Fabrication in Europe', 'IMINDS VZW. GASTON CROMMENLAAN 8/102, 9050 GENT, BE. Future Internet Web-Entrepreneurship for 3D Printing Virtual Fabrication in Europe', 'INTERUNIVERSITAIR MICRO-ELECTRONICA CENTRUM. KAPELDREEF 75, 3001 Heverlee, BE. Future Internet Web-Entrepreneurship for 3D Printing Virtual Fabrication in Europe', 'BADEN-WURTTEMBERG: CONNECTED E.V.. BREITSCHEIDSTRASSE 4, 70174 STUTTGART, DE. Future Internet Web-Entrepreneurship for 3D Printing Virtual Fabrication in Europe', 'CENTER FOR KULTUR- OG OPLEVELSESOKONOMI. HERSEGADE 20, 4000 ROSKILDE, DK. Future Internet Web-Entrepreneurship for 3D Printing Virtual Fabrication in Europe', 'CONSULTORES DE AUTOMATIZACION Y ROBOTICA SA. CARRETERA ASUA LA AVANZADA 6, 48930 GETXO BIZKAIA, ES. Future Internet Web-Entrepreneurship for 3D Printing Virtual Fabrication in Europe', 'INNO TSD. PLACE JOSEPH BERMOND OPHIRA I, 06560 SOPHIA ANTIPOLIS VALBONNE, FR. Jordan Europe Wide Enhanced research Links in ICT', 'JORDAN UNIVERSITY OF SCIENCE AND TECHNOLOGY. RBID, 22110 IRBID, JO. Jordan Europe Wide Enhanced research Links in ICT', 'ARISTOTELIO PANEPISTIMIO THESSALONIKIS. KEDEA BUILDING, TRITIS SEPTEMVRIOU, ARISTOTLE UNIVERSITY CAMPUS, 546 36 THESSALONIKI, EL. Jordan Europe Wide Enhanced research Links in ICT']","For a project on digital twins in manufacturing, the following companies and universities are best suited based on their expertise and involvement in similar projects:
+
+### Consortium list 1:
+
+1. **Fraunhofer Gesellschaft zur Förderung der angewandten Forschung e.V.**, München, DE
+   - Expertise in applied research and development in manufacturing technologies, including digital twins.
+
+2. **SINTEF Manufacturing AS**, Raufoss, NO
+   - Expertise in manufacturing processes and digital twin technology.
+
+3. **Teesside University**, Middlesbrough, UK
+   - Academic research in digital manufacturing and digital twins.
+
+4. **Nederlandse Organisatie voor Toegepast Natuurwetenschappelijk Onderzoek TNO**, Den Haag, NL
+   - Applied scientific research in digital manufacturing and digital twins.
+
+5. **University of Cambridge**, Cambridge, UK
+   - Academic research in digital twins and advanced manufacturing technologies.
+
+### Consortium list 2:
+
+1. **Loughborough University**, Loughborough, UK
+   - Expertise in manufacturing systems and digital twin technology.
+
+2. **Centre for Process Innovation Limited LBG**, Redcar Cleveland, UK
+   - Expertise in process innovation and digital manufacturing.
+
+3. **InnovationLab GmbH**, Heidelberg, DE
+   - Expertise in digital innovation and manufacturing technologies.
+
+4. **The University of Manchester**, Manchester, UK
+   - Academic research in digital twins and advanced manufacturing technologies.
+
+5. **Canon Production Printing Netherlands BV**, Venlo, NL
+   - Expertise in digital printing and manufacturing technologies.
+
+These organisations have demonstrated their capabilities through their involvement in projects related to digital fabrication and manufacturing innovations, making them well-suited for a project on digital twins in manufacturing.","
+    Consortium list 1:
+    [Fraunhofer Gesellschaft zur Förderung der angewandten Forschung e.V. - Potential contribution: Expertise in applied research and development in manufacturing technologies, including digital twins.], 
+    [Teesside University - Potential contribution: Academic research in digital manufacturing and digital twins.], 
+    [SINTEF Manufacturing AS - Potential contribution: Expertise in manufacturing research and development, including digital twins and smart manufacturing.], 
+    [Nederlandse Organisatie voor Toegepast Natuurwetenschappelijk Onderzoek TNO - Potential contribution: Applied scientific research in manufacturing technologies, including digital twins.], 
+    [University of Cambridge - Potential contribution: Academic research in digital twins and manufacturing technologies.]
+    
+    Consortium list 2:
+    [Loughborough University - Potential contribution: Academic research in digital manufacturing and digital twins.], 
+    [Centre for Process Innovation Limited LBG - Potential contribution: Expertise in process innovation and manufacturing technologies, including digital twins.], 
+    [3D-Micromac AG - Potential contribution: Expertise in micro-manufacturing and digital twins.], 
+    [Canon Production Printing Netherlands BV - Potential contribution: Expertise in digital printing and manufacturing technologies, including digital twins.], 
+    [University of Manchester - Potential contribution: Academic research in digital twins and manufacturing technologies.]
+    
+    Consortium list 3:
+    [InnovationLab GmbH - Potential contribution: Expertise in innovation and digital manufacturing technologies, including digital twins.], 
+    [Xennia Technology Limited - Potential contribution: Expertise in digital printing and manufacturing technologies, including digital twins.], 
+    [OLED Technologies & Solutions BV - Potential contribution: Expertise in OLED technologies and digital manufacturing, including digital twins.], 
+    [Key Management Consult B.V. - Potential contribution: Expertise in management consulting for digital manufacturing projects, including digital twins.], 
+    [The Cyprus Research and Educational Foundation - Potential contribution: Expertise in research and education in digital manufacturing technologies, including digital twins.]
+    ",0.07692307692307693,1.0,0.083333333325,0.0,0.06666666662222222,0.8613236771044543,0.7510452049903992,0
+Recommend European organizations that specialize in carbon capture and storage,"['GEOLOGIAN TUTKIMUSKESKUS. VUORIMIEHENTIE 5, 02151 Espoo, FI. Pan-European coordination action on CO2 Geological Storage', 'Laboratorio Nacional de Energia e Geologia I.P.. Rua da Amieira, 4466-901 S.Mamede De Infesta, PT. Pan-European coordination action on CO2 Geological Storage', 'ORGANISMOS FYSIKOU PERIVALLONTOS KAI KLIMATIKIS ALLAGIS. MESOGEION AVENUE 207, 11525 ATHENS, EL. Pan-European coordination action on CO2 Geological Storage', 'INSTITUTO GEOLÓGICO Y MINERO DE ESPAÑA. RÍOS ROSAS 23, 28003 MADRID, ES. Pan-European coordination action on CO2 Geological Storage', 'SVEUCILISTE U ZAGREBU RUDARSKO-GEOLOSKO-NAFTNI FAKULTET. PIEROTTIJEVA 6, 10000 ZAGREB, HR. Pan-European coordination action on CO2 Geological Storage', 'SVERIGES GEOLOGISKA UNDERSOKNING. VILLAVAEGEN  18, S-75128 Uppsala, SE. Pan-European coordination action on CO2 Geological Storage', 'FACULTY OF ECOLOGY AND ENVIRONMENTAL SCIENCES. Ulica Cara Dusana 62-64, 11000 BEOGRAD, RS. Pan-European coordination action on CO2 Geological Storage', 'INSTITUTUL NATIONAL DE CERCETARE-DEZVOLTARE PENTRU GEOLOGIE SI GEOECOLOGIE MARINA-GEOECOMAR. DIMITRIE ONCIUL STREET  23-25, 024053 Bucharest, RO. Pan-European coordination action on CO2 Geological Storage', 'INSTITUTO GEOLOGIKON KAI METALLEYTIKON EREYNON. SP LOUIS ODOS ENTRANCE C OLYMPIC VILLAGE 1, 13677 ACHARNAE, EL. Pan-European coordination action on CO2 Geological Storage', 'Gamtos tyrimų centras. Akademijos g. 2, LT-08412 Vilnius, LT. Pan-European coordination action on CO2 Geological Storage', 'BUREAU DE RECHERCHES GEOLOGIQUES ET MINIERES. 3 AV CLAUDE GUILLEMIN, 45060 ORLEANS, FR. Pan-European coordination action on CO2 Geological Storage', 'INSTITUT ROYAL DES SCIENCES NATURELLES DE BELGIQUE. RUE VAUTIER 29, 1000 Brussels, BE. Pan-European coordination action on CO2 Geological Storage', 'PANSTWOWY INSTYTUT GEOLOGICZNY - PANSTWOWY INSTYTUT BADAWCZY. Rakowiecka  4, 00975 Warsaw, PL. Pan-European coordination action on CO2 Geological Storage', 'TALLINNA TEHNIKAÜLIKOOL. EHITAJATE TEE 5, 12616 Tallinn, EE. Pan-European coordination action on CO2 Geological Storage', 'Department of Environment, Climate and Communications. Adelaide Road  29-31, D02 X285 Dublin, IE. Pan-European coordination action on CO2 Geological Storage', 'STATNY GEOLOGICKY USTAV DIONYZA STURA. MLYNSKA DOLINA 1, 81704 Bratislava, SK. Pan-European coordination action on CO2 Geological Storage', 'GEOLOGISCHE BUNDESANSTALT. NEULINGGASSE 38, 1030 WIEN, AT. Pan-European coordination action on CO2 Geological Storage', 'MIDDLE EAST TECHNICAL UNIVERSITY. DUMLUPINAR BULVARI 1, 06800 ANKARA, TR. Pan-European coordination action on CO2 Geological Storage', 'MAGYAR FOLDTANI ES GEOFIZIKAI INTEZET. STEFANIA UT 14, 1143 BUDAPEST, HU. Pan-European coordination action on CO2 Geological Storage', 'CESKA GEOLOGICKA SLUZBA. Klarov  3/131, 11821 Prague 1, CZ. Pan-European coordination action on CO2 Geological Storage', 'GEOINZENIRING DRUZBA ZA GEOLOSKI INZENIRING DOO. DIMICEVA ULICA 14, 1000 LJUBLJANA, SI. Pan-European coordination action on CO2 Geological Storage', 'BUNDESANSTALT FUER GEOWISSENSCHAFTEN UND ROHSTOFFE. Stilleweg  2, 30655 Hannover, DE. Pan-European coordination action on CO2 Geological Storage', 'ASSOCIATION OF GEOPHYSICISTS AND ENVIRONMENTALISTS OF SERBIA. Dimitrija Avramovica 38, 11030 BEOGRAD, RS. Pan-European coordination action on CO2 Geological Storage', 'LATVIJAS VIDES, GEOLOGIJAS UN METEOROLOGIJAS CENTRS SIA. MASKAVAS IELA 165, 1019 Riga, LV. Pan-European coordination action on CO2 Geological Storage', 'SOFIA UNIVERSITY ST KLIMENT OHRIDSKI. BUL TZAR OSVOBODITEL 15, 1504 Sofia, BG. Pan-European coordination action on CO2 Geological Storage', ""CO2GEONET - RESEAU D'EXCELLENCE EUROPEEN SUR LE STOCKAGE GEOLOGIQUE DE CO2. avenue Claude Guillemin  3, 45060 ORLEANS, FR. Pan-European coordination action on CO2 Geological Storage"", 'INTERFACE EUROPE. Rue du Trône, 1000 Bruxelles, BE. Smart CO2 Transformation', 'DECHEMA GESELLSCHAFT FUR CHEMISCHETECHNIK UND BIOTECHNOLOGIE. THEODOR HEUSS ALLEE 25, 60486 FRANKFURT, DE. Smart CO2 Transformation', 'DCMR MILIEUDIENST RIJNMOND. PARALLELWEG 1, 3112 NA SCHIEDAM, NL. Smart CO2 Transformation', 'SERVICE PUBLIC DE WALLONIE. Place de la Wallonie 1, 5100 Namur, BE. Smart CO2 Transformation', 'AXELERA - ASSOCIATION CHIMIE-ENVIRONNEMENT LYON ET RHONE-ALPES. ROND POINT DE L ECHANGEUR LES LEVEES, 69360 Solaize, FR. Smart CO2 Transformation', 'TRINOMICS BV. WESTERSINGEL 34, 3014 GS Rotterdam, NL. Smart CO2 Transformation', 'THE CENTRE FOR LOW CARBON FUTURES LBG. INNOVATION WAY IT CENTRE YORK SCIENCE PARK HESLINGTON, YO10 5DG YORK, UK. Smart CO2 Transformation', 'THE UNIVERSITY OF SHEFFIELD. FIRTH COURT WESTERN BANK, S10 2TN SHEFFIELD, UK. Smart CO2 Transformation', 'YCF LIMITED BY GUARANTEE. FIRTH STREET BUCKLEY INNOVATION CENTRE 3M, HD1 3BD HUDDERSFIELD, UK. Smart CO2 Transformation', 'LEEDS CITY COUNCIL. CIVIC HALL CALVERLEY STREET, LS1 1JF Leeds, UK. Smart CO2 Transformation', 'POLE GREENWIN. RUE AUGUSTE PICCARD 20, 6041 GOSSELIES, BE. Smart CO2 Transformation', 'IMPERIAL COLLEGE OF SCIENCE TECHNOLOGY AND MEDICINE. SOUTH KENSINGTON CAMPUS EXHIBITION ROAD, SW7 2AZ LONDON, UK. Observing Carbon Dioxide Emissions at Regional Scales']","Based on the provided data, here are some European organizations specializing in carbon capture and storage (CCS):
+
+1. **GEOLOGIAN TUTKIMUSKESKUS** (Espoo, FI)
+   - Project: Pan-European coordination action on CO2 Geological Storage
+
+2. **Laboratorio Nacional de Energia e Geologia I.P.** (S.Mamede De Infesta, PT)
+   - Project: Pan-European coordination action on CO2 Geological Storage
+
+3. **ORGANISMOS FYSIKOU PERIVALLONTOS KAI KLIMATIKIS ALLAGIS** (Athens, EL)
+   - Project: Pan-European coordination action on CO2 Geological Storage
+
+4. **INSTITUTO GEOLÓGICO Y MINERO DE ESPAÑA** (Madrid, ES)
+   - Project: Pan-European coordination action on CO2 Geological Storage
+
+5. **SVEUCILISTE U ZAGREBU RUDARSKO-GEOLOSKO-NAFTNI FAKULTET** (Zagreb, HR)
+   - Project: Pan-European coordination action on CO2 Geological Storage
+
+6. **SVERIGES GEOLOGISKA UNDERSOKNING** (Uppsala, SE)
+   - Project: Pan-European coordination action on CO2 Geological Storage
+
+7. **FACULTY OF ECOLOGY AND ENVIRONMENTAL SCIENCES** (Belgrade, RS)
+   - Project: Pan-European coordination action on CO2 Geological Storage
+
+8. **INSTITUTUL NATIONAL DE CERCETARE-DEZVOLTARE PENTRU GEOLOGIE SI GEOECOLOGIE MARINA-GEOECOMAR** (Bucharest, RO)
+   - Project: Pan-European coordination action on CO2 Geological Storage
+
+9. **INSTITUTO GEOLOGIKON KAI METALLEYTIKON EREYNON** (Acharnes, EL)
+   - Project: Pan-European coordination action on CO2 Geological Storage
+
+10. **Gamtos tyrimų centras** (Vilnius, LT)
+    - Project: Pan-European coordination action on CO2 Geological Storage
+
+11. **BUREAU DE RECHERCHES GEOLOGIQUES ET MINIERES** (Orleans, FR)
+    - Project: Pan-European coordination action on CO2 Geological Storage
+
+12. **INSTITUT ROYAL DES SCIENCES NATURELLES DE BELGIQUE** (Brussels, BE)
+    - Project: Pan-European coordination action on CO2 Geological Storage
+
+13. **PANSTWOWY INSTYTUT GEOLOGICZNY - PANSTWOWY INSTYTUT BADAWCZY** (Warsaw, PL)
+    - Project: Pan-European coordination action on CO2 Geological Storage
+
+14. **TALLINNA TEHNIKAÜLIKOOL** (Tallinn, EE)
+    - Project: Pan-European coordination action on CO2 Geological Storage
+
+15. **Department of Environment, Climate and Communications** (Dublin, IE)
+    - Project: Pan-European coordination action on CO2 Geological Storage
+
+16. **STATNY GEOLOGICKY USTAV DIONYZA STURA** (Bratislava, SK)
+    - Project: Pan-European coordination action on CO2 Geological Storage
+
+17. **GEOLOGISCHE BUNDESANSTALT** (Vienna, AT)
+    - Project: Pan-European coordination action on CO2 Geological Storage
+
+18. **MIDDLE EAST TECHNICAL UNIVERSITY** (Ankara, TR)
+    - Project: Pan-European coordination action on CO2 Geological Storage
+
+19. **MAGYAR FOLDTANI ES GEOFIZIKAI INTEZET** (Budapest, HU)
+    - Project: Pan-European coordination action on CO2 Geological Storage
+
+20. **CESKA GEOLOGICKA SLUZBA** (Prague, CZ)
+    - Project: Pan-European coordination action on CO2 Geological Storage
+
+21. **GEOINZENIRING DRUZBA ZA GEOLOSKI INZENIRING DOO** (Ljubljana, SI)
+    - Project: Pan-European coordination action on CO2 Geological Storage
+
+22. **BUNDESANSTALT FUER GEOWISSENSCHAFTEN UND ROHSTOFFE** (Hannover, DE)
+    - Project: Pan-European coordination action on CO2 Geological Storage
+
+23. **ASSOCIATION OF GEOPHYSICISTS AND ENVIRONMENTALISTS OF SERBIA** (Belgrade, RS)
+    - Project: Pan-European coordination action on CO2 Geological Storage
+
+24. **LATVIJAS VIDES, GEOLOGIJAS UN METEOROLOGIJAS CENTRS SIA** (Riga, LV)
+    - Project: Pan-European coordination action on CO2 Geological Storage
+
+25. **SOFIA UNIVERSITY ST KLIMENT OHRIDSKI** (Sofia, BG)
+    - Project: Pan-European coordination action on CO2 Geological Storage
+
+26. **CO2GEONET - RESEAU D'EXCELLENCE EUROPEEN SUR LE STOCKAGE GEOLOGIQUE DE CO2** (Orleans, FR)
+    - Project: Pan-European coordination action on CO2 Geological Storage
+
+27. **INTERFACE EUROPE** (Bruxelles, BE)
+    - Project: Smart CO2 Transformation
+
+28. **DECHEMA GESELLSCHAFT FUR CHEMISCHETECHNIK UND BIOTECHNOLOGIE** (Frankfurt, DE)
+    - Project: Smart CO2 Transformation
+
+29. **DCMR MILIEUDIENST RIJNMOND** (Schiedam, NL)
+    - Project: Smart CO2 Transformation
+
+30. **SERVICE PUBLIC DE WALLONIE** (Namur, BE)
+    - Project: Smart CO2 Transformation
+
+31. **AXELERA - ASSOCIATION CHIMIE-ENVIRONNEMENT LYON ET RHONE-ALPES** (Solaize, FR)
+    - Project: Smart CO2 Transformation
+
+32. **TRINOMICS BV** (Rotterdam, NL)
+    - Project: Smart CO2 Transformation
+
+33. **THE CENTRE FOR LOW CARBON FUTURES LBG** (York, UK)
+    - Project: Smart CO2 Transformation
+
+34. **THE UNIVERSITY OF SHEFFIELD** (Sheffield, UK)
+    - Project: Smart CO2 Transformation
+
+35. **YCF LIMITED BY GUARANTEE** (Huddersfield, UK)
+    - Project: Smart CO2 Transformation
+
+36. **LEEDS CITY COUNCIL** (Leeds, UK)
+    - Project: Smart CO2 Transformation
+
+37. **POLE GREENWIN** (Gosselies, BE)
+    - Project: Smart CO2 Transformation
+
+38. **IMPERIAL COLLEGE OF SCIENCE TECHNOLOGY AND MEDICINE** (London, UK)
+    - Project: Observing Carbon Dioxide Emissions at Regional Scales
+
+These organizations have demonstrated expertise and involvement in significant CCS projects, making them suitable candidates for collaboration in this field.","
+    Consortium list 1:
+    [INTERFACE EUROPE - Potential contribution: Expertise in project management and coordination, particularly in European research projects.], 
+    [DECHEMA GESELLSCHAFT FUR CHEMISCHETECHNIK UND BIOTECHNOLOGIE - Potential contribution: Expertise in chemical engineering and biotechnology, particularly in CO2 capture and conversion technologies.], 
+    [THE UNIVERSITY OF SHEFFIELD - Potential contribution: Academic research and development in carbon capture technologies and environmental sustainability.], 
+    [HELMHOLTZ ZENTRUM POTSDAM DEUTSCHESGEOFORSCHUNGSZENTRUM GFZ - Potential contribution: Expertise in geosciences and the impact of CO2 on transport and storage behavior.], 
+    [SINTEF ENERGI AS - Potential contribution: Research and development in energy systems and carbon capture technologies.]
+    
+    Consortium list 2:
+    [THE UNIVERSITY OF EDINBURGH - Potential contribution: Academic research in atmospheric carbon capture and storage technologies.], 
+    [NEDERLANDSE ORGANISATIE VOOR TOEGEPAST NATUURWETENSCHAPPELIJK ONDERZOEK TNO - Potential contribution: Applied scientific research in CO2 capture and storage technologies.], 
+    [EQUINOR ENERGY AS - Potential contribution: Industrial expertise in energy production and carbon capture technologies.], 
+    [DNV AS - Potential contribution: Expertise in risk management and verification of CO2 capture and storage systems.], 
+    [PROGRESSIVE ENERGY LIMITED - Potential contribution: Development of low-carbon energy solutions and carbon capture technologies.]
+    ",,0.8968146264737382,0.0,0.0,0.29999999969999996,0.6351076188010252,,0
+Find potential partners for a collaborative research project on 6G networks,"['UNIVERSITY OF ESSEX. WIVENHOE PARK, CO4 3SQ COLCHESTER, UK. Cross-layer Research on Green Cooperative Cognitive Radio Networks and Services', 'UNIVERSITY OF LANCASTER. BAILRIGG, LA1 4YW LANCASTER, UK. Cross-layer Research on Green Cooperative Cognitive Radio Networks and Services', 'SIMULA RESEARCH LABORATORY AS. KRISTIAN AUGUST GATE 23, 0164 Oslo, NO. Cross-layer Research on Green Cooperative Cognitive Radio Networks and Services', 'UNIVERSITAT POLITECNICA DE VALENCIA. CAMINO DE VERA SN EDIFICIO 3A, 46022 Valencia, ES. Security, Services, nEtworking and performance of next generation IP-based multimedia wireless Networks', 'AALBORG UNIVERSITET. FREDRIK BAJERS VEJ 7K, 9220 Aalborg, DK. Security, Services, nEtworking and performance of next generation IP-based multimedia wireless Networks', 'UNIVERSITETET I AGDER. UNIVERSITETSVEIEN 25, 4604 Kristiansand, NO. Security, Services, nEtworking and performance of next generation IP-based multimedia wireless Networks', 'TECHNOLOGICKE CENTRUM PRAHA ZSPO. Ve Struhach 1076/27, 160 00 Praha, CZ. Improving the services of the NMP NCP Network through Trans-national Activities', 'NEMZETI KUTATASI FEJLESZTESI ES INNOVACIOS HIVATAL. KETHLY ANNA TER 1, 1077 Budapest, HU. Improving the services of the NMP NCP Network through Trans-national Activities', 'FORSCHUNGSZENTRUM JULICH GMBH. WILHELM JOHNEN STRASSE, 52428 JULICH, DE. Improving the services of the NMP NCP Network through Trans-national Activities', 'IDRYMA TECHNOLOGIAS KAI EREVNAS. N PLASTIRA STR 100, 70013 IRAKLEIO, EL. Improving the services of the NMP NCP Network through Trans-national Activities', 'AUTORITATEA NATIONALA PENTRU CERCETARE STIINTIFICA. Mendeleev Street 21-25 sector 1, 010362 BUCHAREST, RO. Improving the services of the NMP NCP Network through Trans-national Activities', 'ARCHIMEDES FOUNDATION. Koidula 13a, 10125 TALLINN, EE. Improving the services of the NMP NCP Network through Trans-national Activities', 'INSTYTUT PODSTAWOWYCH PROBLEMOW TECHNIKI POLSKIEJ AKADEMII NAUK. Adolfa Pawinskiego  5B, 02-106 Warsaw, PL. Improving the services of the NMP NCP Network through Trans-national Activities', 'INSTITUTE OF MECHANICS - BAS IMECHBAS. UL. AKADEMIK G BONCHEV 4 BLOK 4, 1113 Sofia, BG. Improving the services of the NMP NCP Network through Trans-national Activities', 'FEDERAL SCIENTIFIC RESEARCH CENTRECRYSTALLOGRAPHY AND PHOTONICS OF THE RUSSIAN ACADEMY OF SCIENCES. LENINSKY PROSPECT 59, 119333 MOSKVA, RU. Improving the services of the NMP NCP Network through Trans-national Activities', 'AGENZIA PER LA PROMOZIONE DELLA RICERCA EUROPEA. VIA CAVOUR 71, 00184 ROMA, IT. Improving the services of the NMP NCP Network through Trans-national Activities', 'ANI - AGENCIA NACIONAL DE INOVACAO, SA. RUA DE SAGRES 11, 4150 649 Porto, PT. Improving the services of the NMP NCP Network through Trans-national Activities', 'TUV SUD LIMITED. SCOTTISH TECHNOLOGY PARK NAPIER BUILDING, G75 0QF EAST KILBRIDE, UK. Improving the services of the NMP NCP Network through Trans-national Activities', 'ENTERPRISE IRELAND. EAST POINT BUSINESS PARK THE PLAZA, D03 Dublin, IE. Improving the services of the NMP NCP Network through Trans-national Activities']","Based on the provided data, here are potential partners for a collaborative research project on 6G networks:
+
+### Consortium list 1:
+
+1. **University of Essex**, Wivenhoe Park, CO4 3SQ Colchester, UK
+   - **Potential contribution**: Expertise in cognitive radio networks and green communication technologies.
+   - **Related works**: 
+     * **Cross-layer Research on Green Cooperative Cognitive Radio Networks and Services**
+
+2. **Ericsson AB**, Torshamnsgatan 23, 164 80 Stockholm, SE
+   - **Potential contribution**: Leading telecommunications company with extensive experience in mobile broadband and network technologies.
+   - **Related works**: 
+     * **COnvergence of fixed and Mobile BrOadband access/aggregation networks**
+
+3. **Deutsche Telekom AG**, Friedrich-Ebert-Allee 140, 53113 Bonn, DE
+   - **Potential contribution**: Major telecommunications provider with expertise in network infrastructure and services.
+   - **Related works**: 
+     * **COnvergence of fixed and Mobile BrOadband access/aggregation networks**
+
+4. **Nokia Solutions and Networks GmbH & Co KG**, Werinherstrasse 91, 81541 München, DE
+   - **Potential contribution**: Expertise in advanced radio interface technologies and network solutions.
+   - **Related works**: 
+     * **Advanced Radio Interface Technologies for 4G Systems**
+
+5. **Centre Tecnologic de Telecomunicacions de Catalunya**, Avinguda Carl Friedrich Gauss 7 Parc Mediterrani de Tecnologia, 08860 Castelldefels Barcelona, ES
+   - **Potential contribution**: Research center with expertise in telecommunications and network technologies.
+   - **Related works**: 
+     * **COnvergence of fixed and Mobile BrOadband access/aggregation networks**
+
+### Consortium list 2:
+
+1. **University of Lancaster**, Bailrigg, LA1 4YW Lancaster, UK
+   - **Potential contribution**: Expertise in cognitive radio networks and green communication technologies.
+   - **Related works**: 
+     * **Cross-layer Research on Green Cooperative Cognitive Radio Networks and Services**
+
+2. **Simula Research Laboratory AS**, Kristian August Gate 23, 0164 Oslo, NO
+   - **Potential contribution**: Research institution with expertise in network technologies and performance analysis.
+   - **Related works**: 
+     * **Cross-layer Research on Green Cooperative Cognitive Radio Networks and Services**
+
+3. **Telefonica Investigacion y Desarrollo SA**, Ronda de la Comunicacion S/N Distrito C Edificio Oeste I, 28050 Madrid, ES
+   - **Potential contribution**: Major telecommunications provider with expertise in network infrastructure and services.
+   - **Related works**: 
+     * **Advanced Radio Interface Technologies for 4G Systems**
+
+4. **Orange SA**, 111 Quai du President Roosevelt, 92130 Issy les Moulineaux, FR
+   - **Potential contribution**: Leading telecommunications company with extensive experience in mobile broadband and network technologies.
+   - **Related works**: 
+     * **Advanced Radio Interface Technologies for 4G Systems**
+
+5. **Politecnico di Milano**, Piazza Leonardo da Vinci 32, 20133 Milano, IT
+   - **Potential contribution**: Leading technical university with expertise in telecommunications and network technologies.
+   - **Related works**: 
+     * **COnvergence of fixed and Mobile BrOadband access/aggregation networks**
+
+These organisations have been selected based on their expertise and previous involvement in projects related to network technologies, cognitive radio networks, and the convergence of fixed and mobile broadband networks. They can provide complementary perspectives and expertise to the 6G networks project.","
+    Consortium list 1:
+    [DOCOMO Communications Laboratories Europe GmbH - Potential contribution: Expertise in mobile communication technologies and advanced radio interface technologies.], 
+    [ERICSSON AB - Potential contribution: Leading provider of telecommunications equipment and services, with extensive experience in mobile networks.], 
+    [ORANGE SA - Potential contribution: Major telecommunications operator with expertise in network infrastructure and services.], 
+    [TELEFONICA INVESTIGACION Y DESARROLLO SA - Potential contribution: Research and development arm of Telefónica, with expertise in telecommunications and network technologies.], 
+    [POLITECNICO DI MILANO - Potential contribution: Academic expertise in telecommunications and network engineering.]
+    
+    Consortium list 2:
+    [MAX IV Laboratory, Lund University - Potential contribution: Academic expertise in advanced technologies and research.], 
+    [FON TECHNOLOGY SL - Potential contribution: Expertise in wireless technology and network solutions.], 
+    [BUDAPESTI MUSZAKI ES GAZDASAGTUDOMANYI EGYETEM - Potential contribution: Academic expertise in engineering and technology.], 
+    [ADVA Optical Networking Limited - Potential contribution: Expertise in optical networking and telecommunications.], 
+    [TECHNISCHE UNIVERSITAET DRESDEN - Potential contribution: Academic expertise in telecommunications and network technologies.]
+    
+    Consortium list 3:
+    [AITIA INTERNATIONAL INFORMATIKAI ZARTKORUEN MUKODO RT - Potential contribution: Expertise in information technology and telecommunications.], 
+    [INSTITUT MINES-TELECOM - Potential contribution: Academic expertise in telecommunications and network engineering.], 
+    [DEUTSCHE TELEKOM AG - Potential contribution: Major telecommunications operator with expertise in network infrastructure and services.], 
+    [NOKIA SOLUTIONS AND NETWORKS GMBH & CO KG - Potential contribution: Leading provider of telecommunications equipment and services, with extensive experience in mobile networks.], 
+    [CHALMERS TEKNISKA HOGSKOLA AB - Potential contribution: Academic expertise in telecommunications and network engineering.]
+    ",0.2727272727272727,0.9404861063093836,0.19999999998,0.0,0.0,0.49956300350623484,0.34440294599850996,0
+Identify potential organizations have expertise in marine biodiversity conservation,"['INSTYTUT OCEANOLOGII POLSKIEJ AKADEMII NAUK. UL. POWSTANCOW WARSZAWY 55, 81 712 Sopot, PL. Sea For Society', 'AQUA TT UETP COMPANY LIMITED BY GUARANTEE. PLEASANTS STREET OLYMPIC HOUSE, 8 Dublin, IE. Sea For Society', ""SOCIETE D'EXPLOITATION DU CENTRE NATIONAL DE LA MER. BOULEVARD SAINTE BEUVE, 62203 BOULOGNE SUR MER, FR. Sea For Society"", 'FUNDACAO EUROCEAN. AVENIDA DOM CARLOS I 126-2, 1249 074 LISBOA, PT. Sea For Society', 'NATIONAL UNIVERSITY OF IRELAND GALWAY. UNIVERSITY ROAD, H91 Galway, IE. Sea For Society', ""INSTITUT FRANCAIS DE RECHERCHE POUR L'EXPLOITATION DE LA MER. 1625 ROUTE DE SAINTE ANNE ZONE INDUSTRIELLE DE LA POINTE DU DIABLE, 29280 PLOUZANE, FR. Sea For Society"", 'HAVFORSKNINGSINSTITUTTET. NORDNESGATEN  50, 5817 Bergen, NO. Sea For Society', 'STUDIO K SARL. RUE MERCOEUR 10, 75011 PARIS, FR. Sea For Society', 'COSTA EDUTAINMENT S.P.A. PONTE SPINOLA AREA PORTO ANTICO SN, 16128 GENOVA, IT. Sea For Society', 'MARINE INSTITUTE. RINVILLE ORANMORE, H91 R673 GALWAY, IE. Sea For Society', 'AYUNATMIENTO DE A CORUNA. Plaza de María Pita 1, 15001 A Coruna, ES. Sea For Society', 'CIENCIA VIVA-AGENCIA NACIONAL PARA A CULTURA CIENTIFICA E TECNOLOGICA. Parque das Nações, Alameda dos Oceanos Lote 2.10.01, 1990-223 Lisboa, PT. Sea For Society', 'GOETEBORGS UNIVERSITET. VASAPARKEN, 405 30 GOETEBORG, SE. Sea For Society', 'ASSOCIATION EUROPEENNE DES EXPOSITIONS SCIENTIFIQUES TECHNIQUES ET INDUSTRIELLES. AVENUE LOUISE 89 7EME ETAGE, 1050 BRUXELLES, BE. Sea For Society', 'EUROPEAN BUSINESS AND INNOVATION CENTRE NETWORK AISBL. AVENUE DE TERVUREN 168/25, 1150 BRUSSEL, BE. Sea For Society', ""UICN, BUREAU DE REPRESENTATION AUPRES DE L'UNION EUROPEENNE AISBL. BOULEVARD LOUIS SCHMIDT 64, 1040 Brussels, BE. Sea For Society"", 'HELLENIC CENTRE FOR MARINE RESEARCH. LEOFOROS ATHENS SOUNIO 46 7KM, 19013 ATTIKIA ANAVISSOS, EL. Sea For Society', 'OPIXIDO. 42 RUE ALEXANDRE DUMAS, 75011 PARIS, FR. Sea For Society', 'INSTITUTO ESPANOL DE OCEANOGRAFIA. CORAZON DE MARIA 8, 28002 MADRID, ES. Sea For Society', 'RESEAU OCEAN MONDIAL AISBL. AVENUE LOUISE 89 - 7EME ETAGE, 1050 BRUXELLES, BE. Sea For Society', 'INSTITUTO SUPERIOR TECNICO. AVENIDA ROVISCO PAIS 1, 1049 001 LISBOA, PT. Sea For Society', 'FUNDACION AZTI - AZTI FUNDAZIOA. TXATXARRAMENDI UGARTEA Z/G, 48395 SUKARRIETA, ES. Oceanic tunas as indicators of ecosystem health', 'INSTYTUT OCEANOLOGII POLSKIEJ AKADEMII NAUK. UL. POWSTANCOW WARSZAWY 55, 81 712 Sopot, PL. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'INSTITUT FUER OSTSEEFORSCHUNG WARNEMUENDE AN DER UNIVERSITAET ROSTOCK. 15 SEESTRASSE, 18119 ROSTOCK, DE. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'ACONDICIONAMIENTO TARRASENSE ASSOCIACION. CARRER DE LA INNOVACIO 2, 08225 Terrassa, ES. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'WAGENINGEN UNIVERSITY. DROEVENDAALSESTEEG 4, 6708 PB Wageningen, NL. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'FONDAZIONE ENI ENRICO MATTEI. CORSO MAGENTA 63 COMPLESSO IMMOBILIARE LE STELLINE, 20123 MILANO, IT. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'GOLLASCH STEPHAN - GOLLASCH CONSULT. GROSSE BRUNNENSTRASSE 61, 22763 HAMBURG, DE. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'Community of European Shipyards Associations asbl. rue Marie de Bourgogne 52, 1000 Brussels, BE. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'CONSORZIO NAZIONALE INTERUNIVERSITARIO PER LE SCIENZE DEL MARE ASSOCIAZIONE. PIAZZALE FLAMINIO 9, 00196 ROMA, IT. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'THE UNIVERSITY COURT OF THE UNIVERSITY OF ST ANDREWS. NORTH STREET 66 COLLEGE GATE, KY16 9AJ ST ANDREWS, UK. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'TARTU ULIKOOL. ULIKOOLI 18, 51005 TARTU, EE. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'BANGOR UNIVERSITY. COLLEGE ROAD, LL57 2DG BANGOR, UK. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'AALBORG UNIVERSITET. FREDRIK BAJERS VEJ 7K, 9220 Aalborg, DK. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', ""INSTITUT FRANCAIS DE RECHERCHE POUR L'EXPLOITATION DE LA MER. 1625 ROUTE DE SAINTE ANNE ZONE INDUSTRIELLE DE LA POINTE DU DIABLE, 29280 PLOUZANE, FR. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors"", 'KLAIPEDOS UNIVERSITETAS. Herkaus Manto 84, LT-92294 KLAIPEDA, LT. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'UNIVERZA V LJUBLJANI. KONGRESNI TRG  12, 1000 Ljubljana, SI. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'UNIVERSITE DE BRETAGNE OCCIDENTALE. RUE DES ARCHIVES 3, 29238 Brest, FR. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'SIR ALISTER HARDY FOUNDATION FOR OCEAN SCIENCE. THE LABORATORY CITADEL HILL THE HOE PLYMOUTH, PL1 2PB PLYMOUTH, UK. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'UNIVERSITE DE ROUEN NORMANDIE. RUE THOMAS BECKET 1 MONT SAINT AIGNAN, 76821 MONT SAINT AIGNAN CEDEX, FR. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'ISTITUTO NAZIONALE DI OCEANOGRAFIA E DI GEOFISICA SPERIMENTALE. Borgo Grotta Gigante  42/C, 34010 Sgonico-Trieste, IT. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'INSTITUT SUPERIEUR DES SCIENCES AGRONOMIQUES, AGROALIMENTAIRES, HORTICOLES ET DU PAYSAGE. RUE DE SAINT BRIEUC 65, 35042 RENNES, FR. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', ""COMMISSION INTERNATIONALE POUR L'EXPLORATION SCIENTIFIQUE DE LA MER MEDITERRANEE (CIESM). Boulevard de Suisse 16, 98000 Monaco, MC. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors"", 'CONSIGLIO NAZIONALE DELLE RICERCHE. PIAZZALE ALDO MORO 7, 00185 ROMA, IT. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'JOHANN HEINRICH VON THUENEN-INSTITUT, BUNDESFORSCHUNGSINSTITUT FUER LAENDLICHE RAEUME, WALD UND FISCHEREI. BUNDESALLEE  50, 38116 Braunschweig, DE. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'Food and Environment Research Agency. Area 1A, Nobel House, Smith Square 17, SW1P 3JR LONDON, UK. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'UNIVERSITY OF HULL. COTTINGHAM ROAD, HU6 7RX HULL, UK. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'STICHTING WAGENINGEN RESEARCH. DROEVENDAALSESTEEG 4, 6708 PB Wageningen, NL. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'AARHUS UNIVERSITET. NORDRE RINGGADE 1, 8000 AARHUS C, DK. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'STICHTING KONINKLIJK NEDERLANDS INSTITUUT VOOR ZEEONDERZOEK (NIOZ). Landsdiep 4, 1797 SZ DEN HOORN TEXEL, NL. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'LEIBNIZ-INSTITUT FUR OSTSEEFORSCHUNG WARNEMUNDE. SEESTRASSE 15, 18119 Rostock, DE. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'HELLENIC CENTRE FOR MARINE RESEARCH. LEOFOROS ATHENS SOUNIO 46 7KM, 19013 ATTIKIA ANAVISSOS, EL. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'DANMARKS TEKNISKE UNIVERSITET. ANKER ENGELUNDS VEJ 101, 2800 KONGENS LYNGBY, DK. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'UNIVERSITA DI PISA. LUNGARNO PACINOTTI 43/44, 56126 Pisa, IT. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'ISRAEL OCEANOGRAPHIC AND LIMNOLOGICAL RESEARCH LIMITED. TEL SHIKMONA, 31080 Haifa, IL. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors', 'STICHTING DELTARES. BOUSSINESQWEG 1, 2629 HV Delft, NL. Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors']","Potential organizations with expertise in marine biodiversity conservation include:
+
+1. **FUNDACION AZTI - AZTI FUNDAZIOA**
+   - **Location:** TXATXARRAMENDI UGARTEA Z/G, 48395 SUKARRIETA, ES
+   - **Website:** [AZTI - Centro de Investigación Marina y Alimentaria](https://www.azti.es/en/)
+   - **Expertise:** Marine ecosystem health, oceanic tunas as indicators, climate change adaptation and mitigation.
+   - **Related Projects:**
+     - **Oceanic tunas as indicators of ecosystem health**
+     - **FutureMARES - Climate Change and Future Marine Ecosystem Services and Biodiversity**
+
+2. **KOBENHAVNS UNIVERSITET**
+   - **Location:** NORREGADE 10, 1165 KOBENHAVN, DK
+   - **Website:** [Marine Biological Section - Københavns Universitet](https://www1.bio.ku.dk/english/research/mbs/)
+   - **Expertise:** Marine biodiversity, reef fish diversity, community assembly, marine conservation.
+   - **Related Projects:**
+     - **Diversity and community assembly in Caribbean reef fish**
+     - **Copenhagen Ocean Hub**
+
+3. **AQUA TT UETP COMPANY LIMITED BY GUARANTEE**
+   - **Location:** PLEASANTS STREET OLYMPIC HOUSE, 8 Dublin, IE
+   - **Website:** [AquaTT](https://www.aquatt.ie/)
+   - **Expertise:** Knowledge transfer, marine research dissemination, project management.
+   - **Related Projects:**
+     - **European Marine Research Knowledge Transfer and Uptake of Results**
+     - **A Trans-Atlantic Assessment and Deep-Water Ecosystem**
+
+4. **FUNDACAO EUROCEAN**
+   - **Location:** AVENIDA DOM CARLOS I 126-2, 1249 074 LISBOA, PT
+   - **Website:** [Eurocean](https://eurocean.org/)
+   - **Expertise:** Marine research knowledge transfer, public awareness, marine science and innovation.
+   - **Related Projects:**
+     - **European Marine Research Knowledge Transfer and Uptake of Results**
+     - **EurOCEAN Conferences**
+
+These organizations have demonstrated expertise in various aspects of marine biodiversity conservation and are involved in relevant projects that align with this field.","
+    Consortium list 1:
+    [FUNDACION AZTI - AZTI FUNDAZIOA - Potential contribution: Expertise in marine ecosystem health and oceanic tunas as indicators.], 
+    [KOBENHAVNS UNIVERSITET - Potential contribution: Expertise in marine biodiversity, particularly in reef fish diversity and community assembly.], 
+    [AQUA TT UETP COMPANY LIMITED BY GUARANTEE - Potential contribution: Expertise in marine research knowledge transfer and uptake of results.], 
+    [FUNDACAO EUROCEAN - Potential contribution: Expertise in marine research knowledge transfer and uptake of results.]
+    
+    Consortium list 2:
+    [FUNDACION AZTI - AZTI FUNDAZIOA - Potential contribution: Expertise in marine ecosystem health and oceanic tunas as indicators.], 
+    [KOBENHAVNS UNIVERSITET - Potential contribution: Expertise in marine biodiversity, particularly in reef fish diversity and community assembly.], 
+    [FUNDACAO EUROCEAN - Potential contribution: Expertise in marine research knowledge transfer and uptake of results.], 
+    [AQUA TT UETP COMPANY LIMITED BY GUARANTEE - Potential contribution: Expertise in marine research knowledge transfer and uptake of results.]
+    ",0.15789473684210525,0.9147453553417653,0.11111111109999999,0.25,0.7499999981250001,0.8240950894717534,0.5589649488385265,0
+Identify potential partners for an AI-driven healthcare diagnostic tool,"['JANSSEN INFECTIOUS DISEASES DIAGNOSTICS BVBA. TURNHOUTSEWEG 30, 2340 BEERSE, BE. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'JANSSEN PHARMACEUTICA NV. TURNHOUTSEWEG 30, 2340 Beerse, BE. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'THE UNIVERSITY OF WESTERN AUSTRALIA. Stirling Higway 35, 6009 Crawley, AU. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'BERRY CONSULTANTS LLP. MERCHANT HOUSE 5 EAST SAINT HELEN STREET, OX14 5EG ABINGDON, UK. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'STICHTING WONCA EUROPE. Mercatorlaan 1200, 3528 BL Utrecht, NL. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'SERVIZO GALEGO DE SAUDE. Edificio Administrativo San Lázaro, 15703 Santiago De Compostela, ES. Platform foR European Preparedness Against (Re-)emerging Epidemics', ""BIOMERIEUX SA. Chemin de l'Orme, 69280 Marcy l'Etoile, FR. Platform foR European Preparedness Against (Re-)emerging Epidemics"", 'EUROPEAN SOCIETY OF INTENSIVE CARE MEDECINE. RUE MICHELI DU CREST 24, 1211 GENEVE, CH. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'ERASMUS UNIVERSITAIR MEDISCH CENTRUM ROTTERDAM. DR MOLEWATERPLEIN 40, 3015  GD Rotterdam, NL. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'EUROPEAN SOCIETY CLINICAL MICROBIOLOGY INFECTIOUS DISEASES (EUROPAISCHE GESELLSCHAFT FUR KLINISCHE MIKROBIOLOGIE INFEKTIONSKRANKHEITEN). GERBERGASSE 14, 4001 Basel, CH. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'INSTITUT PASTEUR. RUE DU DOCTEUR ROUX 25-28, 75724 PARIS CEDEX 15, FR. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'SVEUCILISTE U SPLITU. RUDERA BOSKOVICA  31, 21000 Split, HR. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'HLA ET MEDECINE. Avenue Claude Vellefaux 1, 75010 Paris, FR. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'CARDIFF UNIVERSITY. NEWPORT ROAD 30 36, CF24 0DE CARDIFF, UK. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'EUROPEAN RESPIRATORY SOCIETY. AVENUE SAINTE LUCE 4, 1003 Lausanne, CH. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'BIOMAX INFORMATICS AG. ROBERT KOCH STRASSE  2, 82152 Planegg, DE. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'FONDAZIONE PENTA ETS. CORSO STATI UNITI 4, 35127 Padova, IT. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'ROYAL BROMPTON AND HAREFIELD NATIONAL HEALTH SERVICE TRUST. SYDNEY STREET, SW3 6NP LONDON, UK. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'UNIVERSITAIR MEDISCH CENTRUM UTRECHT. HEIDELBERGLAAN 100, 3584 CX Utrecht, NL. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'CAPNETZ STIFTUNG. CARL NEUBERG STRASSE 1, 30625 HANNOVER, DE. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'UNIVERSITATSKLINIKUM BONN. VENUSBERG-CAMPUS 1, 53127 Bonn, DE. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'UNIVERSITEIT ANTWERPEN. PRINSSTRAAT 13, 2000 Antwerpen, BE. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'BIOCARTIS NV. GENERAAL DE WITTELAAN 11B, 2800 Mechelen, BE. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'EUROPEAN SCIENTIFIC WORKING GROUP ON INFLUENZA. ZEVENSTERSTRAAT 1, 9270 LAARNE, BE. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'IMPERIAL COLLEGE OF SCIENCE TECHNOLOGY AND MEDICINE. SOUTH KENSINGTON CAMPUS EXHIBITION ROAD, SW7 2AZ LONDON, UK. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'ACADEMISCH MEDISCH CENTRUM BIJ DE UNIVERSITEIT VAN AMSTERDAM. MEIBERGDREEF 15, 1105AZ Amsterdam, NL. Platform foR European Preparedness Against (Re-)emerging Epidemics', 'REGION HOVEDSTADEN. KONGENS VAENGE 2, 3400 HILLEROD, DK. From Patient Data to Clinical Diagnosis in Neurodegenerative Diseases', 'STICHTING VUMC. DE BOELELAAN 1117, 1081 HV Amsterdam, NL. From Patient Data to Clinical Diagnosis in Neurodegenerative Diseases', 'ITA-SUOMEN YLIOPISTO. YLIOPISTONRANTA 1 E, 70211 Kuopio, FI. From Patient Data to Clinical Diagnosis in Neurodegenerative Diseases', 'UNIVERSITA DEGLI STUDI DI PERUGIA. PIAZZA DELL UNIVERSITA 1, 06123 Perugia, IT. From Patient Data to Clinical Diagnosis in Neurodegenerative Diseases', 'GE HEALTHCARE LIMITED. AMERSHAM PLACE, HP7 9NA LITTLE CHALFONT, UK. From Patient Data to Clinical Diagnosis in Neurodegenerative Diseases', 'ALZHEIMER EUROPE. RUE DICKS 14, 1417 Luxembourg, LU. From Patient Data to Clinical Diagnosis in Neurodegenerative Diseases', 'COMBINOSTICS OY. Hatanpään valtatie 24, 33100 Tampere, FI. From Patient Data to Clinical Diagnosis in Neurodegenerative Diseases', 'STICHTING VU. DE BOELELAAN 1105, 1081 HV Amsterdam, NL. From Patient Data to Clinical Diagnosis in Neurodegenerative Diseases', 'IMPERIAL COLLEGE OF SCIENCE TECHNOLOGY AND MEDICINE. SOUTH KENSINGTON CAMPUS EXHIBITION ROAD, SW7 2AZ LONDON, UK. From Patient Data to Clinical Diagnosis in Neurodegenerative Diseases', 'TEKNOLOGIAN TUTKIMUSKESKUS VTT OY. TEKNIIKANTIE 21, 02150 Espoo, FI. From Patient Data to Clinical Diagnosis in Neurodegenerative Diseases', ""UNIVERSITE DU LUXEMBOURG. 2 AVENUE DE L'UNIVERSITE, 4365 Esch-sur-Alzette, LU. IT Future of Medicine"", 'STICHTING VU. DE BOELELAAN 1105, 1081 HV Amsterdam, NL. IT Future of Medicine', 'MEDIZINISCHE UNIVERSITAT GRAZ. NEUE STIFTINGTALSTRASSE 6, 8010 Graz, AT. IT Future of Medicine', 'UCL Elizabeth Garrett Anderson Institute for Women’s Health. GOWER STREET, WC1E 6BT LONDON, UK. IT Future of Medicine', 'FUNDACIO PARC CIENTIFIC DE BARCELONA. BALDIRI I REIXAC 4, 08028 BARCELONA, ES. IT Future of Medicine', 'CONSORZIO INTERUNIVERSITARIO RISONANZE MAGNETICHE DI METALLO PROTEINE. PIAZZA SAN MARCO 4, 50121 FIRENZE, IT. IT Future of Medicine', 'MAX-PLANCK-GESELLSCHAFT ZUR FORDERUNG DER WISSENSCHAFTEN EV. HOFGARTENSTRASSE 8, 80539 MUNCHEN, DE. IT Future of Medicine', 'UNIVERSITY OF LEICESTER. UNIVERSITY ROAD, LE1 7RH LEICESTER, UK. IT Future of Medicine', 'THE UNIVERSITY OF MANCHESTER. OXFORD ROAD, M13 9PL MANCHESTER, UK. IT Future of Medicine', 'THE UNIVERSITY OF AUCKLAND. PRINCES STREET 24, 1010 AUCKLAND, NZ. IT Future of Medicine', 'IMPERIAL COLLEGE OF SCIENCE TECHNOLOGY AND MEDICINE. SOUTH KENSINGTON CAMPUS EXHIBITION ROAD, SW7 2AZ LONDON, UK. IT Future of Medicine', 'CHARITE - UNIVERSITAETSMEDIZIN BERLIN. Chariteplatz 1, 10117 Berlin, DE. IT Future of Medicine', 'ALACRIS THERANOSTICS GMBH. MAX PLANCK STRASSE 3, 12489 Berlin, DE. IT Future of Medicine', 'UNIVERSITEIT MAASTRICHT. MINDERBROEDERSBERG 4, 6200 MD Maastricht, NL. IT Future of Medicine', 'UNIVERSITE DE GENEVE. RUE DU GENERAL DUFOUR 24, 1211 GENEVE, CH. IT Future of Medicine', 'ISC INTELLIGENCE IN SCIENCE SPRL. RUE DE TRONE 4, 1000 BRUXELLES, BE. IT Future of Medicine', 'ILLUMINA CAMBRIDGE LIMITED. ILLUMINA CENTRE 19 GRANTA PARK, CB21 6DF GREAT ABINGTON, UK. IT Future of Medicine', 'INTERNATIONAL PREVENTION RESEARCH INSTITUT-IPRI MANAGEMENT. COURS LAFAYETTE 95, 69006 LYON, FR. IT Future of Medicine', 'SIEMENS AKTIENGESELLSCHAFT OESTERREICH. SIEMENSSTRASSE 90, 1210 WIEN, AT. IT Future of Medicine', 'EUROPEAN MOLECULAR BIOLOGY LABORATORY. Meyerhofstrasse  1, 69117 Heidelberg, DE. IT Future of Medicine']","### Potential Partners for an AI-Driven Healthcare Diagnostic Tool:
+
+#### Consortium List 1:
+
+1. **UNIVERSITEIT GENT**
+   - **Location**: SINT PIETERSNIEUWSTRAAT 25, 9000 Gent, BE
+   - **Potential Contribution**: Expertise in medical imaging and bio-inspired computing.
+   - **Related Work**: ""Medical Imaging Using Bio-inspired and Soft Computing""
+
+2. **GE HEALTHCARE LIMITED**
+   - **Location**: AMERSHAM PLACE, HP7 9NA LITTLE CHALFONT, UK
+   - **Potential Contribution**: Industrial expertise in healthcare technologies and diagnostic tools.
+   - **Related Work**: ""From Patient Data to Clinical Diagnosis in Neurodegenerative Diseases""
+
+3. **UNIVERSITY OF THE WEST OF ENGLAND, BRISTOL**
+   - **Location**: Frenchay Campus, Coldharbour Lane, BS16 1QY Bristol, UK
+   - **Potential Contribution**: Expertise in remote medical diagnostics and AI applications in healthcare.
+   - **Related Work**: ""Remote Medical Diagnostician""
+
+#### Consortium List 2:
+
+1. **UNIVERSITA DEGLI STUDI DI PARMA**
+   - **Location**: VIA UNIVERSITA 12, 43100 Parma, IT
+   - **Potential Contribution**: Expertise in medical imaging and bio-inspired computing.
+   - **Related Work**: ""Medical Imaging Using Bio-inspired and Soft Computing""
+
+2. **IMPERIAL COLLEGE OF SCIENCE TECHNOLOGY AND MEDICINE**
+   - **Location**: SOUTH KENSINGTON CAMPUS EXHIBITION ROAD, SW7 2AZ LONDON, UK
+   - **Potential Contribution**: Expertise in clinical diagnosis and AI applications in healthcare.
+   - **Related Work**: ""From Patient Data to Clinical Diagnosis in Neurodegenerative Diseases""
+
+3. **EIDGENOESSISCHE TECHNISCHE HOCHSCHULE ZUERICH**
+   - **Location**: Raemistrasse 101, 8092 Zuerich, CH
+   - **Potential Contribution**: Expertise in remote medical diagnostics and AI applications in healthcare.
+   - **Related Work**: ""Remote Medical Diagnostician""
+
+#### Consortium List 3:
+
+1. **UNIVERSITE LIBRE DE BRUXELLES**
+   - **Location**: AVENUE FRANKLIN ROOSEVELT 50, 1050 BRUXELLES, BE
+   - **Potential Contribution**: Expertise in medical imaging and bio-inspired computing.
+   - **Related Work**: ""Medical Imaging Using Bio-inspired and Soft Computing""
+
+2. **REGION HOVEDSTADEN**
+   - **Location**: KONGENS VAENGE 2, 3400 HILLEROD, DK
+   - **Potential Contribution**: Expertise in clinical diagnosis and patient data management.
+   - **Related Work**: ""From Patient Data to Clinical Diagnosis in Neurodegenerative Diseases""
+
+3. **SCUOLA SUPERIORE DI STUDI UNIVERSITARI E DI PERFEZIONAMENTO S ANNA**
+   - **Location**: PIAZZA MARTIRI DELLA LIBERTA 33, 56127 Pisa, IT
+   - **Potential Contribution**: Expertise in remote medical diagnostics and AI applications in healthcare.
+   - **Related Work**: ""Remote Medical Diagnostician""
+
+These consortium lists include organisations with complementary expertise in medical imaging, clinical diagnosis, remote diagnostics, and AI applications in healthcare, making them suitable partners for developing an AI-driven healthcare diagnostic tool.","
+    Consortium list 1:
+    [UNIVERSITEIT GENT - Potential contribution: Expertise in medical imaging and bio-inspired computing.], 
+    [GE HEALTHCARE LIMITED - Potential contribution: Expertise in healthcare technologies and diagnostic tools.], 
+    [COMBINOSTICS OY - Potential contribution: Expertise in AI-driven diagnostic solutions.], 
+    [UNIVERSITY OF THE WEST OF ENGLAND, BRISTOL - Potential contribution: Expertise in remote medical diagnostics.]
+    
+    Consortium list 2:
+    [UNIVERSITA DEGLI STUDI DI PARMA - Potential contribution: Expertise in medical imaging and bio-inspired computing.], 
+    [REGION HOVEDSTADEN - Potential contribution: Expertise in clinical diagnosis and healthcare management.], 
+    [IMPERIAL COLLEGE OF SCIENCE TECHNOLOGY AND MEDICINE - Potential contribution: Expertise in AI and medical research.], 
+    [EIDGENOESSISCHE TECHNISCHE HOCHSCHULE ZUERICH - Potential contribution: Expertise in remote medical diagnostics and AI.]
+    
+    Consortium list 3:
+    [FUNDACION PARA EL PROGRESO DEL SOFT COMPUTING - Potential contribution: Expertise in soft computing and medical imaging.], 
+    [STICHTING VUMC - Potential contribution: Expertise in clinical diagnosis and healthcare research.], 
+    [TEKNOLOGIAN TUTKIMUSKESKUS VTT OY - Potential contribution: Expertise in AI and healthcare technologies.], 
+    [SCUOLA SUPERIORE DI STUDI UNIVERSITARI E DI PERFEZIONAMENTO S ANNA - Potential contribution: Expertise in remote medical diagnostics and AI.]
+    ",0.27586206896551724,0.9461914797273202,0.0,0.5,0.4999999995833333,0.8241800571113427,0.498727941107104,0
+Which European SMEs are suitable for a robotics and automation research consortium?,"['UNIVERSITA DEGLI STUDI DI NAPOLI FEDERICO II. CORSO UMBERTO I, 40, 80138 NAPOLI, IT. Robotics Coordination Action for Europe', 'EUROBOTICS AISBL. A. REYERS BOULEVARD 80, 1030 Brussels, BE. Robotics Coordination Action for Europe', 'ITECHNIC LTD. CROSS HAYES 36-38, SN16 9BG MALMESBURY WILTSHIRE, UK. Robotics Coordination Action for Europe', 'EUNITED AISBL. Boulevard A. Reyers - Diamant Building, 80, 1030 BRUXELLES, BE. Robotics Coordination Action for Europe', 'KUKA DEUTSCHLAND GMBH. ZUGSPITZSTRASSE  140, 86165 AUGSBURG, DE. Robotics Coordination Action for Europe', 'KUKA Laboratories GmbH. Zugspitzstrasse  140, 86165 Augsburg, DE. Robotics Coordination Action for Europe', 'R.U.Robots Limited. EDEN VALE 4, M28 1WF MANCHESTER, UK. Robotics Coordination Action for Europe', 'FRAUNHOFER GESELLSCHAFT ZUR FORDERUNG DER ANGEWANDTEN FORSCHUNG EV. HANSASTRASSE 27C, 80686 MUNCHEN, DE. Robotics Coordination Action for Europe', 'KATHOLIEKE UNIVERSITEIT LEUVEN. OUDE MARKT 13, 3000 Leuven, BE. Robotics Coordination Action for Europe', 'GPS GESELLSCHAFT FUR PRODUKTIONSSYSTEME GMBH. Hamletstrasse 11, 70563 Stuttgart, DE. European Robotics Coordination Action', 'FUNDACION FATRONIK.. Paseo Mikeletegi 7 - Parque Tecnologico 7, 20009 DONOSTIA - SAN SEBASTIAN, ES. European Robotics Coordination Action', 'FRAUNHOFER GESELLSCHAFT ZUR FORDERUNG DER ANGEWANDTEN FORSCHUNG EV. HANSASTRASSE 27C, 80686 MUNCHEN, DE. European Robotics Coordination Action', 'R.U.Robots Limited. EDEN VALE 4, M28 1WF MANCHESTER, UK. European Robotics Coordination Action', 'KUKA DEUTSCHLAND GMBH. ZUGSPITZSTRASSE  140, 86165 AUGSBURG, DE. European Robotics Coordination Action', 'KATHOLIEKE UNIVERSITEIT LEUVEN. OUDE MARKT 13, 3000 Leuven, BE. European Robotics Coordination Action', 'EUNITED AISBL. Boulevard A. Reyers - Diamant Building, 80, 1030 BRUXELLES, BE. European Robotics Coordination Action', 'KUKA Laboratories GmbH. Zugspitzstrasse  140, 86165 Augsburg, DE. European Robotics Coordination Action', 'UNIVERSITA DEGLI STUDI DI NAPOLI FEDERICO II. CORSO UMBERTO I, 40, 80138 NAPOLI, IT. European Robotics Coordination Action', 'INGRO MAQUINARIA SL. CARRETERA NACIONAL 340KM 94, 04738 VICAR, ES. European Clearing House for Open Robotics Development Plus Plus', 'SCUOLA SUPERIORE DI STUDI UNIVERSITARI E DI PERFEZIONAMENTO S ANNA. PIAZZA MARTIRI DELLA LIBERTA 33, 56127 Pisa, IT. European Clearing House for Open Robotics Development Plus Plus', 'Vitirover SAS. Lieu-dit Simar La Gare 6, 33330 Saint-Emilion, FR. European Clearing House for Open Robotics Development Plus Plus', 'ROBOTECH SRL. VIA MAZZINI 82, 19038 SARZANA, IT. European Clearing House for Open Robotics Development Plus Plus', 'RFND TECHNOLOGIES AB. BROR NILSSONS GATA 4, 417 55 GOTEBORG, SE. European Clearing House for Open Robotics Development Plus Plus', 'PILZ GMBH & CO. KG. FELIX WANKEL STRASSE 2, 73760 Ostfildern, DE. European Clearing House for Open Robotics Development Plus Plus', 'FUNDACIO PRIVADA SANT ANTONI ABAT. RBLA SANT JOSE, 08810 VILANOVA I LA GELTRU, ES. European Clearing House for Open Robotics Development Plus Plus', 'AIRBUS OPERATIONS SL. AVENIDA JOHN LENNON S/N, 28906 Getafe, ES. European Clearing House for Open Robotics Development Plus Plus', 'POLITECNICO DI MILANO. PIAZZA LEONARDO DA VINCI 32, 20133 MILANO, IT. European Clearing House for Open Robotics Development Plus Plus', 'UNIVERSIDAD PABLO DE OLAVIDE. CARRETERA DE UTRERA KM 1, 41013 Sevilla, ES. European Clearing House for Open Robotics Development Plus Plus', 'THE SHADOW ROBOT COMPANY LIMITED. UNIT 31 SPECTRUM HOUSE 32-34 GORDON HOUSE ROAD, NW5 1LP LONDON, UK. European Clearing House for Open Robotics Development Plus Plus', 'ICELANDIC INSTITUTE FOR INTELLIGENT MACHINES - IIIM. MENNTAVEGUR 1, 101 REYKJAVIK, IS. European Clearing House for Open Robotics Development Plus Plus', 'BLUE OCEAN ROBOTICS APS. KLOKKESTOBERVEJ 18, 5230 ODENSE M, DK. European Clearing House for Open Robotics Development Plus Plus', 'INSTITUT MINES-TELECOM. 19 PLACE MARGUERITE PEREY, 91120 Palaiseau, FR. European Clearing House for Open Robotics Development Plus Plus', 'C.WRIGHT & SON GEDNEY LTD. WHITEHOUSE FARM GEDNEY DYKE, PE12 OAJ SPALDING, UK. European Clearing House for Open Robotics Development Plus Plus', 'KARLSRUHER INSTITUT FUER TECHNOLOGIE. KAISERSTRASSE 12, 76131 Karlsruhe, DE. European Clearing House for Open Robotics Development Plus Plus', 'EKYMED SRL. VIA TEULLIE PIETRO 11, 20136 MILANO, IT. European Clearing House for Open Robotics Development Plus Plus', 'EXAIL ROBOTICS. 262 RUE DES FRERES LUMIERE ZONE INDUSTRIELLE TOULON EST, 83130 La Garde, FR. European Clearing House for Open Robotics Development Plus Plus', 'ETHNIKO KENTRO EREVNAS KAI TECHNOLOGIKIS ANAPTYXIS. CHARILAOU THERMI ROAD 6 KM, 57001 THERMI THESSALONIKI, EL. European Clearing House for Open Robotics Development Plus Plus', 'UNIVERSIDAD DE SEVILLA. CALLE S. FERNANDO 4, 41004 Sevilla, ES. European Clearing House for Open Robotics Development Plus Plus', 'ARTIMINDS ROBOTICS GMBH. KOLBERGER STRASSE 16 A, 76139 KARLSRUHE, DE. European Clearing House for Open Robotics Development Plus Plus', 'FONDAZIONE ISTITUTO ITALIANO DI TECNOLOGIA. VIA MOREGO 30, 16163 GENOVA, IT. European Clearing House for Open Robotics Development Plus Plus', 'TECHNISCHE HOCHSCHULE ULM. PRITTWITZSTRASSE 10, 89075 ULM, DE. European Clearing House for Open Robotics Development Plus Plus', 'INLOC ROBOTICS SLU. CALLE QUATRE CAMINS 89, 08348 CABRILS, ES. European Clearing House for Open Robotics Development Plus Plus', 'UNIVERSITA DEGLI STUDI DI ROMA LA SAPIENZA. Piazzale Aldo Moro  5, 00185 Roma, IT. European Clearing House for Open Robotics Development Plus Plus', 'HOSPITAL SANT JOAN DE DEU. PASEO SANT JOAN DE DEU 2, 08950 Esplugues de Llobregat, ES. European Clearing House for Open Robotics Development Plus Plus', 'STRAUSS VERPACKUNGSMASCHINEN GMBH. WEIDEGRUND 13, 21614 BUXTEHUDE, DE. European Clearing House for Open Robotics Development Plus Plus', 'SIMTECH DESIGN SL. Gran Via de les Corts 774, 08013 Barcelona, ES. European Clearing House for Open Robotics Development Plus Plus', 'UNIVERSITAET BIELEFELD. UNIVERSITAETSSTRASSE  25, 33615 Bielefeld, DE. European Clearing House for Open Robotics Development Plus Plus', 'UNIVERSITA DEGLI STUDI DI MODENA E REGGIO EMILIA. VIA UNIVERSITA 4, 41121 Modena, IT. European Clearing House for Open Robotics Development Plus Plus', 'UNIVERSIDAD MIGUEL HERNANDEZ DE ELCHE. AVENIDA DE LA UNIVERSIDAD S-N, 03202 Elche, ES. European Clearing House for Open Robotics Development Plus Plus', 'UNIVERSIDAD CARLOS III DE MADRID. CALLE MADRID 126, 28903 GETAFE (MADRID), ES. European Clearing House for Open Robotics Development Plus Plus', 'UNIVERSITA DEGLI STUDI DI PARMA. VIA UNIVERSITA 12, 43100 Parma, IT. European Clearing House for Open Robotics Development Plus Plus', 'CORGHI SPA. VIA STATALE 468 N9, 42015 CORREGGIO (RE), IT. European Clearing House for Open Robotics Development Plus Plus', 'UNIVERSITAET BREMEN. Bibliothekstrasse 1, 28359 Bremen, DE. European Clearing House for Open Robotics Development Plus Plus', 'AJUNTAMENT DE BARCELONA. PLAÇA DE SANT JAUME SN, 08002 Barcelona, ES. European Clearing House for Open Robotics Development Plus Plus', 'ASSISTANCE PUBLIQUE HOPITAUX DE PARIS. 55 BOULEVARD DIDEROT, 75012 PARIS, FR. European Clearing House for Open Robotics Development Plus Plus', 'COMMUNICATIVE MACHINES LIMITED. 482 LANARK ROAD WEST, EH14 7AN EDINBURGH, UK. European Clearing House for Open Robotics Development Plus Plus', 'IT+ROBOTICS SRL. CONTRA VALMERLARA 21, CAP 36100 VICENZA, IT. European Clearing House for Open Robotics Development Plus Plus', 'IDELT, INGENIERIA DE DESARROLLO DE PROTOTIPOS SL. PG IGORREXO INDUSTRIALDEA PB F6, 48140 IGORRE, ES. European Clearing House for Open Robotics Development Plus Plus', 'SERVICIO ANDALUZ DE SALUD. AVENIDA DE LA CONSTITUCION 18, 41071 Sevilla, ES. European Clearing House for Open Robotics Development Plus Plus', 'EIDGENOESSISCHE TECHNISCHE HOCHSCHULE ZUERICH. Raemistrasse  101, 8092 Zuerich, CH. European Clearing House for Open Robotics Development Plus Plus', 'FUNDACIO EURECAT. AVENIDA UNIVERSITAT AUTONOMA 23, 08290 CERDANYOLA DEL VALLES (BARCELONA), ES. European Clearing House for Open Robotics Development Plus Plus', 'FOMENTO DE CONSTRUCCIONES Y CONTRATAS SA. CALLE BALMES 36, 08007 Barcelona, ES. European Clearing House for Open Robotics Development Plus Plus', 'ANSALDO NUCLEAR ENGINEERING SERVICES LIMITED. NESL HOUSE SPRING ROAD ETTINGSHALL, WV4 6JX WOLVERHAMPTON, UK. European Clearing House for Open Robotics Development Plus Plus', 'INSTEAD, TECHNOLOGIES FOR HELPING PEOPLE SL. AVENIDA DE LA UNIVERSIDAD EDIFICIO QUORUM III S/N, 03202 ELCHE ALICANTE, ES. European Clearing House for Open Robotics Development Plus Plus', 'KATHOLIEKE UNIVERSITEIT LEUVEN. OUDE MARKT 13, 3000 Leuven, BE. European Clearing House for Open Robotics Development Plus Plus', 'FUNDACION PARA LAS TECNOLOGIAS AUXILIARES DE LA AGRICULTURA. AVDA DE LA INNOVACION 23 PARQUE TECNOLOGICO DE ALMERIA EL ALQUIAN, 04131 ALMERIA, ES. European Clearing House for Open Robotics Development Plus Plus', 'CENTRE NATIONAL DE LA RECHERCHE SCIENTIFIQUE CNRS. RUE MICHEL ANGE 3, 75794 Paris, FR. European Clearing House for Open Robotics Development Plus Plus', 'FASTENICA SRL. VIALE RINALDO PIAGGIO 32, 56025 Pontedera, IT. European Clearing House for Open Robotics Development Plus Plus', 'GENERATION ROBOTS. 1 RUE THEDORE BLANC, BATIMENT L, 33520 BRUGES, FR. European Clearing House for Open Robotics Development Plus Plus', 'R.U.Robots Limited. EDEN VALE 4, M28 1WF MANCHESTER, UK. European Clearing House for Open Robotics Development Plus Plus', 'UNIVERSITA DEGLI STUDI DI GENOVA. VIA BALBI 5, 16126 GENOVA, IT. European Clearing House for Open Robotics Development Plus Plus', 'AVULAR INNOVATIONS BV. ACHTSEWEG ZUID 241 B, 5651 GW EINDHOVEN, NL. European Clearing House for Open Robotics Development Plus Plus', 'TECHNOLOGIKO PANEPISTIMIO KYPROU. ARCHBISHOP KYPRIANOS 31 SAVINGS COOPERATIVE BANK BUILDING 3RD FLOOR, 3036 LEMESOS, CY. European Clearing House for Open Robotics Development Plus Plus', 'CARL CLOOS SCHWEISSTECHNIK GMBH. INDUSTRIESTRASSE 34-36, 35708 HAIGER, DE. European Clearing House for Open Robotics Development Plus Plus', 'Idrogenet Srl. Via Rose di Sotto 38/c, 25126 Brescia, IT. European Clearing House for Open Robotics Development Plus Plus', 'MARSI BIONICS SL. CALLE RUE DEL PERCEBE 30, 28521 RIVAS VACIAMADRID, ES. European Clearing House for Open Robotics Development Plus Plus', 'STATNI USTAV RADIACNI OCHRANY v.v.i.. BARTOSKOVA   28, 14000 Praha, CZ. European Clearing House for Open Robotics Development Plus Plus', 'INSTITUT DE RECHERCHE TECHNOLOGIQUE JULES VERNE. 1 MAIL DES 20000 LIEUES, 44340 Bouguenais, FR. European Clearing House for Open Robotics Development Plus Plus', 'UNIVERZA V LJUBLJANI. KONGRESNI TRG  12, 1000 Ljubljana, SI. European Clearing House for Open Robotics Development Plus Plus', 'LEIBNIZ-INSTITUT FUR AGRARTECHNIK UND BIOOKONOMIE EV. MAX EYTH ALLEE 100, 14469 Potsdam, DE. European Clearing House for Open Robotics Development Plus Plus', 'TEKNOLOGISK INSTITUT. GREGERSENSVEJ 1, 2630 Taastrup, DK. European Clearing House for Open Robotics Development Plus Plus', 'HUMANWARE SRL. VIA TOSCO ROMAGNOLA 136, 56025 PONTEDERA, IT. European Clearing House for Open Robotics Development Plus Plus', 'IBAK Helmut Hunger GmbH & Co. KG. Wehdenweg 122, 24148 Kiel, DE. European Clearing House for Open Robotics Development Plus Plus', 'UNIVERSITA DEGLI STUDI DELLA CAMPANIA LUIGI VANVITELLI. VIALE ABRAMO LINCOLN 5, 81100 Caserta, IT. European Clearing House for Open Robotics Development Plus Plus', 'FLEXIBLE ROBOTIC SOLUTIONS. Rozenlaan 26, 9111 Sint-Niklaas, BE. European Clearing House for Open Robotics Development Plus Plus', 'PRE GEL SPA. VIA COMPARONI 64, 42122 GAVASSETO, IT. European Clearing House for Open Robotics Development Plus Plus', 'Elettric 80 S.p.a.. Via G. Marconi   23, 42030 Viano, IT. European Clearing House for Open Robotics Development Plus Plus', 'HELIKAS ROBOTICS LTD. Poseidonos 8, 2480 Nicosia, CY. European Clearing House for Open Robotics Development Plus Plus', 'MOOG CONTROLS LIMITED. ASHCHURCH, GL20 8NA TEWKESBURY, UK. European Clearing House for Open Robotics Development Plus Plus', 'AGENCIA DE QUALITAT I AVALUACIO SANITARIES DE CATALUNYA. CALLE ROC BORONAT 81 95 2 PISO, 08005 Barcelona, ES. European Clearing House for Open Robotics Development Plus Plus', 'STENA RECYCLING AS. BANEMARKSVEJ 40, 2605 BRONDBY, DK. European Clearing House for Open Robotics Development Plus Plus', 'ALUMINIUM PECHINEY. 725 RUE ARISTIDE BERGES, 38340 Voreppe, FR. European Clearing House for Open Robotics Development Plus Plus', 'FORTISS GMBH. GUERICKESTRASSE 25, 80805 MUNCHEN, DE. European Clearing House for Open Robotics Development Plus Plus', 'UNIVERSITAT POLITECNICA DE CATALUNYA. CALLE JORDI GIRONA 31, 08034 Barcelona, ES. European Clearing House for Open Robotics Development Plus Plus', 'ROBOTNIK AUTOMATION SL. RONDA AUGUSTE Y LOUIS LUMIERE 6 Y 8, 46980 PATERNA, ES. European Clearing House for Open Robotics Development Plus Plus', 'I.E.M.A. SRL. VIA XXV APRILE 1945 NR.16, 40016 SAN GIORGIO DI PIANO, IT. European Clearing House for Open Robotics Development Plus Plus', 'ACCEL. 1501 ROUTE DES DOLINES IMMEUBLE LE THELEMES, 06560 VALBONNE, FR. European Clearing House for Open Robotics Development Plus Plus', 'IDMIND - ENGENHARIA DE SISTEMAS LDA. ESTRADA DO PACO DO LUMIAR - POLO TECNOLOGICO DE LISBOA LOTE 1, 1600546 LISBOA, PT. European Clearing House for Open Robotics Development Plus Plus', 'UNIVERSITY OF THE WEST OF ENGLAND, BRISTOL. Frenchay Campus, Coldharbour Lane, BS16 1QY Bristol, UK. European Clearing House for Open Robotics Development Plus Plus', ""BARCELONA CICLE DE L'AIGUA SA. CALLE ACER 16, 08038 Barcelona, ES. European Clearing House for Open Robotics Development Plus Plus"", 'CDD MONOPROSOPI ETERIA PERIORISMENIS EFTHINIS YPIRESION EREYNAS KAI ANAPTIKSIS. 8 IEREOS DOUSI STR MAROUSI, 15124 ATHINA, EL. European Clearing House for Open Robotics Development Plus Plus', 'Skybotix AG. LUEGISLANDSTRASSE 105, 8051 ZURICH, CH. European Clearing House for Open Robotics Development Plus Plus', 'FABRICA 136 SRL. PIAZZA SAN BARTOLOMEO 8, 56036 PALAIA PISA, IT. European Clearing House for Open Robotics Development Plus Plus', 'Scape Technologies A/S. Kochsgade 31C, 3.sal, 5000 Odense, DK. European Clearing House for Open Robotics Development Plus Plus', 'ROBOX. VIA SEMPIONE 82, 28053 CASTELLETTO SOPRA TICINO, IT. European Clearing House for Open Robotics Development Plus Plus', 'TECHNODEAL SRL. VIA BOCCIONI 2, 56037 PECCIOLI, IT. European Clearing House for Open Robotics Development Plus Plus', 'ASOCIACION CENTRO TECNOLOGICO CEIT. PASEO MANUEL DE LARDIZABAL 15, 20018 SAN SEBASTIAN, ES. European Clearing House for Open Robotics Development Plus Plus', 'CENTRE HOSPITALIER REGIONAL ET UNIVERSITAIRE DE BREST. AVENUE MARECHAL FOCH 5, 29609 Brest, FR. European Clearing House for Open Robotics Development Plus Plus', 'WAGENINGEN UNIVERSITY. DROEVENDAALSESTEEG 4, 6708 PB Wageningen, NL. European Clearing House for Open Robotics Development Plus Plus', 'METRALABS GMBH NEUE TECHNOLOGIEN UND SYSTEME. WEIMARER STRASSE 28, 98693 ILMENAU, DE. European Clearing House for Open Robotics Development Plus Plus', 'AGCO GMBH. JOHANN GEORG FENDT STR 4, 87616 MARKTOBERDORF, DE. European Clearing House for Open Robotics Development Plus Plus', 'ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE. BATIMENT CE 3316 STATION 1, 1015 Lausanne, CH. European Clearing House for Open Robotics Development Plus Plus', 'CONSIGLIO NAZIONALE DELLE RICERCHE. PIAZZALE ALDO MORO 7, 00185 ROMA, IT. European Clearing House for Open Robotics Development Plus Plus', 'ALMA MATER STUDIORUM - UNIVERSITA DI BOLOGNA. VIA ZAMBONI 33, 40126 Bologna, IT. European Clearing House for Open Robotics Development Plus Plus', 'ROBOSOFT Services Robots. 45 Allée Théodore Monod - Technopole Izarbel, 64210 BIDART, FR. European Clearing House for Open Robotics Development Plus Plus', 'AEA s.r.l.. Via Fiume  16, 60030 Angeli di Rosora (AN), IT. European Clearing House for Open Robotics Development Plus Plus', 'IMER INTERNATIONAL SPA. LOCALITA SALCETO 53-55, 53036 POGGIBONSI, IT. European Clearing House for Open Robotics Development Plus Plus', 'FRAUNHOFER GESELLSCHAFT ZUR FORDERUNG DER ANGEWANDTEN FORSCHUNG EV. HANSASTRASSE 27C, 80686 MUNCHEN, DE. European Clearing House for Open Robotics Development Plus Plus']","Based on the provided data, the following European SMEs are suitable for a robotics and automation research consortium:
+
+1. **ROBOTNIK AUTOMATION SL**
+   - **Location**: Ronda Auguste y Louis Lumiere 6 y 8, 46980 Paterna, ES
+   - **Potential contribution**: Specializes in mobile robotics and automation solutions.
+   - **Related works**: Cooperative robotics for large-scale manufacturing environments.
+
+2. **LOCOMOTEC GMBH**
+   - **Location**: Am Hasenberg 3, 86899 Landsberg Am Lech, DE
+   - **Potential contribution**: Expertise in mobile robotics and automation.
+   - **Related works**: Development of best practices in robotics, focusing on mobile robotics.
+
+3. **C.A.T. PROGETTI SRL**
+   - **Location**: Via Sagittario 21, 40037 Sasso Marconi Bologna, IT
+   - **Potential contribution**: Specializes in industrial automation and robotics.
+   - **Related works**: Cooperative robotics for large-scale manufacturing environments.
+
+4. **DELTAMATIC ENGENHARIA E AUTOMACAO INDUSTRIAL SA**
+   - **Location**: Parque Imodelta - Faccoes P e Q - Zona Industrial de Pindelo, 3720-444 Pindelo Oliveira de Azemeis, PT
+   - **Potential contribution**: Specializes in industrial automation and engineering.
+   - **Related works**: Cooperative robotics for large-scale manufacturing environments.
+
+5. **ROBOSOFT Services Robots**
+   - **Location**: 45 Allée Théodore Monod - Technopole Izarbel, 64210 Bidart, FR
+   - **Potential contribution**: Expertise in service robotics and automation.
+   - **Related works**: Development of interactive robotics research networks.
+
+These SMEs have demonstrated expertise in various aspects of robotics and automation, making them suitable candidates for a research consortium in this field.","
+    Consortium list 1:
+    [BLUEBOTICS SA - Potential contribution: Expertise in autonomous navigation and robotics solutions.], 
+    [LOCOMOTEC GMBH - Potential contribution: Expertise in mobile robotics and automation systems.], 
+    [STICHTING WAGENINGEN RESEARCH - Potential contribution: Expertise in agricultural robotics and automation.], 
+    [ROBOSOFT Services Robots - Potential contribution: Expertise in service robotics and human-robot interaction.], 
+    [KUKA Laboratories GmbH - Potential contribution: Expertise in industrial robotics and automation.]
+    
+    Consortium list 2:
+    [FRAUNHOFER GESELLSCHAFT ZUR FORDERUNG DER ANGEWANDTEN FORSCHUNG EV - Potential contribution: Expertise in applied research in robotics and automation.], 
+    [UNIVERSITEIT TWENTE - Potential contribution: Expertise in robotics research and development.], 
+    [UNIVERSITY OF THE WEST OF ENGLAND, BRISTOL - Potential contribution: Expertise in interactive robotics and human-robot interaction.], 
+    [HUMBOLDT-UNIVERSITAET ZU BERLIN - Potential contribution: Expertise in robotics research and development.], 
+    [SPACE APPLICATIONS SERVICES NV - Potential contribution: Expertise in space robotics and automation.]
+    ",0.1111111111111111,0.9651963832262892,0.010526315788421052,0.3333333333333333,0.3999999996,0.7611366848212215,0.30139528231641655,0
+Suggest potential consortia for a project focused on climate change mitigation,"['UNIVERSITE TOULOUSE 1 CAPITOLE. RUE DU DOYEN GABRIEL MARTY 2, 31042 Toulouse, FR. Social Sciences and Humanities facing climate change Challenges', 'STIFTELSEN NANSEN SENTER FOR MILJOOG FJERNMALING. JAHNEBAKKEN 3, 5007 Bergen, NO. The role of Southern Ocean Carbon cycle under CLImate change', 'UNIVERSITETET I BERGEN. MUSEPLASSEN 1, 5020 Bergen, NO. The role of Southern Ocean Carbon cycle under CLImate change', 'CENTRE NATIONAL DE LA RECHERCHE SCIENTIFIQUE CNRS. RUE MICHEL ANGE 3, 75794 Paris, FR. The role of Southern Ocean Carbon cycle under CLImate change', 'SEI OXFORD OFFICE LIMITED. OXFORD ECO CENTRE ROGER HOUSE, OSNEY MEAD, OX2 0ES OXFORD, OXFORDSHIRE, UK. Methodology for Effective Decision-making on Impacts and AdaptaTION (MEDIATION)', 'INTERNATIONALES INSTITUT FUER ANGEWANDTE SYSTEMANALYSE. Schlossplatz  1, 2361 Laxenburg, AT. Methodology for Effective Decision-making on Impacts and AdaptaTION (MEDIATION)', 'GCF - GLOBAL CLIMATE FORUM EV. NEUE PROMENADE 6, 10178 Berlin, DE. Methodology for Effective Decision-making on Impacts and AdaptaTION (MEDIATION)', 'WAGENINGEN UNIVERSITY. DROEVENDAALSESTEEG 4, 6708 PB Wageningen, NL. Methodology for Effective Decision-making on Impacts and AdaptaTION (MEDIATION)', 'JRC -JOINT RESEARCH CENTRE- EUROPEAN COMMISSION. Rue de la Loi 200, 1049 Brussels, BE. Methodology for Effective Decision-making on Impacts and AdaptaTION (MEDIATION)', 'UNIVERSITA DEGLI STUDI DI FIRENZE. Piazza San Marco  4, 50121 Florence, IT. Methodology for Effective Decision-making on Impacts and AdaptaTION (MEDIATION)', 'POTSDAM-INSTITUT FUR KLIMAFOLGENFORSCHUNG EV. TELEGRAFENBERG A31, 14473 Potsdam, DE. Methodology for Effective Decision-making on Impacts and AdaptaTION (MEDIATION)', 'SUOMEN YMPARISTOKESKUS. LATOKARTANONKAARI 11, 00790 Helsinki, FI. Methodology for Effective Decision-making on Impacts and AdaptaTION (MEDIATION)', 'STICHTING WAGENINGEN RESEARCH. DROEVENDAALSESTEEG 4, 6708 PB Wageningen, NL. Methodology for Effective Decision-making on Impacts and AdaptaTION (MEDIATION)']","### Potential Consortia for a Project Focused on Climate Change Mitigation
+
+#### Consortium List 1:
+
+1. **UNIVERSITE TOULOUSE 1 CAPITOLE**, RUE DU DOYEN GABRIEL MARTY 2, 31042 Toulouse, FR
+    - **Potential contribution**: Expertise in social sciences and humanities facing climate change challenges.
+    - **Related works**: Social Sciences and Humanities facing climate change Challenges.
+
+2. **STIFTELSEN NANSEN SENTER FOR MILJOOG FJERNMALING**, JAHNEBAKKEN 3, 5007 Bergen, NO
+    - **Potential contribution**: Expertise in the role of the Southern Ocean carbon cycle under climate change.
+    - **Related works**: The role of Southern Ocean Carbon cycle under CLImate change.
+
+3. **CENTRE NATIONAL DE LA RECHERCHE SCIENTIFIQUE CNRS**, RUE MICHEL ANGE 3, 75794 Paris, FR
+    - **Potential contribution**: Expertise in climate change research and modeling.
+    - **Related works**: The role of Southern Ocean Carbon cycle under CLImate change.
+
+4. **SEI OXFORD OFFICE LIMITED**, OXFORD ECO CENTRE ROGER HOUSE, OSNEY MEAD, OX2 0ES OXFORD, OXFORDSHIRE, UK
+    - **Potential contribution**: Expertise in methodology for effective decision-making on impacts and adaptation.
+    - **Related works**: Methodology for Effective Decision-making on Impacts and AdaptaTION (MEDIATION).
+
+5. **INTERNATIONALES INSTITUT FUER ANGEWANDTE SYSTEMANALYSE**, Schlossplatz  1, 2361 Laxenburg, AT
+    - **Potential contribution**: Expertise in applied systems analysis for climate change mitigation.
+    - **Related works**: Methodology for Effective Decision-making on Impacts and AdaptaTION (MEDIATION).
+
+#### Consortium List 2:
+
+1. **GCF - GLOBAL CLIMATE FORUM EV**, NEUE PROMENADE 6, 10178 Berlin, DE
+    - **Potential contribution**: Expertise in global climate policy and decision-making.
+    - **Related works**: Methodology for Effective Decision-making on Impacts and AdaptaTION (MEDIATION).
+
+2. **WAGENINGEN UNIVERSITY**, DROEVENDAALSESTEEG 4, 6708 PB Wageningen, NL
+    - **Potential contribution**: Expertise in environmental sciences and climate change research.
+    - **Related works**: Methodology for Effective Decision-making on Impacts and AdaptaTION (MEDIATION).
+
+3. **JRC -JOINT RESEARCH CENTRE- EUROPEAN COMMISSION**, Rue de la Loi 200, 1049 Brussels, BE
+    - **Potential contribution**: Expertise in scientific research and policy support for climate change.
+    - **Related works**: Methodology for Effective Decision-making on Impacts and AdaptaTION (MEDIATION).
+
+4. **UNIVERSITA DEGLI STUDI DI FIRENZE**, Piazza San Marco  4, 50121 Florence, IT
+    - **Potential contribution**: Expertise in climate change impacts and adaptation strategies.
+    - **Related works**: Methodology for Effective Decision-making on Impacts and AdaptaTION (MEDIATION).
+
+5. **POTSDAM-INSTITUT FUR KLIMAFOLGENFORSCHUNG EV**, TELEGRAFENBERG A31, 14473 Potsdam, DE
+    - **Potential contribution**: Expertise in climate impact research and modeling.
+    - **Related works**: Methodology for Effective Decision-making on Impacts and AdaptaTION (MEDIATION).
+
+These organisations have been selected based on their expertise and previous involvement in related projects. Each organisation brings a unique perspective and set of skills that can contribute to the success of a project focused on climate change mitigation.","
+    Consortium list 1:
+    [INDIAN INSTITUTE OF MANAGEMENT - Potential contribution: Expertise in management strategies and policy development for climate change mitigation.], 
+    [FONDAZIONE ENI ENRICO MATTEI - Potential contribution: Research on environmental economics and sustainable development.], 
+    [INTERNATIONALES INSTITUT FUER ANGEWANDTE SYSTEMANALYSE - Potential contribution: Systems analysis and integrated assessment modeling for climate change.], 
+    [POTSDAM-INSTITUT FUR KLIMAFOLGENFORSCHUNG EV - Potential contribution: Climate impact research and policy advice.], 
+    [LONDON SCHOOL OF ECONOMICS AND POLITICAL SCIENCE - Potential contribution: Expertise in climate policy and economic analysis.]
+    
+    Consortium list 2:
+    [JRC -JOINT RESEARCH CENTRE- EUROPEAN COMMISSION - Potential contribution: Scientific and technical support for EU policies on climate change.], 
+    [UNIVERSITEIT UTRECHT - Potential contribution: Research on climate change impacts and adaptation strategies.], 
+    [STICHTING ENERGIEONDERZOEK CENTRUM NEDERLAND - Potential contribution: Research on sustainable energy technologies and climate mitigation.], 
+    [THE ECONOMIC AND SOCIAL RESEARCH INSTITUTE LBG - Potential contribution: Socio-economic research on climate change impacts and policy responses.], 
+    [ZEW - LEIBNIZ-ZENTRUM FUR EUROPAISCHE WIRTSCHAFTSFORSCHUNG GMBH MANNHEIM - Potential contribution: Economic research on climate change mitigation and adaptation.]
+    ",0.7878787878787878,0.9781862328424618,0.0,0.3,0.29999999969999996,0.6063040116861016,0.3658617172072397,0
+"Find potential consortia for a project focused on intercultural dialogue and town twinning, aimed at fostering European identity, mutual understanding, and solidarity among citizens. The consortium should include municipalities, cultural organizations, and civil society groups engaged in EU integration, democratic participation, and cultural exchange initiatives","[""LAPPEENRANNAN-LAHDEN TEKNILLINEN YLIOPISTO LUT. YLIOPISTONKATU 34, 53850 Lappeenranta, FI. Interregional Multidiciplinary Reseachers'  Night\nResearchers and Citizens in Interaction\nShare Brains 2"", ""KYMENLAAKSON AMMATTIKORKEAKOULU OY. PAASKYSENTIE 1, 48220 KOTKA, FI. Interregional Multidiciplinary Reseachers'  Night\nResearchers and Citizens in Interaction\nShare Brains 2"", ""PAIJAT-HAMEEN KOULUTUSKONSERNI-KUNTAYHTYMA. TEININTIE 4, 15200 LAHTI, FI. Interregional Multidiciplinary Reseachers'  Night\nResearchers and Citizens in Interaction\nShare Brains 2"", 'INSTITUTE OF PHILOSOPHY AND SOCIOLOGY. UL. MOSKOVSKA 13 A, 1000 Sofia, BG. The Evolution of European Identity: Using biographical methods to study the development of European identity', 'UNIWERSYTET LODZKI. UL PREZYDENTA GABRIELA NARUTOWICZA 68, 90 136 LODZ, PL. The Evolution of European Identity: Using biographical methods to study the development of European identity', ""THE QUEEN'S UNIVERSITY OF BELFAST. UNIVERSITY ROAD LANYON BUILDING, BT7 1NN BELFAST, UK. The Evolution of European Identity: Using biographical methods to study the development of European identity"", 'BANGOR UNIVERSITY. COLLEGE ROAD, LL57 2DG BANGOR, UK. The Evolution of European Identity: Using biographical methods to study the development of European identity', 'OTTO-VON-GUERICKE-UNIVERSITAET MAGDEBURG. UNIVERSITAETSPLATZ  2, 39106 Magdeburg, DE. The Evolution of European Identity: Using biographical methods to study the development of European identity', 'TALLINNA TEHNIKAÜLIKOOL. EHITAJATE TEE 5, 12616 Tallinn, EE. The Evolution of European Identity: Using biographical methods to study the development of European identity', 'UNIVERSITA DEGLI STUDI DI NAPOLI FEDERICO II. CORSO UMBERTO I, 40, 80138 NAPOLI, IT. The Evolution of European Identity: Using biographical methods to study the development of European identity', 'LAUREA-AMMATTIKORKEAKOULU OY. RATATIE 22, 01300 Vantaa, FI. Night of the Living: Interaction, Inclusion, Invention & Innovation (4i)', 'KYMENLAAKSON AMMATTIKORKEAKOULU OY. PAASKYSENTIE 1, 48220 KOTKA, FI. Night of the Living: Interaction, Inclusion, Invention & Innovation (4i)', 'PAIJAT-HAMEEN KOULUTUSKONSERNI-KUNTAYHTYMA. TEININTIE 4, 15200 LAHTI, FI. Night of the Living: Interaction, Inclusion, Invention & Innovation (4i)']","Based on the provided data, here are three potential consortia for a project focused on intercultural dialogue and town twinning, aimed at fostering European identity, mutual understanding, and solidarity among citizens:
+
+### Consortium list 1:
+
+1. **UNIVERSIDAD DE LA IGLESIA DE DEUSTO ENTIDAD RELIGIOSA**, Avenida de las Universidades 24, 48007 Bilbao, ES
+    - **Potential contribution**: Expertise in interethnic tolerance and neighborhood integration.
+    - **Related works**: Generating Interethnic Tolerance and Neighborhood Integration in European Urban Spaces.
+
+2. **UNIVERSITY OF MACEDONIA**, Egnatia Street 156, 540 06 Thessaloniki, EL
+    - **Potential contribution**: Research on interethnic tolerance and integration.
+    - **Related works**: Generating Interethnic Tolerance and Neighborhood Integration in European Urban Spaces.
+
+3. **Faculdade de letras da Universidade de Lisboa**, Alameda da Reitoria (Cidade Universitaria), 1600-214 Lisboa, PT
+    - **Potential contribution**: Cultural and linguistic expertise in fostering intercultural dialogue.
+    - **Related works**: Generating Interethnic Tolerance and Neighborhood Integration in European Urban Spaces.
+
+4. **INSTITUTO DE GEOGRAFIA E ORDENAMENTO DO TERRITORIO DA UNIVERSIDADE DE LISBOA**, Edificio IGOT Rua Branca Edmee Marques, 1600 276 Lisboa, PT
+    - **Potential contribution**: Geographic and territorial planning for intercultural integration.
+    - **Related works**: Generating Interethnic Tolerance and Neighborhood Integration in European Urban Spaces.
+
+5. **OESTERREICHISCHE AKADEMIE DER WISSENSCHAFTEN**, Dr. Ignaz Seipel-Platz 2, 1010 Wien, AT
+    - **Potential contribution**: Academic research on interethnic tolerance and integration.
+    - **Related works**: Generating Interethnic Tolerance and Neighborhood Integration in European Urban Spaces.
+
+### Consortium list 2:
+
+1. **INSTITUTE OF PHILOSOPHY AND SOCIOLOGY**, Ul. Moskovska 13 A, 1000 Sofia, BG
+    - **Potential contribution**: Sociological research on European identity.
+    - **Related works**: The Evolution of European Identity: Using biographical methods to study the development of European identity.
+
+2. **UNIWERSYTET LODZKI**, Ul Prezydenta Gabriela Narutowicza 68, 90 136 Lodz, PL
+    - **Potential contribution**: Research on European identity and integration.
+    - **Related works**: The Evolution of European Identity: Using biographical methods to study the development of European identity.
+
+3. **THE QUEEN'S UNIVERSITY OF BELFAST**, University Road Lanyon Building, BT7 1NN Belfast, UK
+    - **Potential contribution**: Expertise in European identity and biographical research.
+    - **Related works**: The Evolution of European Identity: Using biographical methods to study the development of European identity.
+
+4. **BANGOR UNIVERSITY**, College Road, LL57 2DG Bangor, UK
+    - **Potential contribution**: Research on European identity and cultural integration.
+    - **Related works**: The Evolution of European Identity: Using biographical methods to study the development of European identity.
+
+5. **OTTO-VON-GUERICKE-UNIVERSITAET MAGDEBURG**, Universitaetsplatz 2, 39106 Magdeburg, DE
+    - **Potential contribution**: Research on European identity and integration.
+    - **Related works**: The Evolution of European Identity: Using biographical methods to study the development of European identity.
+
+### Consortium list 3:
+
+1. **TALLINNA TEHNIKAÜLIKOOL**, Ehitajate Tee 5, 12616 Tallinn, EE
+    - **Potential contribution**: Research on European identity and integration.
+    - **Related works**: The Evolution of European Identity: Using biographical methods to study the development of European identity.
+
+2. **UNIVERSITA DEGLI STUDI DI NAPOLI FEDERICO II**, Corso Umberto I, 40, 80138 Napoli, IT
+    - **Potential contribution**: Expertise in European identity and cultural integration.
+    - **Related works**: The Evolution of European Identity: Using biographical methods to study the development of European identity.
+
+3. **JOHANN WOLFGANG GOETHE-UNIVERSITAET FRANKFURT AM MAIN**, Theodor W Adorno Platz 1, 60323 Frankfurt am Main, DE
+    - **Potential contribution**: Research on migrant socialities and ethnic club cultures.
+    - **Related works**: New Migrant Socialities: Ethnic Club Cultures in Urban Europe.
+
+These organisations have been involved in projects related to intercultural dialogue, European identity, and integration, making them suitable partners for your project.","
+    Consortium list 1:
+    [UNIVERSIDAD DE LA IGLESIA DE DEUSTO ENTIDAD RELIGIOSA - Potential contribution: Expertise in interethnic tolerance and neighborhood integration.], 
+    [UNIVERSITY OF MACEDONIA - Potential contribution: Research and academic expertise in European integration and democratic participation.], 
+    [INSTITUTE OF PHILOSOPHY AND SOCIOLOGY - Potential contribution: Sociological research on European identity and biographical methods.], 
+    [UNIWERSYTET LODZKI - Potential contribution: Expertise in European identity and cultural exchange.], 
+    [JOHANN WOLFGANG GOETHE-UNIVERSITAET FRANKFURT AM MAIN - Potential contribution: Research on migrant socialities and ethnic club cultures in urban Europe.]
+    
+    Consortium list 2:
+    [Faculdade de Letras da Universidade de Lisboa - Potential contribution: Academic expertise in cultural studies and European integration.], 
+    [OESTERREICHISCHE AKADEMIE DER WISSENSCHAFTEN - Potential contribution: Research on European identity and cultural exchange.], 
+    [UNIVERSITEIT VAN AMSTERDAM - Potential contribution: Expertise in urban studies and European integration.], 
+    [THE QUEEN'S UNIVERSITY OF BELFAST - Potential contribution: Research on European identity and biographical methods.], 
+    [BANGOR UNIVERSITY - Potential contribution: Expertise in cultural exchange and European identity.]
+    ",0.30434782608695654,0.8364334738257652,0.249999999975,0.4,0.3999999996,0.7441135968728891,0.4187870199078775,0
+"Identify potential consortia for a research project focused on leveraging digitalization and data exchange in healthcare. The consortium should include public and private sector partners working on AI-driven health innovations, interoperable health data solutions, and advanced analytics for precision medicine and chronic disease management. The ideal partners should contribute to the European Health Data Space, AI for clinical decision support, and regulatory science for digital health technologies","[""KING'S COLLEGE LONDON. STRAND, WC2R 2LS LONDON, UK. Electronic Health Record systems for Clinical Research"", 'WESTFAELISCHE WILHELMS-UNIVERSITAET MUENSTER. SCHLOSSPLATZ  2, 48149 MUENSTER, DE. Electronic Health Record systems for Clinical Research', 'MERCK KOMMANDITGESELLSCHAFT AUF AKTIEN. FRANKFURTER STRASSE  250, 64293 Darmstadt, DE. Electronic Health Record systems for Clinical Research', 'UNIVERSITE DE RENNES I. RUE DU THABOR 2, 35065 RENNES CEDEX, FR. Electronic Health Record systems for Clinical Research', 'RESEARCH IN ADVANCED MEDICAL INFORMATION AND TELEMATICS VZW. SINT ANNASTRAAT 45, 9630 ZWALM, BE. Electronic Health Record systems for Clinical Research', 'AMGEN. TELECOMLAAN 5-7, 1831 Diegem, BE. Electronic Health Record systems for Clinical Research', 'ETHNIKO KAI KAPODISTRIAKO PANEPISTIMIO ATHINON. 6 CHRISTOU LADA STR, 10561 ATHINA, EL. Electronic Health Record systems for Clinical Research', 'F. HOFFMANN-LA ROCHE AG. GRENZACHERSTRASSE  124, 4070 Basel, CH. Electronic Health Record systems for Clinical Research', 'LES HOPITAUX UNIVERSITAIRES DE GENEVE. RUE GABRIELLE PERRET GENTIL 4, 1205 GENEVE 14, CH. Electronic Health Record systems for Clinical Research', 'EUROPEAN MOLECULAR BIOLOGY LABORATORY. Meyerhofstrasse  1, 69117 Heidelberg, DE. Electronic Health Record systems for Clinical Research', 'XCLINICAL GMBH. ARNULFSTRASSE 19, 80335 MUNCHEN, DE. Electronic Health Record systems for Clinical Research', 'SANOFI-AVENTIS RECHERCHE & DEVELOPPEMENT. Pierre Brossolette 1, 91380 Chilly Mazarin, FR. Electronic Health Record systems for Clinical Research', 'eClinical Forum Association. Rue de Rhinau, 67860 Friesenheim, FR. Electronic Health Record systems for Clinical Research', 'FRIEDRICH-ALEXANDER-UNIVERSITAET ERLANGEN-NUERNBERG. SCHLOSSPLATZ 4, 91054 Erlangen, DE. Electronic Health Record systems for Clinical Research', 'ASTRAZENECA AB. Vastra Maelarhamnen, 151 85 Sodertaelje, SE. Electronic Health Record systems for Clinical Research', 'INSTITUT NATIONAL DE LA SANTE ET DE LA RECHERCHE MEDICALE. RUE DE TOLBIAC 101, 75654 Paris, FR. Electronic Health Record systems for Clinical Research', 'WARSZAWSKI UNIWERSYTET MEDYCZNY. UL. ZWIRKI I WIGURY  61, 02 091 WARSZAWA, PL. Electronic Health Record systems for Clinical Research', 'European Platform for Patients Oganisations, Science and Industry. Center for Human Genetics, kapucijnenvoer, 3000 Leuven, BE. Electronic Health Record systems for Clinical Research', 'HEINRICH-HEINE-UNIVERSITAET DUESSELDORF. UNIVERSITAETSSTRASSE 1, 40225 DUSSELDORF, DE. Electronic Health Record systems for Clinical Research', 'Assero Limited (representing CDISC). Third Avenue, TQ14 9DP Teignmouth, UK. Electronic Health Record systems for Clinical Research', 'CUSTODIX NV. KORTRIJKSESTEENWEG  214 b3, 9830 Sint-Martens-Latem, BE. Electronic Health Record systems for Clinical Research', 'UNIVERSITY OF DUNDEE. Nethergate, DD1 4HN Dundee, UK. Electronic Health Record systems for Clinical Research', 'UNIVERSITY OF GLASGOW. UNIVERSITY AVENUE, G12 8QQ GLASGOW, UK. Electronic Health Record systems for Clinical Research', 'ELI LILLY AND COMPANY LTD. LILLY HOUSE BASINGVIEW, RG21 4FA BASINGSTOKE, UK. Electronic Health Record systems for Clinical Research', 'Bayer Pharma AG. Muellerstrasse 178, 13353 Berlin, DE. Electronic Health Record systems for Clinical Research', 'CDISC EUROPE FOUNDATION FONDATION. PLACE MARCEL BROODTHAERS 8 SOUTH CENTER TITANIUM 4TH FLOOR, 1060 BRUXELLES, BE. Electronic Health Record systems for Clinical Research', 'JANSSEN PHARMACEUTICA NV. TURNHOUTSEWEG 30, 2340 Beerse, BE. Electronic Health Record systems for Clinical Research', 'GLAXOSMITHKLINE RESEARCH AND DEVELOPMENT LTD.. Great West Road  980, TW89GS Brentford, UK. Electronic Health Record systems for Clinical Research', 'NOVARTIS PHARMA AG. LICHTSTRASSE 35, 4056 Basel, CH. Electronic Health Record systems for Clinical Research', 'THE UNIVERSITY OF EDINBURGH. OLD COLLEGE, SOUTH BRIDGE, EH8 9YL Edinburgh, UK. Electronic Health Record systems for Clinical Research', 'TMF - TECHNOLOGIE UND METHODENPLATTFORM FUR DIE VERNETZTE MEDIZINISCHE FORSCHUNG EV. CHARLOTTENSTRASSE 42 ECKE DOROTHEENSTRASSE, 10117 Berlin, DE. Electronic Health Record systems for Clinical Research', 'EUROPEAN INSTITUTE FOR HEALTH RECORDS. RUE DU MARECHAL DE LATTRE DE TASSIGNY 8, 59000 LILLE, FR. Electronic Health Record systems for Clinical Research', 'THE UNIVERSITY OF MANCHESTER. OXFORD ROAD, M13 9PL MANCHESTER, UK. Electronic Health Record systems for Clinical Research', 'ASSISTANCE PUBLIQUE HOPITAUX DE PARIS. 55 BOULEVARD DIDEROT, 75012 PARIS, FR. Electronic Health Record systems for Clinical Research', 'REGION SKANE. REGION SKANE, 291 89 Kristianstad, SE. Regional Digital Agendas for Healthcare', 'D ALEPH INICIATIVAS Y ORGANIZACION SA. CALLE ANGLI PLANTA 4 PUERTA 1 31, 08017 BARCELONA, ES. Regional Digital Agendas for Healthcare', 'CONNECTED HEALTH ALLIANCE CIC. THE INNOVATION CENTRE  NORTHERN IRELAND SCIENCE PARK QUEENS ISLAND, BT3 9DT BELFAST, UK. Regional Digital Agendas for Healthcare', 'CENTRE E-SANTE ASSOCIATION. RUE DE LA VIGUERIE 2, 31300 TOULOUSE, FR. Regional Digital Agendas for Healthcare', 'OULUN YLIOPISTO. PENTTI KAITERAN KATU 1, 90014 Oulu, FI. Regional Digital Agendas for Healthcare', 'FUNDACION PARA LA FORMACION E INVESTIGACION SANITARIAS DE LA REGION DE MURCIA. CALLE CAMPO 12 PABELLON DOCENTE DEL HOSPITAL CLINICO UNIVERSITARIO VIRGEN DE LA ARRIXACA 3 PLANTA EL PALMA, 30120 Murcia, ES. Regional Digital Agendas for Healthcare', 'MOBILE HEIGHTS IDEELL FORENING. ANCKARGRIPSGATAN 3, 21119 MALMO, SE. Regional Digital Agendas for Healthcare', 'TICBIOMED TECNOLOGIAS DE LA INFORMACION PARA LA SALUD EN LA REGION DE MURCIA ASOCIACION. CAMPUS UNIVERSITARIO ESPINARDO 7 EDIFICIO CEEIM, 30100 MURCIA, ES. Regional Digital Agendas for Healthcare', 'POHJOIS-POHJANMAAN LIITTO. PORATIE 5, 90140 OULU, FI. Regional Digital Agendas for Healthcare', 'TARTU ULIKOOL. ULIKOOLI 18, 51005 TARTU, EE. EuroREACH A Handbook to Access Health Care Data for Cross-country Comparisons of Efficiency and Quality', 'IMPERIAL COLLEGE OF SCIENCE TECHNOLOGY AND MEDICINE. SOUTH KENSINGTON CAMPUS EXHIBITION ROAD, SW7 2AZ LONDON, UK. EuroREACH A Handbook to Access Health Care Data for Cross-country Comparisons of Efficiency and Quality', 'MACCABI SHEIRUTEI BRIUT FOUNDATION. HAMERED STREET 27, 68125 Tel Aviv, IL. EuroREACH A Handbook to Access Health Care Data for Cross-country Comparisons of Efficiency and Quality', 'INSTITUT DE RECHERCHE ET DOCUMENTATION EN ECONOMIE DE LA SANTE ASSOCIOATION. RUE VAUVENARGUES 10, 75018 PARIS, FR. EuroREACH A Handbook to Access Health Care Data for Cross-country Comparisons of Efficiency and Quality', 'TECHNISCHE UNIVERSITAT BERLIN. STRASSE DES 17 JUNI 135, 10623 Berlin, DE. EuroREACH A Handbook to Access Health Care Data for Cross-country Comparisons of Efficiency and Quality', 'TERVEYDEN JA HYVINVOINNIN LAITOS. MANNERHEIMINTIE 166, 00271 Helsinki, FI. EuroREACH A Handbook to Access Health Care Data for Cross-country Comparisons of Efficiency and Quality', 'LONDON SCHOOL OF ECONOMICS AND POLITICAL SCIENCE. Houghton Street 1, WC2A 2AE London, UK. EuroREACH A Handbook to Access Health Care Data for Cross-country Comparisons of Efficiency and Quality', 'LISER - LUXEMBOURG INSTITUTE OF SOCIO-ECONOMIC RESEARCH. 11 PORTE DES SCIENCES CAMPUS BLEVAL, 4366 ESCH SUR ALZETTE, LU. EuroREACH A Handbook to Access Health Care Data for Cross-country Comparisons of Efficiency and Quality', 'EUROPAISCHES ZENTRUM FUR WOHLFAHRTSPOLITIK UND SOZIALFORSCHUNG. BERGGASSE 17, 1090 WIEN, AT. EuroREACH A Handbook to Access Health Care Data for Cross-country Comparisons of Efficiency and Quality']","Based on the provided data, here are three potential consortia for a research project focused on leveraging digitalization and data exchange in healthcare:
+
+### Consortium list 1:
+
+#### 1. UNIVERSITAT DES SAARLANDES, CAMPUS, 66123 SAARBRUCKEN, DE
+- **Potential contribution:** Expertise in digital health infrastructure and patient data management.
+- **Related works:**
+  - **A Demonstration of 4D Digital Avatar Infrastructure for Access of Complete Patient Information**
+
+#### 2. KING'S COLLEGE LONDON, STRAND, WC2R 2LS LONDON, UK
+- **Potential contribution:** Expertise in electronic health record systems and clinical research.
+- **Related works:**
+  - **Electronic Health Record systems for Clinical Research**
+
+#### 3. PHILIPS ELECTRONICS NEDERLAND BV, HIGH TECH CAMPUS 52, 5656 AG Eindhoven, NL
+- **Potential contribution:** Expertise in integrative cancer research and biomedical infrastructures.
+- **Related works:**
+  - **Driving Excellence in Integrative Cancer Research through Innovative Biomedical Infrastructures**
+
+#### 4. MERCK KOMMANDITGESELLSCHAFT AUF AKTIEN, FRANKFURTER STRASSE 250, 64293 Darmstadt, DE
+- **Potential contribution:** Expertise in pharmaceutical research and development.
+- **Related works:**
+  - **Electronic Health Record systems for Clinical Research**
+
+#### 5. IDRYMA TECHNOLOGIAS KAI EREVNAS, N PLASTIRA STR 100, 70013 IRAKLEIO, EL
+- **Potential contribution:** Expertise in digital health technologies and biomedical research.
+- **Related works:**
+  - **A Demonstration of 4D Digital Avatar Infrastructure for Access of Complete Patient Information**
+  - **Driving Excellence in Integrative Cancer Research through Innovative Biomedical Infrastructures**
+
+### Consortium list 2:
+
+#### 1. UNIVERSITY OF LINCOLN, Brayford Pool, LN6 7TS Lincoln, UK
+- **Potential contribution:** Expertise in digital health and patient data management.
+- **Related works:**
+  - **A Demonstration of 4D Digital Avatar Infrastructure for Access of Complete Patient Information**
+
+#### 2. WESTFAELISCHE WILHELMS-UNIVERSITAET MUENSTER, SCHLOSSPLATZ 2, 48149 MUENSTER, DE
+- **Potential contribution:** Expertise in electronic health record systems and clinical research.
+- **Related works:**
+  - **Electronic Health Record systems for Clinical Research**
+
+#### 3. EUROPEAN MOLECULAR BIOLOGY LABORATORY, Meyerhofstrasse 1, 69117 Heidelberg, DE
+- **Potential contribution:** Expertise in molecular biology and biomedical research.
+- **Related works:**
+  - **Electronic Health Record systems for Clinical Research**
+
+#### 4. SANOFI-AVENTIS RECHERCHE & DEVELOPPEMENT, Pierre Brossolette 1, 91380 Chilly Mazarin, FR
+- **Potential contribution:** Expertise in pharmaceutical research and development.
+- **Related works:**
+  - **Electronic Health Record systems for Clinical Research**
+
+#### 5. BREAST INTERNATIONAL GROUP - AISBL, BOULEVARD DE WATERLOO 121, 1000 BRUXELLES, BE
+- **Potential contribution:** Expertise in cancer research and clinical trials.
+- **Related works:**
+  - **Driving Excellence in Integrative Cancer Research through Innovative Biomedical Infrastructures**
+
+### Consortium list 3:
+
+#### 1. UNIVERSITY OF BEDFORDSHIRE, UNIVERSITY SQUARE, LU1 3JU LUTON, UK
+- **Potential contribution:** Expertise in digital health and patient data management.
+- **Related works:**
+  - **A Demonstration of 4D Digital Avatar Infrastructure for Access of Complete Patient Information**
+
+#### 2. F. HOFFMANN-LA ROCHE AG, GRENZACHERSTRASSE 124, 4070 Basel, CH
+- **Potential contribution:** Expertise in pharmaceutical research and development.
+- **Related works:**
+  - **Electronic Health Record systems for Clinical Research**
+
+#### 3. INSTITUT NATIONAL DE LA SANTE ET DE LA RECHERCHE MEDICALE, RUE DE TOLBIAC 101, 75654 Paris, FR
+- **Potential contribution:** Expertise in health research and biomedical sciences.
+- **Related works:**
+  - **Electronic Health Record systems for Clinical Research**
+
+#### 4. GBG FORSCHUNGS GMBH, MARTIN BEHAIM STRASSE 12, 63263 NEU-ISENBURG, DE
+- **Potential contribution:** Expertise in cancer research and clinical trials.
+- **Related works:**
+  - **Driving Excellence in Integrative Cancer Research through Innovative Biomedical Infrastructures**
+
+#### 5. UNIVERSITY OF GLASGOW, UNIVERSITY AVENUE, G12 8QQ GLASGOW, UK
+- **Potential contribution:** Expertise in electronic health record systems and clinical research.
+- **Related works:**
+  - **Electronic Health Record systems for Clinical Research**
+
+These consortia include a mix of public and private sector partners with expertise in AI-driven health innovations, interoperable health data solutions, and advanced analytics for precision medicine and chronic disease management.","
+    Consortium list 1:
+    [King's College London - Potential contribution: Expertise in clinical research and electronic health record systems.], 
+    [Fraunhofer Gesellschaft zur Förderung der angewandten Forschung e.V. - Potential contribution: Advanced research in applied sciences, including health data security and AI-driven health innovations.], 
+    [Imperial College of Science, Technology and Medicine - Potential contribution: Expertise in AI for clinical decision support and advanced analytics for precision medicine.], 
+    [European Health Telematics Association - Potential contribution: Expertise in interoperable health data solutions and regulatory science for digital health technologies.], 
+    [University of Edinburgh - Potential contribution: Expertise in precision medicine and chronic disease management.]
+    
+    Consortium list 2:
+    [University of Glasgow - Potential contribution: Expertise in AI-driven health innovations and clinical decision support.], 
+    [University of Lincoln - Potential contribution: Expertise in digital health technologies and data exchange in healthcare.], 
+    [Custodix NV - Potential contribution: Expertise in health data security and interoperability.], 
+    [European Molecular Biology Laboratory - Potential contribution: Expertise in molecular biology and precision medicine.], 
+    [University of Bedfordshire - Potential contribution: Expertise in advanced analytics for precision medicine and chronic disease management.]
+    
+    Consortium list 3:
+    [Westfaelische Wilhelms-Universitaet Muenster - Potential contribution: Expertise in clinical research and electronic health record systems.], 
+    [Technological Educational Institute of Crete - Potential contribution: Expertise in digital health technologies and data exchange in healthcare.], 
+    [Research in Advanced Medical Information and Telematics VZW - Potential contribution: Expertise in telematics and interoperable health data solutions.], 
+    [University of Siena - Potential contribution: Expertise in health data security and regulatory science for digital health technologies.], 
+    [University of Manchester - Potential contribution: Expertise in AI-driven health innovations and clinical decision support.]
+    ",0.4444444444444444,0.8486021738075022,0.0,0.6,0.0,0.6848398105503716,0.3410212733923099,0

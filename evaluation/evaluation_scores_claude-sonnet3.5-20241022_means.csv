@@ -1,0 +1,2 @@
+faithfulness,answer_relevancy,context_precision,context_recall,context_entity_recall,semantic_similarity,answer_correctness,harmfulness
+0.336,0.767,0.0,0.147,0.278,0.653,0.26,0.0
