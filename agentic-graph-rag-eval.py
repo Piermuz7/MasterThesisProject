@@ -8,23 +8,23 @@ from langchain_ollama import OllamaEmbeddings
 from ragas import evaluate
 from ragas.metrics import faithfulness, answer_relevancy, context_precision, context_recall, context_entity_recall, \
     answer_similarity, answer_correctness
-from ragas.metrics._aspect_critic import harmfulness
 from graphrag.agent_workflow import execute_agent_workflow
 from graphrag.agents.projects_participants_agent import embedding_store
-import graphrag.llm as llm
+import graphrag.llm as grag_llm
 from evaluation.qa import potential_consortium_queries, potential_consortium_ground_truths
 import os
 import streamlit as st
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
-llm = llm.langchain_anthropic_llm
+llm = grag_llm.langchain_azure_openai_gpt4o_llm
 embedder = OllamaEmbeddings(model="all-minilm:l6-v2")
 
 results = []
 contexts = []
 cleaned_context = []
 
+# Evaluation queries. For the evaluation, we use the potential consortium queries.
 all_queries = [{"potential_consortium": potential_consortium_queries}]  # ,{"titles": []}, {"abstracts": []}]
 
 
@@ -41,7 +41,7 @@ def get_organisations_of_similar_projects(project_IRIs) -> any:
                 PREFIX eurio: <http://data.europa.eu/s66#>
                 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-                SELECT DISTINCT ?organisation ?org_role ?postal_address ?project_title ?project_abstract
+                SELECT DISTINCT ?organisation ?postal_address ?project_title ?project_abstract
                 WHERE {{
                     BIND (<{project_iri}> as ?project) 
                     ?project a eurio:Project.
@@ -56,6 +56,7 @@ def get_organisations_of_similar_projects(project_IRIs) -> any:
                     ?site eurio:hasAddress ?address.
                     ?address eurio:fullAddress ?postal_address.
                 }}
+                ORDER BY ?organisation
             """
 
         sparql.setQuery(query)
@@ -95,7 +96,7 @@ def project_info_to_str(d):
     org = format_value(d.get("organisation", ""))
     addr = format_value(d.get("postal_address", ""))
     title = format_value(d.get("project_title", ""))
-    return f"{org}. {addr}. {title}"
+    return f"{org}, {addr}, Related works: {title}"
 
 
 def transform_json_array(json_array):
@@ -157,13 +158,84 @@ for entry in all_queries:
             Unstructured information: {vector_result}.
             Structured information: {agent_result}
             """
-            res = llm.invoke(input=final_prompt)
+            #res = llm.invoke(input=final_prompt)
             # print(res)
-            result = res.content
+            #result = res.content
             # print(result)
-            results.append(result)
+            #results.append(result)
+            results.append(agent_result)
             orgs = transform_json_array(vector_result)
             contexts.append(orgs)
+
+
+def get_next_filename(base_filename: str, extension: str) -> str:
+    """
+    Determines the next available filename with a progressive count.
+
+    Args:
+        base_filename (str): The base filename without numbering.
+        extension (str): The file extension (e.g., ".csv").
+
+    Returns:
+        str: The next available filename with an incremented number if necessary.
+    """
+    new_filename = f"{base_filename}{extension}"
+
+    if os.path.exists(new_filename):
+        existing_files = glob.glob(f"{base_filename}_*{extension}")
+        highest_num = 0
+        for file in existing_files:
+            parts = file.replace(base_filename, "").replace(extension, "")
+            if parts.startswith("_") and parts[1:].isdigit():
+                highest_num = max(highest_num, int(parts[1:]))
+        new_filename = f"{base_filename}_{highest_num + 1}{extension}"
+
+    return new_filename
+
+
+def eval_and_save_files(df: pd.DataFrame, base_filename: str, extension: str) -> str:
+    """
+    Saves the file with a progressive count if a file with the same name exists.
+    Also computes means for numeric columns and saves them in a separate file.
+
+    Args:
+        df (pd.DataFrame): The DataFrame to be saved.
+        base_filename (str): The base filename without numbering.
+        extension (str): The file extension (e.g., ".csv").
+
+    Returns:
+        str: The final saved filename.
+    """
+    new_filename = get_next_filename(base_filename, extension)
+
+    # Save the DataFrame
+    df.to_csv(new_filename, encoding="utf-8", index=False)
+    print(f"Saved file as: {new_filename}")
+
+    # Read the CSV file into a DataFrame
+    df = pd.read_csv(new_filename)
+
+    # Select only numeric columns
+    numeric_df = df.select_dtypes(include="number")
+
+    # Compute the mean for each numeric column and round to three decimals
+    means = numeric_df.mean().round(3)
+
+    # Create a DataFrame from the means (a single row)
+    means_df = pd.DataFrame([means])
+
+    # Generate progressive filename for means file
+    means_filename = get_next_filename(base_filename + "_means", extension)
+
+    # Save the means to a new CSV file with headers
+    means_df.to_csv(means_filename, index=False)
+
+    print(f"Saved means file as: {means_filename}")
+    print("Computed means for numeric columns:")
+    print(means_df)
+
+    return new_filename
+
 
 d = {
     "user_input": potential_consortium_queries,
@@ -172,55 +244,20 @@ d = {
     "reference": potential_consortium_ground_truths,
 }
 
-#print("d: ", d)
-
+# print("d: ", d)
 dataset = Dataset.from_dict(d)
 score = evaluate(dataset,
                  metrics=[faithfulness, answer_relevancy, context_precision, context_recall, context_entity_recall,
-                          answer_similarity, answer_correctness, harmfulness],
+                          answer_similarity, answer_correctness],
                  llm=llm,
                  embeddings=embedder
                  )
 score_df = score.to_pandas()
 
-#llm_name = "gpt-4o-20240513"
-llm_name = "claude-sonnet3.5-20241022"
+llm_name = "gpt-4o-20240513"
+# llm_name = "claude-sonnet3.5-20241022"
 base_filename = "evaluation/evaluation_scores_" + llm_name
 extension = ".csv"
 
-# Find existing files that match the pattern
-existing_files = glob.glob(f"{base_filename}*{extension}")
-
-# Determine the next available filename
-if existing_files:
-    highest_num = 0
-    for file in existing_files:
-        parts = file.replace(base_filename, "").replace(extension, "")
-        if parts.startswith("_") and parts[1:].isdigit():
-            highest_num = max(highest_num, int(parts[1:]))
-    new_filename = f"{base_filename}_{highest_num + 1}{extension}"
-else:
-    new_filename = f"{base_filename}{extension}"
-
-# Save the file with the new name
-score_df.to_csv(new_filename, encoding="utf-8", index=False)
-
-print(f"Saved file as: {new_filename}")
-
-# Read the CSV file into a DataFrame
-df = pd.read_csv(f"./evaluation/{new_filename}.csv")
-
-# Select only numeric columns
-numeric_df = df.select_dtypes(include="number")
-
-# Compute the mean for each numeric column and round to three decimals
-means = numeric_df.mean().round(3)
-
-# Create a DataFrame from the means (a single row)
-means_df = pd.DataFrame([means])
-
-# Save the means to a new CSV file with headers
-means_df.to_csv(f"./{new_filename}", index=False)
-
-print("Computed means for numeric columns:")
-print(means_df)
+new_filename = eval_and_save_files(score_df, base_filename, extension)
+print(f"Final saved filename: {new_filename}")

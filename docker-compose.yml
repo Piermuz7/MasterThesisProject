@@ -1,0 +1,58 @@
+services:
+
+  streamlit-app:
+    build: .
+    container_name: streamlit-app
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    depends_on:
+      - graphdb
+      - chromadb
+      - ollama
+    environment:
+      - GRAPHDB_URL=http://graphdb:7200
+      - CHROMADB_URL=http://chromadb:8000
+      - OLLAMA_URL=http://ollama:11434
+      - GRAPHDB_USERNAME=admin
+      - GRAPHDB_PASSWORD=root
+      - DOCKER_ENV=true
+
+  graphdb:
+    image: ontotext/graphdb:10.6.4
+    container_name: graphdb
+    ports:
+      - "7200:7200"
+    volumes:
+      - /Users/piermichelerosati/Library/Application Support/GraphDB/:/opt/graphdb/home
+    restart: always
+
+  chromadb:
+    image: ghcr.io/chroma-core/chroma:latest
+    container_name: chromadb
+    ports:
+      - "8000:8000"
+    volumes:
+      - chromadb_data:/chroma/
+    restart: always
+
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    entrypoint: [ "/bin/sh", "-c" ]
+    command:
+      - |
+        ollama pull all-minilm:l6-v2
+        ollama serve
+        python3 /app/vector_db_init.py
+    restart: always
+
+volumes:
+  graphdb_data:
+  chromadb_data:
+  ollama_data:

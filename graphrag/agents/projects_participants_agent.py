@@ -90,7 +90,7 @@ projects_participants_agent = FunctionAgent(
 
         """
     ),
-    llm=llm.llama_index_azure_openai_llm,
+    llm=llm.llama_index_azure_openai_gpt4o_llm,
     tools=[get_project_info, get_participant_information, get_similar_projects],
     can_handoff_to=["PotentialCollaboratorsAgent", "PotentialConsortiumOrganisationsAgent"],
 )

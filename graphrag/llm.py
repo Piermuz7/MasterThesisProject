@@ -1,12 +1,10 @@
 from langchain_anthropic import ChatAnthropic
 from langchain_openai import AzureChatOpenAI
 from llama_index.llms.anthropic import Anthropic
+from llama_index.llms.azure_openai import AzureOpenAI
 
 import toml
-
 import streamlit as st
-from llama_index.llms.azure_openai import AzureOpenAI
-from llama_index.llms.gemini import Gemini
 
 # Large Language Model configuration
 
@@ -17,24 +15,40 @@ config = toml.load(".streamlit/secrets.toml")
 # Gemini is not available in the current version of the Llama Index API for agentic workflows.
 # api_key = config["api_key"]["GOOGLE_KEY"]
 
-# Switch between Anthropic and Azure OpenAI LLMs.
 
-#api_key = config["api_key"]["ANTHROPIC_KEY"]
-api_key = config["api_key"]["AZURE_OPENAI_API_KEY"]
+api_key_anthropic = config["api_key"]["ANTHROPIC_KEY"]
+api_key_azure = config["api_key"]["AZURE_OPENAI_API_KEY"]
 
-langchain_anthropic_llm = ChatAnthropic(
+langchain_anthropic_sonnet_3_5_llm = ChatAnthropic(
     temperature=0,
     model_name="claude-3-5-sonnet-20241022",
     max_tokens_to_sample=8192,
-    api_key=api_key,
+    api_key=api_key_anthropic,
     max_retries=3
 )
 
-llama_index_anthropic_llm = Anthropic(temperature=0,
-                                      api_key=api_key,
-                                      model="claude-3-5-sonnet-20241022",
-                                      max_tokens=8192,
-                                      )
+llama_index_anthropic_sonnet_3_5_llm = Anthropic(temperature=0,
+                                                 api_key=api_key_anthropic,
+                                                 model="claude-3-5-sonnet-20241022",
+                                                 max_tokens=8192,
+                                                 )
+
+langchain_anthropic_haiku_llm = ChatAnthropic(
+    temperature=0,
+    model_name="claude-3-5-haiku-20241022",
+    max_tokens_to_sample=8192,
+    api_key=api_key_anthropic,
+    max_retries=3
+)
+
+langchain_anthropic_sonnet_3_7_llm = ChatAnthropic(
+    temperature=0,
+    model_name="claude-3-7-sonnet-20250219",
+    max_tokens_to_sample=8192,
+    api_key=api_key_anthropic,
+    max_retries=3
+)
+
 '''
 
 Gemini is not available in the current version of the Llama Index API for agentic workflows.
@@ -55,20 +69,20 @@ llama_index_gemini_llm = Gemini(
 )
 '''
 
-langchain_azure_openai_llm = AzureChatOpenAI(
+langchain_azure_openai_gpt4o_llm = AzureChatOpenAI(
     azure_endpoint=st.secrets["AZURE_OPENAI_ENDPOINT"],
     temperature=0,
     model="gpt-4o",
     max_tokens=4096,
-    api_key=api_key,
+    api_key=api_key_azure,
     api_version="2024-08-01-preview",
     timeout=None,
     max_retries=2,
 )
 
-llama_index_azure_openai_llm = AzureOpenAI(
+llama_index_azure_openai_gpt4o_llm = AzureOpenAI(
     model="gpt-4o",
-    api_key=api_key,
+    api_key=api_key_azure,
     azure_endpoint=st.secrets["AZURE_OPENAI_ENDPOINT"],
     api_version="2024-08-01-preview",
     max_retries=3,

@@ -15,13 +15,13 @@ from graphrag.embeddings.graph_embedding_service import GraphEmbeddingStore
 
 from graphrag.graph import graph_db
 import graphrag.llm as llm
-from evaluation.qa import queries, ground_truths
+#from evaluation.qa import queries, ground_truths
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 # TODO: maybe useful to evaluate only GraphRAG without agents...
 
-llm = llm.langchain_azure_openai_llm
+llm = llm.langchain_azure_openai_gpt4o_llm
 
 SPARQL_GENERATION_TEMPLATE = """
 You are a SPARQL expert about the EURIO graph database.

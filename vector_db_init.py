@@ -5,7 +5,7 @@ import streamlit as st
 # Initialize embedding store
 embedding_store = GraphEmbeddingStore()
 
-'''
+
 # Function to run SPARQL query and get projects with abstracts
 def fetch_projects_from_graph():
     sparql = SPARQLWrapper(st.secrets["GRAPHDB_URL"])
@@ -44,19 +44,20 @@ def fetch_projects_from_graph():
 
     return projects
 
+
 # print(fetch_projects_from_graph()[0])
 
 
 # Fetch projects from GraphDB
 projects = fetch_projects_from_graph()
 
-
+'''
 projects = [
     ("http://data.europa.eu/s66/resource/projects/9cf329d2-f10f-37fc-8743-fff766dcf1ca",
      "BIM-based holistic tools for Energy-driven Renovation of existing Residences",
      "This project aims to develop BIM-based holistic tools for Energy-driven Renovation of existing Residences.")
 ]
-
+'''
 
 
 def batch_store_embeddings(embedding_store, projects, batch_size=1000):
@@ -76,13 +77,11 @@ def batch_store_embeddings(embedding_store, projects, batch_size=1000):
 
 
 batch_store_embeddings(embedding_store, projects, batch_size=1000)
-'''
 
 # Store embeddings
-#embedding_store.store_embeddings(projects)
+embedding_store.store_embeddings(projects)
 
-# print("Total Embeddings Stored:", len(embedding_store.collection.get()["ids"]))
-
+#print("Total Embeddings Stored:", len(embedding_store.collection.get()["ids"]))
 
 # Test retrieval
 # test_iri = "http://data.europa.eu/s66/resource/projects/9cf329d2-f10f-37fc-8743-fff766dcf1ca"
@@ -93,6 +92,6 @@ batch_store_embeddings(embedding_store, projects, batch_size=1000)
 # print("Retrieved abstract embedding:", abstract_embedding)
 
 # Test similarity search
-query_text = "Topology driven methods project"
-similar_entities = embedding_store.similarity_search_with_relevance_score(query_text, "title", k=3)
-print("Similar entities:", similar_entities)
+# query_text = "Topology driven methods project"
+# similar_entities = embedding_store.similarity_search_with_relevance_score(query_text, "title", k=3)
+# print("Similar entities:", similar_entities)

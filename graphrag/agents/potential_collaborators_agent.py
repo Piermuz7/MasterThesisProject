@@ -129,7 +129,7 @@ potential_collaborators_agent = FunctionAgent(
         Avoid to thank for the given input, mention your knowledge source or provide any unnecessary information.
         """
     ),
-    llm=llm.llama_index_azure_openai_llm,
+    llm=llm.llama_index_azure_openai_gpt4o_llm,
     tools=[get_similar_projects, get_collaborators_of_similar_projects, search_web],
     can_handoff_to=[],
 )

@@ -221,7 +221,7 @@ class GraphEmbeddingStore:
             }
 
             entity_results.append(result_item)
-
+            entity_results = sorted(entity_results, key=lambda x: x["relevance_score"], reverse=True)
         return entity_results
 
     def get_entity_by_iri(self, iri):

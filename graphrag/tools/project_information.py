@@ -81,7 +81,7 @@ GRAPHDB_SPARQL_GENERATION_PROMPT = PromptTemplate(
 )
 
 sparql_qa = OntotextGraphDBQAChain.from_llm(
-    llm=llm.langchain_azure_openai_llm,
+    llm=llm.langchain_azure_openai_gpt4o_llm,
     graph=graph_db,
     sparql_generation_prompt=GRAPHDB_SPARQL_GENERATION_PROMPT,
     verbose=True,
