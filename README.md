@@ -164,7 +164,13 @@ This project is licensed under the **MIT License**. Feel free to modify and dist
 ## Contact
 
 For any questions or contributions, feel free to contact:  
-**Piermichele Rosati**  
-Email: `piermichele.rosati@gmail.com`  
+**Piermichele Rosati**
+
+Personal email: `piermichele.rosati@gmail.com`
+
+Institutional emails:
+- `piermichele.rosati@studenti.unicam.it`
+- `piermichele.rosati@students.fhnw.ch`
+
 GitHub: [Piermuz7](https://github.com/Piermuz7)
 
