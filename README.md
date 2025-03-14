@@ -9,8 +9,7 @@ The success of research project proposals heavily depends on the **formation of 
 inclusion of experienced researchers aligned with the **topics of research calls**, such as those in the EU's **Horizon
 Europe** program.
 
-One of the most challenging aspects of consortium formation is the **identification of suitable research collaborators
-**. Traditional approaches, which primarily rely on **social networks** and **author citations**, often fail to provide
+One of the most challenging aspects of consortium formation is the **identification of suitable research collaborators**. Traditional approaches, which primarily rely on **social networks** and **author citations**, often fail to provide
 effective recommendations.
 
 This thesis introduces an **Agentic Graph Retrieval-Augmented Generation (RAG) method** that enhances **contextual and
@@ -73,9 +72,10 @@ AZURE_OPENAI_API_KEY = "<YOUR_AZURE_OPENAI_API_KEY>"
       properties in GraphDB.
     - Go to **META-INF** GraphDB directory. On MacOS, it is located at
       `'/Applications/GraphDB Desktop.app/Contents/app/lib/common/WEB-INF/classes/META-INF'`.
-    ```bash
-    cd /Applications/GraphDB\ Desktop.app/Contents/app/lib/common/WEB-INF/classes/META-INF
-    ```
+   
+      ```bash
+      cd /Applications/GraphDB\ Desktop.app/Contents/app/lib/common/WEB-INF/classes/META-INF
+      ```
     - Open properties.xml and set the following values:
         - `<entry key="graphdb.workbench.maxInMemorySize">5368709120</entry>`
         - `<entry key="graphdb.workbench.maxUploadSize">5368709120</entry>`
