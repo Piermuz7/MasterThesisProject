@@ -103,14 +103,12 @@ jsonschema-specifications==2024.10.1
 jupyter_client==8.6.3
 jupyter_core==5.7.2
 jupyterlab_pygments==0.3.0
-keybert==0.8.5
 kubernetes==32.0.0
 langchain==0.3.15
 langchain-anthropic==0.3.3
 langchain-community==0.3.15
 langchain-core==0.3.40
 langchain-google-genai==2.0.9
-langchain-neo4j==0.3.0
 langchain-ollama==0.2.2
 langchain-openai==0.3.7
 langchain-text-splitters==0.3.5
@@ -126,10 +124,8 @@ llama-index-graph-stores-neo4j==0.4.6
 llama-index-indices-managed-llama-cloud==0.6.4
 llama-index-llms-anthropic==0.6.4
 llama-index-llms-azure-openai==0.3.0
-llama-index-llms-gemini==0.4.8
 llama-index-llms-huggingface==0.4.2
 llama-index-llms-langchain==0.5.1
-llama-index-llms-mistralai==0.3.2
 llama-index-llms-ollama==0.5.1
 llama-index-llms-openai==0.3.17
 llama-index-multi-modal-llms-openai==0.4.3
@@ -138,7 +134,6 @@ llama-index-question-gen-openai==0.3.0
 llama-index-readers-file==0.4.4
 llama-index-readers-llama-parse==0.4.0
 llama-index-readers-web==0.3.5
-llama-index-vector-stores-neo4jvector==0.3.0
 llama-parse==0.5.20
 lxml==5.3.0
 markdown-it-py==3.0.0
@@ -146,7 +141,6 @@ MarkupSafe==3.0.2
 marshmallow==3.25.1
 matplotlib-inline==0.1.7
 mdurl==0.1.2
-mistralai==1.5.0
 mistune==3.1.2
 mmh3==5.1.0
 monotonic==1.6
@@ -160,7 +154,6 @@ narwhals==1.23.0
 nbclient==0.10.2
 nbconvert==7.16.6
 nbformat==5.10.4
-neo4j==5.28.0
 nest-asyncio==1.6.0
 networkx==3.4.2
 newspaper3k==0.2.8
@@ -215,7 +208,6 @@ pydeck==0.9.1
 pyee==12.1.1
 Pygments==2.19.1
 PyJWT==2.10.1
-pymongo==4.10.1
 pyparsing==3.2.1
 pypdf==5.2.0
 PyPika==0.48.9
