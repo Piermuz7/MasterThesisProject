@@ -12,10 +12,6 @@ config = toml.load(".streamlit/secrets.toml")
 
 # uncomment the API key that you want to use
 
-# Gemini is not available in the current version of the Llama Index API for agentic workflows.
-# api_key = config["api_key"]["GOOGLE_KEY"]
-
-
 api_key_anthropic = config["api_key"]["ANTHROPIC_KEY"]
 api_key_azure = config["api_key"]["AZURE_OPENAI_API_KEY"]
 
@@ -48,26 +44,6 @@ langchain_anthropic_sonnet_3_7_llm = ChatAnthropic(
     api_key=api_key_anthropic,
     max_retries=3
 )
-
-'''
-
-Gemini is not available in the current version of the Llama Index API for agentic workflows.
-
-langchain_gemini_llm = ChatGoogleGenerativeAI(
-    model="models/gemini-2.0-flash",
-    temperature=0,
-    max_tokens=None,
-    timeout=None,
-    max_retries=5,
-    google_api_key=st.secrets["api_key"]["GOOGLE_KEY"],
-)
-
-llama_index_gemini_llm = Gemini(
-    model="models/gemini-2.0-flash",
-    api_key=st.secrets["api_key"]["GOOGLE_KEY"],
-    max_tokens=8192,
-)
-'''
 
 langchain_azure_openai_gpt4o_llm = AzureChatOpenAI(
     azure_endpoint=st.secrets["AZURE_OPENAI_ENDPOINT"],

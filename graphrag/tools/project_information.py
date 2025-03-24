@@ -22,6 +22,25 @@ examples = [
                     ```
                 """
     },
+{
+        "question": "Provide information of a project named Knowledge-Based Information Agent with Social Competence and Human Interaction Capabilities:",
+        "query": """
+                    ```
+                    PREFIX eurio: <http://data.europa.eu/s66#>
+                    SELECT DISTINCT ?title ?url ?abstract ?status ?startDate ?endDate
+                    WHERE{{
+                        ?project a eurio:Project .
+                        ?project eurio:title "Knowledge-Based Information Agent with Social Competence and Human Interaction Capabilities" .
+                        ?project eurio:title ?title.
+                        ?project eurio:url ?url.
+                        ?project eurio:abstract ?abstract.
+                        ?project eurio:projectStatus ?status.
+                        ?project eurio:startDate ?startDate.
+                        ?project eurio:endDate ?endDate.
+                    }}
+                    ```
+                """
+    },
     {
         "question": "Find title, URL, abstract, and status of a project named BIM-based holistic tools for Energy-driven Renovation of existing Residences:",
         "query": """
@@ -35,6 +54,23 @@ examples = [
                         ?project eurio:url ?url.
                         ?project eurio:abstract ?abstract.
                         ?project eurio:projectStatus ?status.
+                    }}
+                    ```
+                """
+    },
+    {
+        "question" : "What are the start date and end date of the project named 'Topology driven methods for complex systems'?",
+        "query": """
+                    ```
+                    PREFIX eurio: <http://data.europa.eu/s66#>
+                    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                    
+                    SELECT ?startDate ?endDate
+                    WHERE {{
+                        ?project a eurio:Project .
+                        ?project eurio:title "Topology driven methods for complex systems".
+                        ?project eurio:startDate ?startDate.
+                        ?project eurio:endDate ?endDate.
                     }}
                     ```
                 """

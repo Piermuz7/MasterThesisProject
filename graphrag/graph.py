@@ -11,8 +11,6 @@ GRAPHDB_ENDPOINT = st.secrets["GRAPHDB_URL"]
 if os.getenv("DOCKER_ENV") == "true":
     GRAPHDB_ENDPOINT = GRAPHDB_ENDPOINT.replace("localhost", "graphdb")
 
-print(f"Using GraphDB endpoint: {GRAPHDB_ENDPOINT}")
-
 # OntotextGraphDBGraph configuration
 graph_db = OntotextGraphDBGraph(
     query_endpoint=GRAPHDB_ENDPOINT,

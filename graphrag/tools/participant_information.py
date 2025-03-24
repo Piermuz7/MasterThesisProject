@@ -56,6 +56,113 @@ examples = [
                     }}
                     ```
                 """
+    },
+    {
+        "question": "Which project was Emanuela Merelli involved in?",
+        "query": """
+                    ```
+                    PREFIX eurio: <http://data.europa.eu/s66#>
+                    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                    
+                    SELECT DISTINCT ?project_title
+                    WHERE {{
+                        ?person a eurio:Person .
+                        ?person rdfs:label ?label .
+                        FILTER (LCASE(?label) = "emanuela merelli")
+                        ?person eurio:hasRole ?role.
+                        ?role eurio:isInvolvedIn ?project .
+                        ?project eurio:title ?project_title .
+                    }}
+                    ```
+                """
+    },
+    {
+        "question": "What is the postal address of university of Camerino?",
+        "query": """
+                    ```
+                    PREFIX eurio: <http://data.europa.eu/s66#>
+                    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                    
+                    SELECT DISTINCT ?postal_address
+                    WHERE {{
+                        ?organisation a eurio:Organisation .
+                        ?organisation rdfs:label ?label .
+                        FILTER(REGEX(?label, "universita degli studi di camerino", "i")) .
+                        ?organisation eurio:hasSite ?site .
+                        ?site eurio:hasAddress ?address .
+                        ?address eurio:fullAddress ?postal_address .
+                    }}
+                    ```
+                """
+    },
+    {
+        "question": "What is the postal address of university of Camerino?",
+        "query": """
+                    ```
+                    PREFIX eurio: <http://data.europa.eu/s66#>
+                    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                    
+                    SELECT DISTINCT ?postal_address
+                    WHERE {{
+                        ?organisation a eurio:Organisation .
+                        ?organisation rdfs:label ?label .
+                        FILTER(CONTAINS(LCASE(?label), "camerino")) .
+                        ?organisation eurio:hasSite ?site .
+                        ?site eurio:hasAddress ?address .
+                        ?address eurio:fullAddress ?postal_address .
+                    }}
+                    ```
+                """
+    },
+    {
+        "question": "Who is Emanuela Merelli?",
+        "query": """
+                    ```
+                    PREFIX eurio: <http://data.europa.eu/s66#>
+                    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                    
+                    SELECT ?person_label ?org_name ?telephone ?fax ?project_title
+                    WHERE {{
+                        ?person a eurio:Person .
+                        ?person rdfs:label ?person_label .
+                        ?person eurio:hasContactDetails ?contact_details.
+                        ?contact_details eurio:telephone ?telephone.
+                        OPTIONAL{{?contact_details eurio:faxNumber ?fax.}}
+                        FILTER (LCASE(?person_label) = "emanuela merelli") .
+                        ?person eurio:hasRole ?role.
+                        ?role eurio:isEmployedBy ?org.
+                        ?org rdfs:label ?org_name.
+                        ?role eurio:isInvolvedIn ?project.
+                        ?project a eurio:Project.
+                        ?project eurio:title ?project_title.
+                    }}
+                    ```
+                """
+    },
+    {
+        "question": "Provide information about Emanuela Merelli",
+        "query": """
+                    ```
+                    PREFIX eurio: <http://data.europa.eu/s66#>
+                    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+                    SELECT ?person_label ?org_name ?telephone ?fax ?project_title
+                    WHERE {{
+                        ?person a eurio:Person .
+                        ?person rdfs:label ?person_label .
+                        ?person eurio:hasContactDetails ?contact_details.
+                        ?contact_details eurio:telephone ?telephone.
+                        OPTIONAL{{?contact_details eurio:faxNumber ?fax.}}
+                        FILTER (LCASE(?person_label) = "emanuela merelli") .
+                        ?person eurio:hasRole ?role.
+                        ?role eurio:isEmployedBy ?org.
+                        ?org rdfs:label ?org_name.
+                        ?role eurio:isInvolvedIn ?project.
+                        ?project a eurio:Project.
+                        ?project eurio:title ?project_title.
+                    }}
+                    ```
+                """
     }
 ]
 
@@ -89,6 +196,13 @@ Follow these rules:
         - [person_full_name] ([organisation]), [postal_address] , ([role_label])
 
     2.  If the question asks to "count" or "determine the number of" participants, use Example 2.
+    
+    3.  If the question asks "which project was [person_full_name] involved in", use Example 3.
+    
+    4.  If the question asks "what is the postal address of [organisation_name]", use Example 4 or 5.
+    
+    5.  If the question asks "who is [person name]" or "provide information about [person name]", use Example 6 or 7.
+        In this case, you must use the eurio:telephone and eurio:faxNumber properties, not the eurio:telephoneNumber and eurio:fax properties.
 
 Given an input question, create a syntactically very accurate SPARQL query based on the following examples:
 """
@@ -123,3 +237,5 @@ async def get_participant_information(user_question: str) -> str:
         return sparql_qa.invoke(input=tool_input)
     except Exception as e:
         return str(e)
+
+

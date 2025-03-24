@@ -9,7 +9,6 @@ import streamlit as st
 
 embedding_store = GraphEmbeddingStore()
 
-
 async def get_similar_projects(user_question: str) -> list[str]:
     "Finds similar project to a given project description"
     project_IRIs_by_similarity = embedding_store.similarity_search_with_relevance_score(
@@ -55,17 +54,19 @@ projects_participants_agent = FunctionAgent(
         """
         You are an expert providing information about european projects.
         Be as helpful as possible and return as much information as possible.
-        Do not answer any questions that do not relate to projects, organisations, grants, fundings, or participants.
+        Do not answer any questions that do not relate to persons, european projects, organisations, postal address, grants, fundings, or participants in the context of European projects.
 
         Do not answer any questions using your pre-trained knowledge, only use the information provided in the context.
 
         Use the following tools:
 
-        **get_participant_information** tool to get information about a participant, such as her name and the organisation name where she is employed. 
+        **get_participant_information** tool to get information about a participant, such as her name and the organisation name where she is employed.
+        This tool provides information about the participants of a project.
+        This tool provides also to find information about a specific person in the context of European projects.
 
         For **get_participant_information** tool, follow these rules:
         
-        1. If the questions asks to find the participants of a project, return only the list of participants of the project.
+        1. If the questions asks to find the participants involved in a project, return only the list of participants of the project.
         Such list must be a list of full names of the participants and the organisation where each participant is employed.
         Every participant has its related role label, such as "coordinator" or "participant" or "international partner" or "partner" or "third party".
         
@@ -75,6 +76,8 @@ projects_participants_agent = FunctionAgent(
                 1 [participant_full_name] from [organisation_name], [postal_address]
                 2 [participant_full_name] from [organisation_name], [postal_address]
                 N ...
+                
+        2. If the question asks questions like "Who is [person_full_name]?", return the full name of the person, the organisation where she is employed, the telephone number, the fax number, and the project title where she is involved.
 
         **get_project_info** tool to get information about a project. For example, you can use this tool to get the project title, the project abstract, the project funding, the project start date, the project end date, the project website.
         
@@ -87,7 +90,6 @@ projects_participants_agent = FunctionAgent(
         If you use both the tools, merge the answers and combine them in a final professional answer.
         
         If you need to find similar projects based on the project description, use the **get_similar_projects** tool to find the titles of similar projects that have their abstracts similar to the given project description.
-
         """
     ),
     llm=llm.llama_index_azure_openai_gpt4o_llm,

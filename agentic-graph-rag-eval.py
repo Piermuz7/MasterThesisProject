@@ -9,13 +9,15 @@ from ragas import evaluate
 from ragas.metrics import faithfulness, answer_relevancy, context_precision, context_recall, context_entity_recall, \
     answer_similarity, answer_correctness
 from graphrag.agent_workflow import execute_agent_workflow
-from graphrag.agents.projects_participants_agent import embedding_store
+from graphrag.embeddings.graph_embedding_service import GraphEmbeddingStore
 import graphrag.llm as grag_llm
-from evaluation.qa import potential_consortium_queries, potential_consortium_ground_truths
+from evaluation.qa import potential_consortium_queries, potential_consortium_ground_truths, potential_collaborators_queries, potential_collaborators_ground_truths
 import os
 import streamlit as st
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
+embedding_store = GraphEmbeddingStore()
 
 llm = grag_llm.langchain_azure_openai_gpt4o_llm
 embedder = OllamaEmbeddings(model="all-minilm:l6-v2")
@@ -24,8 +26,9 @@ results = []
 contexts = []
 cleaned_context = []
 
-# Evaluation queries. For the evaluation, we use the potential consortium queries.
-all_queries = [{"potential_consortium": potential_consortium_queries}]  # ,{"titles": []}, {"abstracts": []}]
+# Evaluation queries. For the evaluation, we use the potential consortium queries and ground truths. Same for potential collaborators.
+#all_queries = [{"potential_consortium": potential_consortium_queries}]
+all_queries = [{"potential_collaborators": potential_collaborators_queries}]
 
 
 def get_organisations_of_similar_projects(project_IRIs) -> any:
@@ -65,6 +68,57 @@ def get_organisations_of_similar_projects(project_IRIs) -> any:
             response = sparql.query().convert()
             for result in response["results"]["bindings"]:
                 results.append({
+                    "organisation": result.get("organisation", {}).get("value", ""),
+                    "postal_address": result.get("postal_address", {}).get("value", ""),
+                    "project_title": result.get("project_title", {}).get("value", "")
+                })
+
+        except Exception as e:
+            print(f"Error querying {project_iri}: {e}")
+
+    return results
+
+
+def get_collaborators_of_similar_projects(project_IRIs) -> any:
+    "Get collaborators for a given project IRI."
+    results = []
+
+    # Initialize SPARQLWrapper
+    sparql = SPARQLWrapper(st.secrets["GRAPHDB_URL"])
+    sparql.setReturnFormat(JSON)
+
+    for project_iri in project_IRIs:
+        query = f"""
+                PREFIX eurio: <http://data.europa.eu/s66#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+                SELECT DISTINCT ?person_full_name ?organisation ?postal_address ?project_title
+                WHERE {{
+                    BIND (<{project_iri}> as ?project) 
+                    ?project a eurio:Project.
+                    ?project eurio:title ?project_title.
+                    ?project eurio:hasInvolvedParty ?party .
+                    ?party a eurio:OrganisationRole.
+                    ?party rdfs:label ?party_title.
+                    ?party eurio:isRoleOf ?role .
+                    ?role rdfs:label ?organisation.
+                    ?role eurio:hasSite ?site.
+                    ?site eurio:hasAddress ?address.
+                    ?address eurio:fullAddress ?postal_address.
+                    ?person eurio:isInvolvedIn ?project.
+                    ?person eurio:isEmployedBy ?role .
+                    ?person eurio:isRoleOf ?p.
+                    ?p rdfs:label ?person_full_name.
+                }}
+            """
+
+        sparql.setQuery(query)
+
+        try:
+            response = sparql.query().convert()
+            for result in response["results"]["bindings"]:
+                results.append({
+                    "full_name_person": result.get("person_full_name", {}).get("value", ""),
                     "organisation": result.get("organisation", {}).get("value", ""),
                     "postal_address": result.get("postal_address", {}).get("value", ""),
                     "project_title": result.get("project_title", {}).get("value", "")
@@ -119,20 +173,7 @@ for entry in all_queries:
     for q_type, queries in entry.items():
         for query in queries:
             agent_result = asyncio.run(execute_agent_workflow(query))
-            '''
-            if q_type == "titles":
-            vector_result = embedding_store.similarity_search_with_relevance_score(
-                query_text=query,
-                property_name="title",
-                k=3
-            )
-            '''
-            '''else:
-                vector_result = embedding_store.similarity_search_with_relevance_score(
-                    query_text=query,
-                    property_name="abstract",
-                    k=3
-                )'''
+
             project_IRIs_by_similarity = embedding_store.similarity_search_with_relevance_score(
                 query_text=query,
                 property_name="abstract",
@@ -141,7 +182,9 @@ for entry in all_queries:
 
             project_IRIs = [item['iri'] for item in project_IRIs_by_similarity]
 
-            vector_result = get_organisations_of_similar_projects(project_IRIs)
+            #vector_result = get_organisations_of_similar_projects(project_IRIs)
+
+            vector_result = get_collaborators_of_similar_projects(project_IRIs)
 
             final_prompt = f"""
             You are an expert providing information about european projects.
@@ -158,11 +201,11 @@ for entry in all_queries:
             Unstructured information: {vector_result}.
             Structured information: {agent_result}
             """
-            #res = llm.invoke(input=final_prompt)
+            # res = llm.invoke(input=final_prompt)
             # print(res)
-            #result = res.content
+            # result = res.content
             # print(result)
-            #results.append(result)
+            # results.append(result)
             results.append(agent_result)
             orgs = transform_json_array(vector_result)
             contexts.append(orgs)
@@ -236,12 +279,19 @@ def eval_and_save_files(df: pd.DataFrame, base_filename: str, extension: str) ->
 
     return new_filename
 
-
+'''
 d = {
     "user_input": potential_consortium_queries,
     "retrieved_contexts": contexts,
     "response": results,
     "reference": potential_consortium_ground_truths,
+}
+'''
+d = {
+    "user_input": potential_collaborators_queries,
+    "retrieved_contexts": contexts,
+    "response": results,
+    "reference": potential_collaborators_ground_truths,
 }
 
 # print("d: ", d)
@@ -256,7 +306,7 @@ score_df = score.to_pandas()
 
 llm_name = "gpt-4o-20240513"
 # llm_name = "claude-sonnet3.5-20241022"
-base_filename = "evaluation/evaluation_scores_" + llm_name
+base_filename = "evaluation/evaluation_scores_" + llm_name + "collaborators_scenario"
 extension = ".csv"
 
 new_filename = eval_and_save_files(score_df, base_filename, extension)
